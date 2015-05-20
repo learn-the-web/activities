@@ -2,15 +2,57 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Semantics Soothsayer</title>
+  <title>Quiz · Learn the Web</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
 
-  <main>
+  <header id="start-screen">
+    <h1 id="game-title"></h1>
+    <p id="game-intro"></p>
+    <img class="game-icon" src="images/keyboard.svg" alt="">
+    <button id="start-button">Start quiz</button>
+  </header>
 
+  <main id="main-screen" hidden>
+    <h2 id="question-title"></h2>
+    <ul id="question-choices"></ul>
+    <button id="question-button">Check answer</button>
   </main>
+
+  <aside class="screen-cover mark-screen" id="failure-screen" hidden>
+    <strong class="marker marker-failure">✘</strong>
+    <p hidden>Something’s whacky. Try again.</p>
+    <p hidden>Slow down. Try again.</p>
+    <p hidden>Whoa. Try again.</p>
+    <p hidden>Hold your horses. Try again.</p>
+    <p hidden>Not quite. Try again.</p>
+    <p hidden>Nope. Try again.</p>
+    <p hidden>Um… no. Try again.</p>
+    <p hidden>You wish. Try again.</p>
+  </aside>
+
+  <aside class="screen-cover mark-screen" id="success-screen" hidden>
+    <strong class="marker marker-success">✔</strong>
+    <p hidden>Way to go!</p>
+    <p hidden>Super-duper!</p>
+    <p hidden>Awesome!</p>
+    <p hidden>Cowabunga!</p>
+    <p hidden>Rad!</p>
+    <p hidden>Amazeballs!</p>
+    <p hidden>Sweet!</p>
+    <p hidden>Cool!</p>
+    <p hidden>Nice!</p>
+    <p hidden>Fantastic!</p>
+    <p hidden>Geronimo!</p>
+  </aside>
+
+  <footer id="end-screen" hidden>
+    <h2>Congratulations</h2>
+    <strong class="marker-image"><img src="images/victory.svg" alt="Victory!"></strong>
+    <p id="game-congrats"></p>
+  <footer>
 
   <script src="js/quiz.js"></script>
   <script src="js/quizifier.js"></script>
