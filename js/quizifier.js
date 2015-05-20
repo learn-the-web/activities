@@ -18,7 +18,7 @@
     question = {
       title: document.getElementById('question-title'),
       choices: document.getElementById('question-choices'),
-      button: document.getElementById('question-button')
+      form: document.getElementById('question-form')
     }
   ;
 
@@ -45,7 +45,8 @@
     document.getElementById('start-button').addEventListener('click', function () {
       startQuiz();
     });
-    question.button.addEventListener('click', function () {
+    question.form.addEventListener('submit', function (e) {
+      e.preventDefault();
       advanceOrFail();
     });
   };
