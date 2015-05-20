@@ -34,13 +34,6 @@
     }
   };
 
-  var populateQuizDetails = function () {
-    document.querySelector('title').innerHTML = escape(quiz.title);
-    document.getElementById('game-title').innerHTML = escape(quiz.title);
-    document.getElementById('game-intro').innerHTML = escape(quiz.intro);
-    document.getElementById('game-congrats').innerHTML = escape(quiz.congrats);
-  };
-
   var bindEvents = function () {
     document.getElementById('start-button').addEventListener('click', function () {
       startQuiz();
@@ -52,7 +45,7 @@
   };
 
   var hasAnotherQuestion = function () {
-    return !(current == quiz.questions.length - 1);
+    return !(current == quiz.length - 1);
   };
 
   var createChoiceElement = function (i, label) {
@@ -75,13 +68,13 @@
   };
 
   var populateQuestion = function (id) {
-    var i = 0, t = quiz.questions[id].choices.length;
+    var i = 0, t = quiz[id].choices.length;
 
     question.choices.innerHTML = '';
-    question.title.innerHTML = escape(quiz.questions[id].question);
+    question.title.innerHTML = escape(quiz[id].question);
 
     for (i; i<t; i++) {
-      question.choices.appendChild(createChoiceElement(i, quiz.questions[id].choices[i]));
+      question.choices.appendChild(createChoiceElement(i, quiz[id].choices[i]));
     }
   };
 
@@ -168,13 +161,12 @@
       return;
     }
 
-    if (parseInt(choice.getAttribute('data-id'), 10) == quiz.questions[current].correct) {
+    if (parseInt(choice.getAttribute('data-id'), 10) == quiz[current].correct) {
       return 'yes';
     } else {
       return 'no';
     }
   };
 
-  populateQuizDetails();
   bindEvents();
 }(quiz));

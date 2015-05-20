@@ -2,26 +2,20 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Quiz · Learn the Web</title>
+  <title>{{page.title}} · Learn the Web</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css/main.css" rel="stylesheet">
+  <link href="/main.min.css" rel="stylesheet">
 </head>
 <body>
 
   <header id="start-screen">
-    <h1 id="game-title"></h1>
-    <p id="game-intro"></p>
-    <img class="game-icon" src="images/keyboard.svg" alt="">
-    <button id="start-button">Start quiz</button>
+    <h1 id="game-title">{{page.title}}</h1>
+    <p id="game-intro">{{page.intro}}</p>
+    <img class="game-icon" src="{{page.image}}" alt="">
+    <button class="btn" id="start-button">Start</button>
   </header>
 
-  <main id="main-screen" hidden>
-    <form id="question-form">
-      <h2 id="question-title"></h2>
-      <ul id="question-choices"></ul>
-      <button type="submit">Check answer</button>
-    </form>
-  </main>
+  {{content}}
 
   <aside class="screen-cover mark-screen" id="failure-screen" hidden>
     <strong class="marker marker-failure">✘</strong>
@@ -53,10 +47,11 @@
   <footer id="end-screen" hidden>
     <h2>Congratulations</h2>
     <strong class="marker-image"><img src="images/victory.svg" alt="Victory!"></strong>
-    <p id="game-congrats"></p>
-  <footer>
+    <p id="game-congrats">{{page.congrats}}</p>
+  </footer>
 
-  <script src="js/quiz.js"></script>
-  <script src="js/quizifier.js"></script>
+  {% for script in page.scripts %}
+    <script src="{{script}}"></script>
+  {% endfor %}
 </body>
 </html>

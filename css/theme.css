@@ -1,0 +1,24 @@
+html {
+  overflow-x: hidden;
+  color: #333;
+  font-family: "Alegreya Sans",sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  border-top: 4px solid var(--color-brand-dark);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border-color: var(--color-grey-light);
+  border-width: 3px;
+}
