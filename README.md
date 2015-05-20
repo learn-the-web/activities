@@ -1,8 +1,16 @@
-# Tests for Learn the Web
+# Activities for Learn the Web
 
-A bunch of tests, quizzes & games for Algonquin Design’s Learn the Web curriculum.
+Activities, games & quizzes to complement Algonquin Design’s Learn the Web materials.
 
 ### [☛ Learn the Web](http://learn-the-web.algonquindesign.ca/)
+
+---
+
+## Activities
+
+Try out the activities to test yourself.
+
+- [**Semantics Soothsayer**](http://activities.learn-the-web.algonquindesign.ca/semantics-soothsayer/)
 
 ---
 
