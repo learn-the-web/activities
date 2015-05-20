@@ -150,6 +150,7 @@
         break;
 
       default:
+        displayFailureScreen();
         break;
     }
   };

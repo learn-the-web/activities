@@ -7,10 +7,13 @@ scripts:
   - /app.min.js
 ---
 
-<main id="main-screen" hidden>
+<main class="wrapper pad-t-2" id="main-screen" hidden>
   <form id="question-form">
-    <h2 id="question-title"></h2>
-    <ul id="question-choices"></ul>
-    <button type="submit">Check answer</button>
+    <h2 class="push" id="question-title"></h2>
+    <ul class="list-group push-2 mega choice-list" id="question-choices"></ul>
+    <hr class="hr-dark">
+    <div class="text-center">
+      <button class="btn btn--ghost kilo" type="submit">Check answer</button>
+    </div>
   </form>
 </main>

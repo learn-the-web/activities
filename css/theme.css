@@ -6,6 +6,7 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: var(--color-code);
   border-top: 4px solid var(--color-brand-dark);
 }
 
@@ -21,4 +22,82 @@ a:hover {
 hr {
   border-color: var(--color-grey-light);
   border-width: 3px;
+}
+
+.hr-dark {
+  border-color: var(--color-code-darkest);
+}
+
+.wrapper {
+  max-width: 35em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.choice-list li {
+  padding-left: 1.1em;
+  position: relative;
+}
+
+.choice-list input {
+  left: 0;
+  margin-right: .5rem;
+  position: absolute;
+  top: .9em;
+
+  vertical-align: middle;
+}
+
+.choice-list label {
+  vertical-align: middle;
+}
+
+.screen-cover {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  background-color: rgba(245, 242, 240,.9);
+  border-top: 4px solid var(--color-brand-dark);
+  pointer-events: none;
+}
+
+.marker {
+  display: block;
+  height: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .45em 0 0;
+  width: 2em;
+
+  background-color: #333;
+  border-radius: 1em;
+  box-sizing: border-box;
+
+  color: #fff;
+  font-size: 8em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.marker-symbol {
+  display: inline-block;
+  margin-top: -.2em;
+  font-size: 2em;
+}
+
+.marker--success {
+  background-color: #6dd110;
+}
+
+.marker--failure {
+  background-color: #f33;
 }

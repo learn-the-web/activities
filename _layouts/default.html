@@ -5,49 +5,54 @@
   <title>{{page.title}} · Learn the Web</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="/main.min.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Alegreya+Sans:400,400italic,700|Source+Code+Pro:400,700" rel="stylesheet">
+  <meta name="application-name" content="Learn the Web">
+  <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
+  <meta name="msapplication-TileImage" content="/favicon-144.png">
+  <meta name="msapplication-TileColor" content="#00deae">
 </head>
 <body>
 
-  <header id="start-screen">
-    <h1 id="game-title">{{page.title}}</h1>
-    <p id="game-intro">{{page.intro}}</p>
-    <img class="game-icon" src="{{page.image}}" alt="">
-    <button class="btn" id="start-button">Start</button>
+  <header class="text-center pad-t-2" id="start-screen">
+    <h1 class="zetta" id="game-title">{{page.title}}</h1>
+    <p class="giga" id="game-intro">{{page.intro}}</p>
+    <img class="game-icon push-2" src="icon.svg" alt="">
+    <button class="btn btn--ghost giga" id="start-button">Start activity</button>
   </header>
 
   {{content}}
 
-  <aside class="screen-cover mark-screen" id="failure-screen" hidden>
-    <strong class="marker marker-failure">✘</strong>
-    <p hidden>Something’s whacky. Try again.</p>
-    <p hidden>Slow down. Try again.</p>
-    <p hidden>Whoa. Try again.</p>
-    <p hidden>Hold your horses. Try again.</p>
-    <p hidden>Not quite. Try again.</p>
-    <p hidden>Nope. Try again.</p>
-    <p hidden>Um… no. Try again.</p>
-    <p hidden>You wish. Try again.</p>
+  <aside class="screen-cover text-center bold pad-t-2" id="failure-screen" hidden>
+    <strong class="marker marker--failure push">✘</strong>
+    <p class="giga" hidden>Something’s whacky. Try again.</p>
+    <p class="giga" hidden>Slow down. Try again.</p>
+    <p class="giga" hidden>Whoa. Try again.</p>
+    <p class="giga" hidden>Hold your horses. Try again.</p>
+    <p class="giga" hidden>Not quite. Try again.</p>
+    <p class="giga" hidden>Nope. Try again.</p>
+    <p class="giga" hidden>Um… no. Try again.</p>
+    <p class="giga" hidden>You wish. Try again.</p>
   </aside>
 
-  <aside class="screen-cover mark-screen" id="success-screen" hidden>
-    <strong class="marker marker-success">✔</strong>
-    <p hidden>Way to go!</p>
-    <p hidden>Super-duper!</p>
-    <p hidden>Awesome!</p>
-    <p hidden>Cowabunga!</p>
-    <p hidden>Rad!</p>
-    <p hidden>Amazeballs!</p>
-    <p hidden>Sweet!</p>
-    <p hidden>Cool!</p>
-    <p hidden>Nice!</p>
-    <p hidden>Fantastic!</p>
-    <p hidden>Geronimo!</p>
+  <aside class="screen-cover text-center bold pad-t-2" id="success-screen" hidden>
+    <strong class="marker marker--success push">✔</strong>
+    <p class="giga" hidden>Way to go!</p>
+    <p class="giga" hidden>Super-duper!</p>
+    <p class="giga" hidden>Awesome!</p>
+    <p class="giga" hidden>Cowabunga!</p>
+    <p class="giga" hidden>Rad!</p>
+    <p class="giga" hidden>Amazeballs!</p>
+    <p class="giga" hidden>Sweet!</p>
+    <p class="giga" hidden>Cool!</p>
+    <p class="giga" hidden>Nice!</p>
+    <p class="giga" hidden>Fantastic!</p>
+    <p class="giga" hidden>Geronimo!</p>
   </aside>
 
-  <footer id="end-screen" hidden>
-    <h2>Congratulations</h2>
-    <strong class="marker-image"><img src="images/victory.svg" alt="Victory!"></strong>
-    <p id="game-congrats">{{page.congrats}}</p>
+  <footer class="text-center pad-t-2" id="end-screen" hidden>
+    <h2 class="zetta">Congratulations</h2>
+    <strong class="block push marker-image"><img src="/images/victory.svg" alt="Victory!"></strong>
+    <p class="giga italic" id="game-congrats">{{page.congrats}}</p>
   </footer>
 
   {% for script in page.scripts %}
