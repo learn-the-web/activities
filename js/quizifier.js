@@ -24,7 +24,7 @@
 
   var escape = function (str) {
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  }
+  };
 
   var toggleScreen = function (screen) {
     if (screens[screen].hidden) {
@@ -97,7 +97,7 @@
       var scn = screen, cb = callback;
 
       clearTimeout(screenTimeout);
-      toggleScreen(scn)
+      toggleScreen(scn);
 
       if (cb) {
         cb();
@@ -132,7 +132,7 @@
   var displayEndScreen = function () {
     toggleScreen('main');
     toggleScreen('end');
-  }
+  };
 
   var advanceQuestion = function () {
     if (hasAnotherQuestion()) {
