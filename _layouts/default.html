@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <header class="text-center pad-t-2" id="start-screen">
+  <header class="text-center pad-t-2" data-screen="start">
     <h1 class="zetta" id="game-title">{{page.title}}</h1>
     <p class="giga" id="game-intro">{{page.intro}}</p>
     <img class="game-icon push-2" src="icon.svg" alt="">
@@ -22,7 +22,7 @@
 
   {{content}}
 
-  <aside class="screen-cover text-center bold pad-t-2" id="failure-screen" hidden>
+  <aside class="screen-cover text-center bold pad-t-2" data-screen="failure" hidden>
     <strong class="marker marker--failure push">✘</strong>
     <p class="giga" hidden>Something’s whacky. Try again.</p>
     <p class="giga" hidden>Slow down. Try again.</p>
@@ -34,7 +34,7 @@
     <p class="giga" hidden>You wish. Try again.</p>
   </aside>
 
-  <aside class="screen-cover text-center bold pad-t-2" id="success-screen" hidden>
+  <aside class="screen-cover text-center bold pad-t-2" data-screen="success" hidden>
     <strong class="marker marker--success push">✔</strong>
     <p class="giga" hidden>Way to go!</p>
     <p class="giga" hidden>Super-duper!</p>
@@ -49,12 +49,13 @@
     <p class="giga" hidden>Geronimo!</p>
   </aside>
 
-  <footer class="text-center pad-t-2" id="end-screen" hidden>
+  <footer class="text-center pad-t-2" data-screen="end" hidden>
     <h2 class="zetta">Congratulations</h2>
     <strong class="block push marker-image"><img src="/images/victory.svg" alt="Victory!"></strong>
     <p class="giga italic" id="game-congrats">{{page.congrats}}</p>
   </footer>
 
+  <script src="/activities.min.js"></script>
   {% for script in page.scripts %}
     <script src="{{script}}"></script>
   {% endfor %}

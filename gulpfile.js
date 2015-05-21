@@ -19,8 +19,8 @@ gulp.task('css', function () {
 });
 
 gulp.task('js', function () {
-  return gulp.src(['js/quizifier.js'])
-    .pipe(concat('app.min.js'))
+  return gulp.src(['js/*.js'])
+    .pipe(concat('activities.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./'))
   ;

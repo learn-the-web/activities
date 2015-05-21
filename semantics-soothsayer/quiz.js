@@ -1,4 +1,4 @@
-var quiz = [
+var questions = [
   {
     question: 'What tag is used to create a hyperlink?',
     correct: 0,
@@ -95,3 +95,5 @@ var quiz = [
     ]
   }
 ];
+
+MultipleChoice(ActivityRunner(), questions);
