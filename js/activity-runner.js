@@ -70,8 +70,8 @@ var ActivityRunner = function () {
     displaySaying(sayings.success);
   };
 
-  var displayFailureScreen = function () {
-    displayTimedScreen('failure');
+  var displayFailureScreen = function (callback) {
+    displayTimedScreen('failure', callback);
     displaySaying(sayings.failure);
   };
 
