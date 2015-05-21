@@ -8,9 +8,15 @@ Activities, games & quizzes to complement Algonquin Design’s Learn the Web mat
 
 ## Activities
 
-Try out the activities to test yourself.
+Try out the activities to test yourself:
 
 - [**Semantics Soothsayer**](http://activities.learn-the-web.algonquindesign.ca/semantics-soothsayer/)
+- [**Ingenious Indentor**](http://activities.learn-the-web.algonquindesign.ca/ingenious-indentor/)
+
+*Not converted to the new system yet:*
+
+- [Dev Tool Dynamo](http://thomasjbradley.github.io/dev-tool-dynamo/)
+- [Keyboard Commander](http://thomasjbradley.github.io/keyboard-commander/)
 
 ---
 
