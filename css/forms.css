@@ -1,0 +1,19 @@
+input {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+input:focus {
+  outline: 3px solid #000;
+}
+
+input.code {
+  font-family: "Source Code Pro",Menlo,monospace;
+}
+
+label {
+  display: inline-block;
+  margin-right: .4em;
+
+  vertical-align: middle;
+}

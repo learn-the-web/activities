@@ -11,6 +11,10 @@
   text-decoration: none;
 }
 
+.btn:focus {
+  outline: 3px solid #000;
+}
+
 .btn:hover {
   background-color: var(--color-brand-dark);
   color: #fff;
