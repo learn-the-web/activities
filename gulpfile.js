@@ -67,7 +67,7 @@ gulp.task('build-js', ['js'], function () {
 gulp.task('build', ['build-css-main', 'build-css-common', 'build-js']);
 
 gulp.task('watch', function() {
-  gulp.watch('css/*.css', ['css']);
+  gulp.watch('css/*.css', ['css-main', 'css-common']);
   gulp.watch('js/*.js', ['js']);
 });
 
