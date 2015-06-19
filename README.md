@@ -12,6 +12,7 @@ Try out the activities to test yourself:
 
 - [**Semantics Soothsayer**](http://activities.learn-the-web.algonquindesign.ca/semantics-soothsayer/)
 - [**Ingenious Indentor**](http://activities.learn-the-web.algonquindesign.ca/ingenious-indentor/)
+- [**Selector Surgeon**](http://activities.learn-the-web.algonquindesign.ca/selector-surgeon/)
 
 *Not converted to the new system yet:*
 
