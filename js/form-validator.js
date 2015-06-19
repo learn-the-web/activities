@@ -38,6 +38,10 @@ var FormValidator = function (runner, questions) {
     elems.title.innerHTML = runner.escape(questions[id].question);
     elems.inputs.innerHTML = '';
     elems.inputs.appendChild(inputGroups[questions[id].inputGroup]);
+
+    if (questions[id].onstart) {
+      questions[id].onstart();
+    }
   };
 
   var advanceQuestion = function () {
