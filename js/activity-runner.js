@@ -76,6 +76,8 @@ var ActivityRunner = function () {
   };
 
   var displayEndScreen = function () {
+    toggleScreen('main');
+    dispatchEvent('on-end');
     toggleScreen('end');
   };
 
@@ -98,12 +100,14 @@ var ActivityRunner = function () {
   };
 
   var dispatchEvent = function (ev) {
-    boundListeners[ev]();
+    if (boundListeners[ev]) boundListeners[ev]();
   };
 
   var bindEvents = function () {
     document.getElementById('start-button').addEventListener('click', function () {
       toggleScreen('start');
+      dispatchEvent('on-start');
+      toggleScreen('main');
       dispatchEvent('start');
     });
   };

@@ -47,7 +47,6 @@ var CodeCompare = function (runner, questions) {
       current++;
       populateQuestion(current);
     } else {
-      runner.toggleScreen('main');
       runner.send('end');
     }
   };
@@ -87,6 +86,5 @@ var CodeCompare = function (runner, questions) {
 
   runner.listen('start', function () {
     populateQuestion(current);
-    runner.toggleScreen('main');
   });
 };
