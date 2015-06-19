@@ -8,6 +8,8 @@ input:focus {
 }
 
 input.code {
+  width: 16em;
+
   font-family: "Source Code Pro",Menlo,monospace;
 }
 
