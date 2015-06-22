@@ -53,8 +53,10 @@ var FormValidator = function (runner, questions) {
     }
   };
 
-  var advanceOrFail = function () {
-    switch (isAnswerCorrect()) {
+  var advanceOrFail = function (forceDirection) {
+    var yesNo = forceDirection || isAnswerCorrect();
+
+    switch (yesNo) {
       case 'yes':
         runner.send('success', function () {
           advanceQuestion();
@@ -80,10 +82,19 @@ var FormValidator = function (runner, questions) {
         answer = questions[current].inputs[key]
       ;
 
-      if (answer === true) {
-        if (!elem.checked) valid = 'no';
-      } else {
-        if (elem.value.trim() !== answer) valid = 'no';
+      switch (typeof answer) {
+        case 'string':
+        case 'number':
+          if (elem.value.trim() != answer) valid = 'no';
+          break;
+        case 'boolean':
+          if (!elem.checked) valid = 'no';
+          break;
+        case 'object': // Regex
+          if (!elem.value.trim().match(answer)) valid = 'no';
+          break;
+        default:
+          valid = 'no';
       }
     });
 
@@ -96,4 +107,9 @@ var FormValidator = function (runner, questions) {
   runner.listen('start', function () {
     populateQuestion(current);
   });
+
+  return {
+    runner: runner,
+    advanceOrFail: advanceOrFail
+  }
 };
