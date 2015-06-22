@@ -44,6 +44,7 @@ var ActivityRunner = function () {
 
       clearTimeout(screenTimeout);
       toggleScreen(scn);
+      document.querySelector('main h2').focus();
 
       if (cb) {
         cb();
@@ -68,17 +69,20 @@ var ActivityRunner = function () {
   var displaySuccessScreen = function (callback) {
     displayTimedScreen('success', callback);
     displaySaying(sayings.success);
+    screens.success.focus();
   };
 
   var displayFailureScreen = function (callback) {
     displayTimedScreen('failure', callback);
     displaySaying(sayings.failure);
+    screens.failure.focus();
   };
 
   var displayEndScreen = function () {
     toggleScreen('main');
     dispatchEvent('on-end');
     toggleScreen('end');
+    document.querySelector('[data-screen="end"] > h2').focus();
   };
 
   var send = function (ev, cb) {
@@ -108,6 +112,7 @@ var ActivityRunner = function () {
       toggleScreen('start');
       dispatchEvent('on-start');
       toggleScreen('main');
+      document.querySelector('main h2').focus();
       dispatchEvent('start');
     });
   };
