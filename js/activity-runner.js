@@ -80,14 +80,14 @@ var ActivityRunner = function () {
 
   var displayEndScreen = function (callback) {
     toggleScreen('main');
-    dispatchEvent('on-end');
+    dispatchEvent('end');
     toggleScreen('end');
     document.querySelector('[data-screen="end"] > h2').focus();
   };
 
   var displayFatalErrorScreen = function (callback, opts) {
     toggleScreen('main');
-    dispatchEvent('on-fatal-error');
+    dispatchEvent('fatal-error');
     toggleScreen('fatal-error');
     document.getElementById('fatal-error-img').src = opts.image;
     document.getElementById('fatal-error-message').innerHTML = escape(opts.message);
@@ -128,7 +128,6 @@ var ActivityRunner = function () {
   var bindEvents = function () {
     document.getElementById('start-button').addEventListener('click', function () {
       toggleScreen('start');
-      dispatchEvent('on-start');
       toggleScreen('main');
       document.querySelector('main h2').focus();
       dispatchEvent('start');
