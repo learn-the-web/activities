@@ -67,6 +67,7 @@ var questions = [
 
 var
   form = document.getElementById('question-form'),
+  runner = ActivityRunner(),
   activity,
   resetBtns = document.querySelectorAll('[type="reset"]'),
   i = 0, t = resetBtns.length
@@ -91,4 +92,17 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-activity = FormValidator(ActivityRunner(), questions);
+var fatalMouseMove = function (e) {
+  runner.send('fatal-error', null, {
+    image: '/images/mouse.svg',
+    message: 'Don’t use your mouse.'
+  });
+
+  document.removeEventListener('mousemove', fatalMouseMove);
+};
+
+runner.listen('start', function () {
+  document.addEventListener('mousemove', fatalMouseMove);
+});
+
+activity = FormValidator(runner, questions);
