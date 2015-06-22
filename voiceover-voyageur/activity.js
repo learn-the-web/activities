@@ -1,6 +1,6 @@
 var questions = [
   {
-    question: 'Activate VoiceOver and press the hidden button below.',
+    question: 'Use VoiceOver and press the hidden button below.',
     inputGroup: 'question-1',
     inputs: {}
   },
@@ -24,7 +24,7 @@ var questions = [
     }
   },
   {
-    question: 'Press the "Go!" button.',
+    question: 'Press the image of the dinosaur.',
     inputGroup: 'question-5',
     inputs: {},
     onstart: function () {
@@ -32,17 +32,24 @@ var questions = [
     }
   },
   {
-    question: 'Press the image of the dinosaur.',
+    question: 'Press the H5 tag.',
     inputGroup: 'question-6',
     inputs: {}
   },
   {
-    question: 'Press the button inside column “C”, row “4”.',
+    question: 'Check the checkbox',
     inputGroup: 'question-7',
-    inputs: {}
+    inputs: {
+      dino: true
+    },
+    onstart: function () {
+      document.getElementById('dino').addEventListener('change', function (e) {
+        if (document.getElementById('dino').checked) activity.advanceOrFail('yes');
+      });
+    }
   },
   {
-    question: 'Press the <h5>.',
+    question: 'Press the button inside column “C”, row “4”.',
     inputGroup: 'question-8',
     inputs: {}
   },
