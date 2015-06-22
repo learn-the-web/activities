@@ -78,14 +78,23 @@ var ActivityRunner = function () {
     screens.failure.focus();
   };
 
-  var displayEndScreen = function () {
+  var displayEndScreen = function (callback) {
     toggleScreen('main');
     dispatchEvent('on-end');
     toggleScreen('end');
     document.querySelector('[data-screen="end"] > h2').focus();
   };
 
-  var send = function (ev, cb) {
+  var displayFatalErrorScreen = function (callback, opts) {
+    toggleScreen('main');
+    dispatchEvent('on-fatal-error');
+    toggleScreen('fatal-error');
+    document.getElementById('fatal-error-img').src = opts.image;
+    document.getElementById('fatal-error-message').innerHTML = escape(opts.message);
+    document.querySelector('[data-screen="fatal-error"] > h2').focus();
+  };
+
+  var send = function (ev, cb, opts) {
     switch (ev) {
       case 'success':
         displaySuccessScreen(cb);
@@ -96,15 +105,24 @@ var ActivityRunner = function () {
       case 'end':
         displayEndScreen(cb);
         break;
+      case 'fatal-error':
+        displayFatalErrorScreen(cb, opts);
+        break;
     }
   };
 
   var listen = function (ev, cb) {
-    boundListeners[ev] = cb;
+    if (!boundListeners[ev]) boundListeners[ev] = [];
+
+    boundListeners[ev].push(cb);
   };
 
   var dispatchEvent = function (ev) {
-    if (boundListeners[ev]) boundListeners[ev]();
+    if (boundListeners[ev]) {
+      boundListeners[ev].forEach(function (item) {
+        item();
+      });
+    };
   };
 
   var bindEvents = function () {
