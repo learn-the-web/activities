@@ -105,4 +105,8 @@ runner.listen('start', function () {
   document.addEventListener('mousemove', fatalMouseMove);
 });
 
+runner.listen('end', function () {
+  document.removeEventListener('mousemove', fatalMouseMove);
+});
+
 activity = FormValidator(runner, questions);
