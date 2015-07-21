@@ -19,3 +19,7 @@ label {
 
   vertical-align: middle;
 }
+
+samp {
+  font-size: 1rem;
+}
