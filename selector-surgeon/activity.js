@@ -72,7 +72,7 @@ var questions = [
 ];
 
 questions.forEach(function (item, i) {
-  questions[i].onstart = function () {
+  questions[i].onStart = function () {
     document.getElementById('selector').focus();
     Prism.highlightElement(document.querySelector('.language-markup'));
   };

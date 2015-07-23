@@ -71,6 +71,4 @@ var questions = [
   }
 ];
 
-
-
 FormValidator(ActivityRunner(), questions);

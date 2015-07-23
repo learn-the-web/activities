@@ -27,7 +27,7 @@ var questions = [
     question: 'Press the image of the dinosaur.',
     inputGroup: 'question-5',
     inputs: {},
-    onstart: function () {
+    onStart: function () {
       document.getElementById('question-title').className += ' visually-hidden';
     }
   },
@@ -42,7 +42,7 @@ var questions = [
     inputs: {
       dino: true
     },
-    onstart: function () {
+    onStart: function () {
       document.getElementById('dino').addEventListener('change', function (e) {
         if (document.getElementById('dino').checked) activity.advanceOrFail('yes');
       });

@@ -39,8 +39,8 @@ var FormValidator = function (runner, questions) {
     elems.inputs.innerHTML = '';
     elems.inputs.appendChild(inputGroups[questions[id].inputGroup]);
 
-    if (questions[id].onstart) {
-      questions[id].onstart();
+    if (questions[id].onStart) {
+      questions[id].onStart();
     }
   };
 
