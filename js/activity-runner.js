@@ -126,12 +126,20 @@ var ActivityRunner = function () {
   };
 
   var bindEvents = function () {
-    document.getElementById('start-button').addEventListener('click', function () {
-      toggleScreen('start');
-      toggleScreen('main');
-      document.querySelector('main h2').focus();
-      dispatchEvent('start');
-    });
+    var startButton = document.getElementById('start-button');
+
+    if (startButton) {
+      startButton.addEventListener('click', function () {
+        start();
+      });
+    }
+  };
+
+  var start = function () {
+    toggleScreen('start');
+    toggleScreen('main');
+    document.querySelector('main h2').focus();
+    dispatchEvent('start');
   };
 
   findScreens();
@@ -141,6 +149,7 @@ var ActivityRunner = function () {
     escape: escape,
     toggleScreen: toggleScreen,
     send: send,
-    listen: listen
+    listen: listen,
+    start: start
   }
 };

@@ -1,0 +1,14 @@
+.box {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 10em;
+
+  border: 5px solid #63666a;
+
+  font-size: 2em;
+  text-align: center;
+}
+
+.gozer {
+  border-color: #9ad600;
+}
