@@ -16,24 +16,24 @@ var questions = [
     }
   },
   {
-    question: 'Add the class “gozer” to `$box`.',
+    question: 'Add the class “red-giant” to `$box`.',
     contentGroup: 'question-3',
     onStart: function () {
       document.querySelector('[data-content-group="question-3"]').appendChild($box.get(0));
     },
     onTick: function () {
-      if (typeof $box === 'object' && $box instanceof jQuery && $box.hasClass('gozer')) return true;
+      if (typeof $box === 'object' && $box instanceof jQuery && $box.hasClass('red-giant')) return true;
     }
   },
   {
-    question: 'Change the content inside `$box` to read “Marshmallow Mania”.',
+    question: 'Change the content inside `$box` to read “Galactic Mayhem”.',
     contentGroup: 'question-4',
     onStart: function () {
-      $box.removeClass('gozer');
+      $box.removeClass('red-giant');
       document.querySelector('[data-content-group="question-4"]').appendChild($box.get(0));
     },
     onTick: function () {
-      if (typeof $box === 'object' && $box instanceof jQuery && $box.html() === 'Marshmallow Mania') return true;
+      if (typeof $box === 'object' && $box instanceof jQuery && $box.html() === 'Galactic Mayhem') return true;
     }
   },
   {
@@ -58,24 +58,24 @@ var questions = [
     }
   },
   {
-    question: 'There’s a variable called `ghosts`, it’s an array, add “Keymaster” to it.',
+    question: 'There’s a variable called `stars`, it’s an array, add “Tau Ceti” to it.',
     contentGroup: 'question-7',
     onTick: function () {
-      if (window.ghosts[window.ghosts.length - 1] == 'Keymaster') return true;
+      if (window.stars[window.stars.length - 1] == 'Tau Ceti') return true;
     }
   },
   {
-    question: 'Create a variable called `caughtGhost`, remove the first item from `ghosts` and put it into the new variable.',
+    question: 'Create a variable called `nearStar`, remove the first item from `stars` and put it into the new variable.',
     contentGroup: 'question-8',
     onTick: function () {
-      if (typeof caughtGhost === 'string' && caughtGhost === 'Slimer') return true;
+      if (typeof nearStar === 'string' && nearStar === 'Sirius') return true;
     }
   },
   {
-    question: 'Using jQuery, select the third <li> and put the contents of the `caught` variable inside it.',
+    question: 'Using jQuery, select the third <li> and put the contents of the `nearStar` variable inside it.',
     contentGroup: 'question-9',
     onTick: function () {
-      if (document.querySelector('.ecto-containment-unit li:nth-child(3)').innerHTML === 'Slimer') return true;
+      if (document.querySelector('.neighbourhood-stars li:nth-child(3)').innerHTML === 'Sirius') return true;
     }
   },
   {
@@ -83,11 +83,11 @@ var questions = [
     contentGroup: 'question-10',
     onTick: function () {
       if (
-        document.querySelector('.ecto-containment-unit li:nth-child(1)').innerHTML === 'Number 0'
-        && document.querySelector('.ecto-containment-unit li:nth-child(2)').innerHTML === 'Number 1'
-        && document.querySelector('.ecto-containment-unit li:nth-child(3)').innerHTML === 'Number 2'
-        && document.querySelector('.ecto-containment-unit li:nth-child(4)').innerHTML === 'Number 3'
-        && document.querySelector('.ecto-containment-unit li:nth-child(5)').innerHTML === 'Number 4'
+        document.querySelector('.neighbourhood-stars li:nth-child(1)').innerHTML === 'Number 0'
+        && document.querySelector('.neighbourhood-stars li:nth-child(2)').innerHTML === 'Number 1'
+        && document.querySelector('.neighbourhood-stars li:nth-child(3)').innerHTML === 'Number 2'
+        && document.querySelector('.neighbourhood-stars li:nth-child(4)').innerHTML === 'Number 3'
+        && document.querySelector('.neighbourhood-stars li:nth-child(5)').innerHTML === 'Number 4'
       ) {
         return true;
       }
@@ -110,7 +110,7 @@ var
   question5Clicked = false;
 ;
 
-window.ghosts = ['Slimer', 'Boogieman', 'Vigo', 'Samhain'];
+window.stars = ['Sirius', 'EZ Aquarii', 'Procyon', 'Cygni'];
 
 startMessage.className = 'btn btn--subtle btn--disabled giga';
 startMessage.innerHTML = 'Start by opening the console.';
@@ -119,5 +119,5 @@ startButton.parentNode.appendChild(startMessage);
 startButton.parentNode.removeChild(startButton);
 
 console.clear();
-console.log('%cWelcome to Javascript Jailer!', bigWord);
+console.log('%cWelcome to Javascript Journeyer!', bigWord);
 console.log('%cTo begin the activity use the command line below and run the `start()` function.', boldStatement);
