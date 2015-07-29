@@ -1,0 +1,27 @@
+---
+title: URL Explorer
+blockingscripts:
+  - /url-explorer/redirector.js
+styles:
+  - /url-explorer/activity.css
+scripts:
+  - /url-explorer/activity.js
+layout: wrapper
+---
+
+<main class="wrapper pad-t-2">
+  <h2 class="instructions" tabindex="-1">Here’s some navigation, go to the products page.</h2>
+
+  <nav class="pad-t-2">
+    <ul class="nav">
+      <li><a href="/url-explorer/">Start over</a></li>
+      <li><a href="/url-explorer/products/">Products</a></li>
+      <li><a href="/url-explorer/shopping-cart/">Shopping cart</a></li>
+      <li><a href="/url-explorer/finish/">Finish</a></li>
+    </ul>
+  </nav>
+</main>
+
+<script>
+  saveState('/start/');
+</script>

@@ -1,0 +1,157 @@
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+kbd {
+  background-color: #ffc;
+}
+
+.wrapper {
+  padding-bottom: 8rem;
+}
+
+.instructions {
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 1rem;
+  position: fixed;
+  max-width: calc(100% - 20px);
+  z-index: 100;
+
+  background-color: rgba(255, 255, 204, .6);
+  border-radius: 8px;
+  border: 2px solid #ffc;
+}
+
+.nav {
+  overflow: hidden;
+  padding: 0;
+
+  list-style-type: none;
+  text-align: center;
+}
+
+.nav li {
+  float: left;
+  width: 25%;
+
+  border: 2px solid #e6e3e2;
+  border-right: 0;
+}
+
+.nav li:last-child {
+  border-right: 2px solid #e6e3e2;
+}
+
+.nav a {
+  display: block;
+  padding: 1em;
+}
+
+.search-form {
+  background-color: #eeebe9;
+  border-bottom: 2px solid #dfdcda;
+  border-top: 2px solid #dfdcda;
+
+  text-align: center;
+}
+
+.search-form input {
+  margin: 0 .4em 0 0;
+}
+
+.product-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.product-list li {
+  padding-left: 110px;
+  position: relative;
+
+  border-bottom: 2px solid #eeebe9;
+}
+
+.shopping-cart li {
+  min-height: 60px;
+  padding-left: 60px;
+}
+
+.product-list img {
+  left: 0;
+  position: absolute;
+  width: 100px;
+}
+
+.shopping-cart img {
+  width: 50px;
+}
+
+.btns {
+  text-align: right;
+}
+
+.product-list .btn {
+  font-size: .8rem;
+}
+
+.shopping-cart .btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pages {
+  list-style-type: none;
+}
+
+.pages li {
+  display: inline-block;
+  margin: 0 .1em;
+}
+
+.pages a {
+  display: inline-block;
+  padding: 0 .7em;
+}
+
+.pages .current {
+  background-color: #dfdcda;
+}
+
+.product {
+  min-height: 274px;
+  padding-left: 274px;
+  position: relative;
+
+  border-bottom: 2px solid #eeebe9;
+}
+
+.product > img {
+  left: 0;
+  position: absolute;
+  width: 256px;
+}
+
+.ratings {
+  display: inline-block;
+
+  list-style-type: none;
+}
+
+.ratings > li {
+  display: inline-block;
+}
+
+.reviews {
+  padding: 0;
+
+  list-style-type: none;
+}

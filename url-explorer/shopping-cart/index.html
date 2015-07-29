@@ -1,0 +1,47 @@
+---
+title: URL Explorer
+blockingscripts:
+  - /url-explorer/redirector.js
+styles:
+  - /url-explorer/activity.css
+scripts:
+  - /url-explorer/activity.js
+layout: wrapper
+---
+
+<main class="wrapper pad-t-2" hidden>
+  <h2 id="check-out" class="instructions" hidden tabindex="-1">Check out to finish.</h2>
+
+  <ul class="product-list shopping-cart">
+    <li class="push pad-b-1-2">
+      <a href="/url-explorer/products/1138/"><img src="/url-explorer/img/product.svg" alt=""></a>
+      <h3 class="mega push-0"><a href="/url-explorer/products/1138/">Mangalyaan</a></h3 class="mega">
+      <div class="btns">
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/shopping-cart/?remove=1138">Remove</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="text-center">
+    <a class="btn mega btn--subtle btn--disabled" href="/url-explorer/shopping-cart/Check out/">Check out</a>
+  </div>
+</main>
+
+<aside id="added-to-cart" class="screen-cover text-center bold pad-t-2">
+  <strong class="marker marker--success push">✔</strong>
+  <div id="right-message">
+    <p class="giga">Added to the cart!</p>
+  </div>
+</aside>
+
+<script>
+  if (expectedUrl == '/products/?q=mom' || expectedUrl == '/shopping-cart/?add=1138') {
+    expectedUrl = '/shopping-cart/?add=1138';
+    saveState(expectedUrl);
+
+    setTimeout(function () {
+      document.getElementById('added-to-cart').setAttribute('hidden', true);
+      document.getElementById('check-out').removeAttribute('hidden');
+    }, 800);
+  }
+</script>

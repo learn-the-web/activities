@@ -1,0 +1,24 @@
+---
+title: URL Explorer
+blockingscripts:
+  - /url-explorer/redirector.js
+styles:
+  - /url-explorer/activity.css
+scripts:
+  - /url-explorer/activity.js
+layout: wrapper
+---
+
+<header class="text-center pad-t-2">
+  <h1 class="zetta">URL Explorer</h1>
+  <p class="giga">The Open Web’s super power.</p>
+  <img class="game-icon push-2" src="icon.svg" alt="">
+  <a href="/url-explorer/start/" class="btn btn--subtle btn--disabled giga">To begin, navigate to<br>
+    <code class="base-url"></code><kbd>start/</kbd>
+  </a>
+</header>
+
+<script>
+  sessionStorage.setItem('expected-url', '/');
+  sessionStorage.setItem('level', '0');
+</script>

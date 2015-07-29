@@ -1,0 +1,114 @@
+---
+title: URL Explorer
+blockingscripts:
+  - /url-explorer/redirector.js
+styles:
+  - /url-explorer/activity.css
+scripts:
+  - /url-explorer/activity.js
+layout: wrapper
+---
+
+<main class="wrapper pad-t-2" hidden>
+  <h2 id="jump-down" class="instructions" tabindex="-1">Jump down to the reviews section.</h2>
+  <h2 id="rate-4" class="instructions" tabindex="-1" hidden>Rate the product 4 stars.</h2>
+  <h2 id="go-back" class="instructions" tabindex="-1" hidden>Go back to the products listing page.</h2>
+
+  <article class="product push-1-2 pad-b-1-2">
+    <img src="/url-explorer/img/product.svg" alt="">
+    <h3 class="pad-t-1-2 mega">New Horizons</h3 class="mega">
+    <p class="push">New Horizons is the first space probe to be visiting Pluto, its moons, and other icy objects in the Kuiper Belt.</p>
+    <div class="btns">
+      <a class="btn btn--subtle btn--disabled" href="/url-explorer/shopping-cart/add/258/">Add to cart</a>
+    </div>
+  </article>
+
+  <aside>
+    <h4 class="kilo" id="reviews">Reviews</h4>
+
+    <strong>Rate:</strong>
+    <ol class="ratings">
+      <li><a href="/url-explorer/products/258/?rate=1"><img src="/url-explorer/img/star.svg" width="18" alt="1 Star"></a></li>
+      <li><a href="/url-explorer/products/258/?rate=2"><img src="/url-explorer/img/star.svg" width="18" alt="2 Stars"></a></li>
+      <li><a href="/url-explorer/products/258/?rate=3"><img src="/url-explorer/img/star.svg" width="18" alt="3 Stars"></a></li>
+      <li><a href="/url-explorer/products/258/?rate=4"><img src="/url-explorer/img/star.svg" width="18" alt="4 Stars"></a></li>
+      <li><a href="/url-explorer/products/258/?rate=5"><img src="/url-explorer/img/star.svg" width="18" alt="5 Stars"></a></li>
+    </ol>
+
+    <ol class="reviews">
+      <li>
+        <h5 class="push-0 micro italic">By Neil deGrasse Tyson</h5>
+        <p>A triumph of engineering and the laws of physics!</p>
+      </li>
+      <li>
+        <h5 class="push-0 micro italic">By Bill Nye</h5>
+        <p>This mission is a big deal for humankind. The interest in this part of the Solar System couldn’t be higher. Who hasn’t wondered what Pluto is like?</p>
+      </li>
+    </ol>
+  </aside>
+</main>
+
+<aside id="rating-thanks" class="screen-cover text-center bold pad-t-2" hidden>
+  <strong class="marker marker--success push">✔</strong>
+  <div id="right-message">
+    <p class="giga">Thanks for your rating!</p>
+  </div>
+</aside>
+
+<script>
+  var
+    expectedUrl = getState().url,
+    rawRating = window.location.search.match(/rating=(\d+)/),
+    rating
+  ;
+
+  // window.location.hash = '';
+
+  if (expectedUrl == '/products/?page=2' || expectedUrl == '/products/258/') {
+    expectedUrl = '/products/258/';
+    saveState(expectedUrl);
+
+    window.addEventListener('hashchange', function () {
+      if (window.location.hash === '#reviews') {
+        expectedUrl = '/products/258/#reviews';
+        sessionStorage.setItem('expected-url', expectedUrl);
+        document.getElementById('jump-down').setAttribute('hidden', true);
+        document.getElementById('rate-4').removeAttribute('hidden');
+      }
+    });
+  }
+
+  if (expectedUrl == '/products/258/#reviews') {
+    document.getElementById('jump-down').setAttribute('hidden', true);
+    document.getElementById('rate-4').removeAttribute('hidden');
+
+    if (rawRating && rawRating[1]) {
+      rating = parseInt(rawRating[1], 10) || 1;
+    }
+
+    if (rating == 4) {
+      expectedUrl = '/products/258/?rating=4';
+      saveState(expectedUrl);
+
+      document.getElementById('jump-down').setAttribute('hidden', true);
+      document.getElementById('rate-4').setAttribute('hidden', true);
+      document.getElementById('rating-thanks').removeAttribute('hidden');
+
+      setTimeout(function () {
+        document.getElementById('rating-thanks').setAttribute('hidden', true);
+        document.getElementById('go-back').removeAttribute('hidden');
+      }, 800);
+    }
+  }
+
+  if (expectedUrl == '/products/258/?rating=4') {
+    document.getElementById('jump-down').setAttribute('hidden', true);
+    document.getElementById('rate-4').setAttribute('hidden', true);
+    document.getElementById('rating-thanks').removeAttribute('hidden');
+
+    setTimeout(function () {
+      document.getElementById('rating-thanks').setAttribute('hidden', true);
+      document.getElementById('go-back').removeAttribute('hidden');
+    }, 800);
+  }
+</script>

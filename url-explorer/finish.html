@@ -1,0 +1,21 @@
+---
+title: URL Explorer
+styles:
+  - /url-explorer/activity.css
+layout: wrapper
+---
+
+<main class="wrapper pad-t-2">
+  <aside class="screen-cover text-center bold pad-t-2">
+    <strong class="marker marker--failure push">✘</strong>
+    <div id="wrong-message">
+      <p class="giga">You wish. Try again.</p>
+    </div>
+  </aside>
+</main>
+
+<script>
+  setTimeout(function () {
+    window.location = '/url-explorer/';
+  }, 1000);
+</script>

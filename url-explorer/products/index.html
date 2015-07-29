@@ -1,0 +1,172 @@
+---
+title: URL Explorer
+blockingscripts:
+  - /url-explorer/redirector.js
+styles:
+  - /url-explorer/activity.css
+scripts:
+  - /url-explorer/activity.js
+layout: wrapper
+---
+
+<main class="wrapper pad-t-2" hidden>
+  <h2 id="go-page-2" class="instructions" tabindex="-1">Go to page 2 of the products.</h2>
+  <h2 id="view-details" class="instructions" hidden tabindex="-1">View more details on the “New Horizons” products.</h2>
+  <h2 id="search-details" class="instructions" hidden tabindex="-1">Figure out the search URL, and use a query string with the parameter `q` to search for “mom”.</h2>
+  <h2 id="add-cart" class="instructions" hidden tabindex="-1">Add the “Mangalyaan” product to the shopping cart.</h2>
+
+  <form class="search-form push-2 pad-t-1-2 pad-b-1-2 gutter-1-4 clearfix" method="get" action="/url-explorer/products/">
+    <label for="q">Search</label>
+    <input type="search" id="q" name="q">
+    <button class="btn btn--subtle btn--disabled micro" type="submit">Find</button>
+  </form>
+
+  <ul class="product-list">
+    <li class="push pad-b-1-2">
+      <a href="/url-explorer/products/555/"><img src="/url-explorer/img/product.svg" alt=""></a>
+      <h3 class="mega push-0"><a href="/url-explorer/products/555/">Voyageur 1</a></h3 class="mega">
+      <p class="push-1-4">Voyager 1 is a space probe that has gone to the outer reaches of our solar system and beyond.</p>
+      <div class="btns">
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/products/555/">More details</a>
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/shopping-cart/add/555/">Add to cart</a>
+      </div>
+    </li>
+    <li class="push pad-b-1-2">
+      <a href="/url-explorer/products/1138/"><img src="/url-explorer/img/product.svg" alt=""></a>
+      <h3 class="mega push-0"><a href="/url-explorer/products/1138/">Mangalyaan</a></h3 class="mega">
+      <p class="push-1-4">The Mars Orbiter Mission (MOM), informally referred to as Mangalyaan, is India’s first interplanetary space probe. </p>
+      <div class="btns">
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/products/1138/">More details</a>
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/shopping-cart/add/1138/">Add to cart</a>
+      </div>
+    </li>
+    <li class="push pad-b-1-2">
+      <a href="/url-explorer/products/259/"><img src="/url-explorer/img/product.svg" alt=""></a>
+      <h3 class="mega push-0"><a href="/url-explorer/products/259/">Juno</a></h3 class="mega">
+      <p class="push-1-4">Juno is a space probe currently on its way to arrive at Jupiter in 2016.</p>
+      <div class="btns">
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/products/259/">More details</a>
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/shopping-cart/add/259/">Add to cart</a>
+      </div>
+    </li>
+    <li class="push pad-b-1-2" hidden>
+      <a href="/url-explorer/products/258/"><img src="/url-explorer/img/product.svg" alt=""></a>
+      <h3 class="mega push-0"><a href="/url-explorer/products/258/">New Horizons</a></h3 class="mega">
+      <p class="push-1-4">New Horizons is the first space probe to be visiting Pluto, its moons, and other icy objects in the Kuiper Belt.</p>
+      <div class="btns">
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/products/258/">More details</a>
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/shopping-cart/add/258/">Add to cart</a>
+      </div>
+    </li>
+    <li class="push pad-b-1-2" hidden>
+      <a href="/url-explorer/products/257/"><img src="/url-explorer/img/product.svg" alt=""></a>
+      <h3 class="mega push-0"><a href="/url-explorer/products/257/">Rosetta</a></h3 class="mega">
+      <p class="push-1-4">Rosetta is a space probe orbiting Comet 67P/Churyumov-Gerasimenko, witnessing how it changes as it orbits the Sun.</p>
+      <div class="btns">
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/products/257/">More details</a>
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/shopping-cart/add/257/">Add to cart</a>
+      </div>
+    </li>
+    <li class="push pad-b-1-2" hidden>
+      <a href="/url-explorer/products/1139/"><img src="/url-explorer/img/product.svg" alt=""></a>
+      <h3 class="mega push-0"><a href="/url-explorer/products/1139/">Kepler</a></h3 class="mega">
+      <p class="push-1-4">Kepler is a space probe on a mission to discover planets around other stars (also known as exoplanets).</p>
+      <div class="btns">
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/products/1139/">More details</a>
+        <a class="btn btn--subtle btn--disabled" href="/url-explorer/shopping-cart/add/1139/">Add to cart</a>
+      </div>
+    </li>
+  </ul>
+
+  <div id="pager" class="giga text-center">
+    <ol class="pages">
+      <li><a class="current" id="page-1" href="/url-explorer/products/?page=1">1</a></li>
+      <li><a id="page-2" href="/url-explorer/products/?page=2">2</a></li>
+    </ol>
+  </div>
+</main>
+
+<script>
+  var
+    rawPage = window.location.search.match(/page=(\d+)/),
+    rawSearch = window.location.search.match(/q=(\w+)/),
+    page, search,
+    expectedUrl = getState().url,
+    setPage2 = function () {
+      var products = document.querySelectorAll('.product-list li')
+
+      products[0].setAttribute('hidden', true);
+      products[1].setAttribute('hidden', true);
+      products[2].setAttribute('hidden', true);
+      products[3].removeAttribute('hidden');
+      products[4].removeAttribute('hidden');
+      products[5].removeAttribute('hidden');
+
+      document.getElementById('page-1').classList.remove('current');
+      document.getElementById('page-2').classList.add('current');
+    }
+  ;
+
+  if (rawPage && rawPage[1]) {
+    page = parseInt(rawPage[1], 10) || 1;
+  }
+
+  if (rawSearch && rawSearch[1]) {
+    search = rawSearch[1] || '';
+  }
+
+  if (expectedUrl == '/start/') {
+    expectedUrl = '/products/';
+    saveState(expectedUrl);
+  }
+
+  if ((expectedUrl == '/products/' && getState().level <= 2) || expectedUrl == '/products/?page=2') {
+    if (page == 2) {
+      expectedUrl = '/products/?page=2';
+      saveState(expectedUrl);
+      setPage2();
+      document.getElementById('go-page-2').setAttribute('hidden', true);
+      document.getElementById('view-details').removeAttribute('hidden');
+    }
+
+    if (page > 2) {
+      window.location = '/url-explorer/404/';
+    }
+  }
+
+  if (expectedUrl == '/products/258/?rating=4') {
+    expectedUrl = '/products/';
+    saveState(expectedUrl);
+
+    document.getElementById('go-page-2').setAttribute('hidden', true);
+    document.getElementById('view-details').setAttribute('hidden', true);
+    document.getElementById('search-details').removeAttribute('hidden');
+  }
+
+  if ((expectedUrl == '/products/' && getState().level > 4) || expectedUrl == '/products/?q=mom') {
+    document.getElementById('go-page-2').setAttribute('hidden', true);
+    document.getElementById('view-details').setAttribute('hidden', true);
+    document.getElementById('search-details').removeAttribute('hidden');
+
+    if (search == 'mom') {
+      var products = document.querySelectorAll('.product-list li')
+
+      document.getElementById('q').value = search;
+
+      expectedUrl = '/products/?q=mom';
+      saveState(expectedUrl);
+
+      products[0].setAttribute('hidden', true);
+      products[2].setAttribute('hidden', true);
+      products[3].setAttribute('hidden', true);
+      products[4].setAttribute('hidden', true);
+      products[5].setAttribute('hidden', true);
+      products[1].removeAttribute('hidden');
+
+      document.getElementById('pager').setAttribute('hidden', true);
+      document.getElementById('search-details').setAttribute('hidden', true);
+      document.getElementById('add-cart').removeAttribute('hidden');
+    }
+  }
+
+</script>
