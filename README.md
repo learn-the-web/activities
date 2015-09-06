@@ -3,6 +3,7 @@
 Activities, games & quizzes to complement Algonquin Design’s Learn the Web materials.
 
 ### [☛ Learn the Web](http://learn-the-web.algonquindesign.ca/)
+### [☛ Activities website](http://activities.learn-the-web.algonquindesign.ca/)
 
 ---
 
@@ -10,9 +11,13 @@ Activities, games & quizzes to complement Algonquin Design’s Learn the Web mat
 
 Try out the activities to test yourself:
 
-- [**Semantics Soothsayer**](http://activities.learn-the-web.algonquindesign.ca/semantics-soothsayer/)
+- [**Character Classifier**](http://activities.learn-the-web.algonquindesign.ca/character-classifier/)
 - [**Ingenious Indentor**](http://activities.learn-the-web.algonquindesign.ca/ingenious-indentor/)
+- [**Javascript Journeyer**](http://activities.learn-the-web.algonquindesign.ca/javascript-journeyer/)
+- [**Path Paladin**](http://activities.learn-the-web.algonquindesign.ca/path-paladin/)
 - [**Selector Surgeon**](http://activities.learn-the-web.algonquindesign.ca/selector-surgeon/)
+- [**Semantics Soothsayer**](http://activities.learn-the-web.algonquindesign.ca/semantics-soothsayer/)
+- [**URL Explorer**](http://activities.learn-the-web.algonquindesign.ca/url-explorer/)
 - [**VoiceOver Voyageur**](http://activities.learn-the-web.algonquindesign.ca/voiceover-voyageur/)
 
 *Not converted to the new system yet:*
