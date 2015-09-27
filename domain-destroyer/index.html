@@ -1,0 +1,38 @@
+---
+title: Domain Destroyer
+intro: The magical mystifying domain!
+congrats: I dub you the title Director of Noteworthy Supercalifragilisticexpialidociousness.
+styles:
+  - /common/prism.min.css
+scripts:
+  - activity.js
+layout: multiple-choice
+---
+
+<div id="question-9" hidden>
+<pre><code class="language-sh">{% capture code %}algonquindesign.ca.   A       192.168.1.1
+algonquindesign.ca.   NS      vera.ns.cloudflare.com.
+algonquindesign.ca.   MX      in1-smtp.messagingengine.com.
+www                   CNAME   algonquindesign.ca.
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-10" hidden>
+<pre><code class="language-sh">{% capture code %}$ traceroute learn-the-web.algonquindesign.ca
+
+1  10.0.1.1                                   (10.0.1.1)
+2  bas1-ottawa11_lo0_symp.net.bell.ca         (64.230.200.134)
+3  dis32-ottawa23_9-1-0_100.net.bell.ca       (64.230.57.50)
+4  core1-ottawa23_xe4-0-0.net.bell.ca         (64.230.165.65)
+   core2-ottawa23_xe4-0-0.net.bell.ca         (64.230.165.73)
+5  tcore4-montreal01_0-14-0-0.net.bell.ca     (64.230.79.125)
+   tcore3-montreal01_pos0-14-0-0.net.bell.ca  (64.230.79.222)
+6  newcore1-newyork83_so6-0-0_0               (64.230.187.234)
+   newcore2-newyork83_so6-0-0_0               (64.230.187.238)
+   newcore1-newyork83_so6-0-0_0               (64.230.187.234)
+7  bx6-newyork83_xe2-0-0.net.bell.ca          (64.230.187.162)
+   bx6-newyork83_xe3-0-0.net.bell.ca          (64.230.187.158)
+8  xe-0-0-0.edge01.ewr01.as13335.net          (198.32.118.206)
+9  104.28.13.18                               (104.28.13.18)
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
