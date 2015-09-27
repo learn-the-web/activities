@@ -6,7 +6,8 @@ var MultipleChoice = function (runner, questions) {
     elems = {
       title: document.getElementById('question-title'),
       choices: document.getElementById('question-choices'),
-      form: document.getElementById('question-form')
+      form: document.getElementById('question-form'),
+      extras: document.getElementById('extras')
     }
   ;
 
@@ -45,6 +46,12 @@ var MultipleChoice = function (runner, questions) {
 
     elems.choices.innerHTML = '';
     elems.title.innerHTML = runner.escape(questions[id].question);
+
+    if (questions[id].extras) {
+      elems.extras.innerHTML = document.getElementById(questions[id].extras).innerHTML;
+    } else {
+      elems.extras.innerHTML = '';
+    }
 
     for (i; i<t; i++) {
       elems.choices.appendChild(createChoiceElement(i, questions[id].choices[i]));
