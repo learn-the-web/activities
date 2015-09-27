@@ -15,10 +15,10 @@ Try out the activities to test yourself:
 
 - Naming Conventioneer
 - Validation Verifier
-- [**Semantics Soothsayer**](http://activities.learn-the-web.algonquindesign.ca/semantics-soothsayer/)
-- [**Selector Surgeon**](http://activities.learn-the-web.algonquindesign.ca/selector-surgeon/)
-- [**Path Paladin**](http://activities.learn-the-web.algonquindesign.ca/path-paladin/)
-- [**URL Explorer**](http://activities.learn-the-web.algonquindesign.ca/url-explorer/)
+- [Semantics Soothsayer](http://activities.learn-the-web.algonquindesign.ca/semantics-soothsayer/)
+- [Selector Surgeon](http://activities.learn-the-web.algonquindesign.ca/selector-surgeon/)
+- [Path Paladin](http://activities.learn-the-web.algonquindesign.ca/path-paladin/)
+- [URL Explorer](http://activities.learn-the-web.algonquindesign.ca/url-explorer/)
 
 *Not converted to the new system yet:*
 
@@ -28,8 +28,8 @@ Try out the activities to test yourself:
 
 - [Em Enforcer](http://activities.learn-the-web.algonquindesign.ca/em-enforcer/)
 - Media Query Mapper
-- [**Ingenious Indentor**](http://activities.learn-the-web.algonquindesign.ca/ingenious-indentor/)
-- [**VoiceOver Voyageur**](http://activities.learn-the-web.algonquindesign.ca/voiceover-voyageur/)
+- [Ingenious Indentor](http://activities.learn-the-web.algonquindesign.ca/ingenious-indentor/)
+- [VoiceOver Voyageur](http://activities.learn-the-web.algonquindesign.ca/voiceover-voyageur/)
 
 *Not converted to the new system yet:*
 
@@ -40,8 +40,8 @@ Try out the activities to test yourself:
 - Hex Hacker
 - Layout Labeller
 - SVG Synthesizer
-- [**Javascript Journeyer**](http://activities.learn-the-web.algonquindesign.ca/javascript-journeyer/)
-- [**Character Classifier**](http://activities.learn-the-web.algonquindesign.ca/character-classifier/)
+- [Javascript Journeyer](http://activities.learn-the-web.algonquindesign.ca/javascript-journeyer/)
+- [Character Classifier](http://activities.learn-the-web.algonquindesign.ca/character-classifier/)
 
 ### For Web Dev 4
 
