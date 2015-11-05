@@ -9,10 +9,7 @@ layout: main
 
     {% if page.hideSubmit %}
     {% else %}
-      <hr class="hr-dark">
-      <div class="text-center">
-        <button class="btn btn--ghost kilo" type="submit">Check answer</button>
-      </div>
+      {% include check-answer-button.html %}
     {% endif %}
   </form>
 </main>
