@@ -5,7 +5,6 @@ var ActivityRunner = function () {
     boundListeners = {
       start: null
     },
-    screenTimeout,
     screens = {},
     sayings = {
       failure: document.querySelectorAll('[data-screen="failure"] p'),
@@ -39,10 +38,9 @@ var ActivityRunner = function () {
   var displayTimedScreen = function (screen, callback) {
     toggleScreen(screen);
 
-    screenTimeout = setTimeout(function () {
+     setTimeout(function () {
       var scn = screen, cb = callback;
 
-      clearTimeout(screenTimeout);
       toggleScreen(scn);
       document.querySelector('main h2').focus();
 
