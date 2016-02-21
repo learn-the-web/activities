@@ -17,6 +17,7 @@ Try out the activities to test yourself:
 - Validation Verifier
 - [Semantics Soothsayer](http://activities.learn-the-web.algonquindesign.ca/semantics-soothsayer/)
 - [Selector Surgeon](http://activities.learn-the-web.algonquindesign.ca/selector-surgeon/)
+- [Display Dominator](http://activities.learn-the-web.algonquindesign.ca/display-dominator/)
 - [Path Paladin](http://activities.learn-the-web.algonquindesign.ca/path-paladin/)
 - [URL Explorer](http://activities.learn-the-web.algonquindesign.ca/url-explorer/)
 
