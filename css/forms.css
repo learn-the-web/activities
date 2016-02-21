@@ -7,6 +7,10 @@ input:focus {
   outline: 3px solid #000;
 }
 
+input.small {
+  width: 5em;
+}
+
 input.code {
   width: 16em;
 
