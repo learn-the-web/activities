@@ -131,15 +131,6 @@ var questions = [
       'UTF-16',
       'ISO 8859-1'
     ]
-  },
-  {
-    question: 'Standard used for date & time formats in HTML:',
-    correct: 1,
-    choices: [
-      'ISO-646',
-      'ISO-8601',
-      'ISO-8859'
-    ]
   }
 ];
 
