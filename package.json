@@ -13,9 +13,9 @@
     "gulp-uglify": "^1.2.0"
   },
   "scripts": {
-    "server": "jekyll serve --incremental",
+    "start": "jekyll serve --incremental",
     "gulp": "gulp",
-    "builder": "gulp watch",
+    "assets-watch": "gulp watch",
     "build": "gulp build"
   }
 }
