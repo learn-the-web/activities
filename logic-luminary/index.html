@@ -1,0 +1,133 @@
+---
+title: Logic Luminary
+intro: Logisticians unite to find the true path.
+congrats: Looks like you’re more left-brained than you thought.
+styles:
+  - /common/prism.min.css
+scripts:
+  - /common/prism.min.js
+  - activity.js
+layout: multiple-choice
+---
+
+<div id="question-1" hidden>
+<pre><code class="language-javascript">{% capture code %}if (true) {
+  // True path
+} else {
+  // False path
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-2" hidden>
+<pre><code class="language-javascript">{% capture code %}if (false) {
+  // True path
+} else {
+  // False path
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-3" hidden>
+<pre><code class="language-javascript">{% capture code %}var isDino = true;
+
+if (isDino) {
+  // True path
+} else {
+  // False path
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-4" hidden>
+<pre><code class="language-javascript">{% capture code %}var isDino = false;
+
+if (!isDino) {
+  // True path
+} else {
+  // False path
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-5" hidden>
+<pre><code class="language-javascript">{% capture code %}var isDino = true;
+var isHuman = false;
+
+if (isDino || isHuman) {
+  // True path
+} else {
+  // False path
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-6" hidden>
+<pre><code class="language-javascript">{% capture code %}var isDino = false;
+var isHuman = false;
+
+if (isDino || isHuman) {
+  // True path
+} else {
+  // False path
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-7" hidden>
+<pre><code class="language-javascript">{% capture code %}var isDino = true;
+var isHuman = false;
+
+if (isDino && isHuman) {
+  // True path
+} else {
+  // False path
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-8" hidden>
+<pre><code class="language-javascript">{% capture code %}var isDino = false;
+var isHuman = false;
+var isInsect = false;
+var isFish = true;
+
+if (isDino || isHuman) {
+  // Path 1
+} else {
+  if (isInsect) {
+    // Path 2
+  } else {
+    if (isFish) {
+      // Path 3
+    } else {
+      // Path 4
+    }
+  }
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-9" hidden>
+<pre><code class="language-javascript">{% capture code %}var dinoAge = 66000000;
+
+if (dinoAge > 66000000) {
+  // True path
+} else {
+  // False path
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-10" hidden>
+<pre><code class="language-javascript">{% capture code %}var isDino = true;
+var isHuman = false;
+var dinoAge = 66000000;
+
+if (isDino && !isHuman && dinoAge < 66000000) {
+  // True path
+} else {
+  // False path
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
