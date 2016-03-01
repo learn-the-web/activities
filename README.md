@@ -20,34 +20,31 @@ Try out the activities to test yourself:
 - [Display Dominator](http://activities.learn-the-web.algonquindesign.ca/display-dominator/)
 - [Path Paladin](http://activities.learn-the-web.algonquindesign.ca/path-paladin/)
 - [URL Explorer](http://activities.learn-the-web.algonquindesign.ca/url-explorer/)
+- [Character Classifier](http://activities.learn-the-web.algonquindesign.ca/character-classifier/)
+- [Em Enforcer](http://activities.learn-the-web.algonquindesign.ca/em-enforcer/)
+- Media Query Mapper
+- [Ingenious Indentor](http://activities.learn-the-web.algonquindesign.ca/ingenious-indentor/)
+- Hex Hacker
 
 *Not converted to the new system yet:*
 
 - [Dev Tool Dynamo](http://thomasjbradley.github.io/dev-tool-dynamo/)
+- [Keyboard Commander](http://thomasjbradley.github.io/keyboard-commander/)
 
 ### For Web Dev 2
 
-- [Em Enforcer](http://activities.learn-the-web.algonquindesign.ca/em-enforcer/)
-- Media Query Mapper
-- [Ingenious Indentor](http://activities.learn-the-web.algonquindesign.ca/ingenious-indentor/)
 - [VoiceOver Voyageur](http://activities.learn-the-web.algonquindesign.ca/voiceover-voyageur/)
-
-*Not converted to the new system yet:*
-
-- [Keyboard Commander](http://thomasjbradley.github.io/keyboard-commander/)
 
 ### For Web Dev 3
 
-- Hex Hacker
 - Layout Labeller
 - SVG Synthesizer
 - [Javascript Journeyer](http://activities.learn-the-web.algonquindesign.ca/javascript-journeyer/)
-- [Character Classifier](http://activities.learn-the-web.algonquindesign.ca/character-classifier/)
+- [Logic Luminary](http://activities.learn-the-web.algonquindesign.ca/logic-luminary/)
 
 ### For Web Dev 4
 
 - [Domain Destroyer](http://activities.learn-the-web.algonquindesign.ca/domain-destroyer/)
-- Logic Luminary
 - Bug Basher
 
 ---
