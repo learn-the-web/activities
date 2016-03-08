@@ -1,0 +1,139 @@
+---
+title: Loop Lancer
+intro: "Loopy de loop"
+congrats: "Now we’re all a little loopy!"
+styles:
+  - /common/prism.min.css
+scripts:
+  - /common/prism.min.js
+  - activity.js
+layout: form-validator
+---
+
+<div data-input-group="question-1">
+<pre><code class="language-javascript">{% capture code %}var i;
+
+for (i = 0; i < 10; i++) {
+  // The code in here
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="looptotal">№ executions:</label>
+  <input class="code" id="looptotal">
+</div>
+
+<div data-input-group="question-2">
+<pre><code class="language-javascript">{% capture code %}var i;
+
+for (i = 1; i < 10; i++) {
+  // The code in here
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="looptotal">№ executions:</label>
+  <input class="code" id="looptotal">
+</div>
+
+<div data-input-group="question-3">
+<pre><code class="language-javascript">{% capture code %}var i;
+
+for (i = 0; i <= 10; i++) {
+  // The code in here
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="looptotal">№ executions:</label>
+  <input class="code" id="looptotal">
+</div>
+
+<div data-input-group="question-4">
+<pre><code class="language-javascript">{% capture code %}var i = 0;
+var total = 58;
+
+for (i; i <= total; i++) {
+  // The code in here
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="looptotal">№ executions:</label>
+  <input class="code" id="looptotal">
+</div>
+
+<div data-input-group="question-5">
+<pre><code class="language-javascript">{% capture code %}var i;
+var j;
+
+for (i = 0; i < 10; i++) {
+  for (j = 0; j < 10; j++) {
+    // The code in here
+  }
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="looptotal">№ executions:</label>
+  <input class="code" id="looptotal">
+</div>
+
+<div data-input-group="question-6">
+<pre><code class="language-javascript">{% capture code %}var i;
+var j;
+
+for (i = 0; i < 10; i++) {
+  for (j = 0; j <= 10; j++) {
+    // The code in here
+  }
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="looptotal">№ executions:</label>
+  <input class="code" id="looptotal">
+</div>
+
+<div data-input-group="question-7">
+<pre><code class="language-javascript">{% capture code %}var i;
+var j;
+var total = 100;
+
+for (i = 0; i < total + 4; i++) {
+  for (j = 1; j <= total; j++) {
+    // The code in here
+  }
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="looptotal">№ executions:</label>
+  <input class="code" id="looptotal">
+</div>
+
+<div data-input-group="question-8">
+<pre><code class="language-javascript">{% capture code %}var dinos = ['Stegosaurus', 'Triceratops', 'Brontosaurus', 'Microraptor'];
+
+dinos.forEach(function (item) {
+  // The code in here
+});
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="looptotal">CSS selector:</label>
+  <input class="code" id="looptotal">
+</div>
+
+<div data-input-group="question-9">
+<pre><code class="language-javascript">{% capture code %}var dinos = ['Stegosaurus', 'Triceratops', 'Brontosaurus', 'Microraptor'];
+
+dinos.push('Tyrannosaurus');
+dinos.push('Spinosaurus');
+
+dinos.forEach(function (item) {
+  // The code in here
+});
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="looptotal">№ executions:</label>
+  <input class="code" id="looptotal">
+</div>
+
+<div data-input-group="question-10">
+<pre><code class="language-javascript">{% capture code %}var dinos = ['Stegosaurus', 'Triceratops', 'Brontosaurus', 'Microraptor'];
+
+dinos.pop();
+dinos.push('Tyrannosaurus');
+dinos.shift();
+
+dinos.forEach(function (item) {
+  // The code in here
+});
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="looptotal">№ executions:</label>
+  <input class="code" id="looptotal">
+</div>
