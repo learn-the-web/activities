@@ -1,0 +1,95 @@
+---
+title: Bug Basher
+intro: Get your bug spray & be on your way.
+congrats: Well done you extraordinary exterminator!
+styles:
+  - /common/prism.min.css
+scripts:
+  - /common/prism.min.js
+  - activity.js
+layout: multiple-choice
+---
+
+<div id="question-1" hidden>
+<pre><code class="language-javascript">{% capture code %}alart('Stegosaurus!');
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-2" hidden>
+<pre><code class="language-javascript">{% capture code %}alert('Tyrannosaurus!");
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-3" hidden>
+<pre><code class="language-javascript">{% capture code %}vardino = 'Apatosaurus';
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-4" hidden>
+<pre><code class="language-javascript">{% capture code %}var dino = Apatosaurus;
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-5" hidden>
+<pre><code class="language-javascript">{% capture code %}var num1 = '58';
+var num2 = '101';
+
+document.write(num1 + num2);
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-6" hidden>
+<pre><code class="language-javascript">{% capture code %}var i = 0;
+
+for (i = 0; i < 0; i++) {
+  document.write('Brontosaurus');
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-7" hidden>
+<pre><code class="language-javascript">{% capture code %}var i = 0;
+
+for (i = 0; i < 10; i++) {
+  document.write('Brontosaurus';
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-8" hidden>
+<pre><code class="language-javascript">{% capture code %}var dino = 'Pteranodon';
+
+if dino == 'Velociraptor' {
+  alert('Run!');
+} else {
+  alert('Fly');
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-9" hidden>
+<pre><code class="language-javascript">{% capture code %}var dino = 'Pteranodon';
+
+if (dino = 'Velociraptor') {
+  alert('Run!');
+} else {
+  alert('Fly');
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-10" hidden>
+<pre><code class="language-javascript">{% capture code %}var dino = 'Triceratops';
+
+switch (dino) {
+  case 'Triceratops':
+    console.log('Three horns');
+  case 'Stegosaurus':
+    console.log('Amoured plates');
+    break;
+  case 'Ankylosaurus':
+    console.log('Clubbed tail');
+    break;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
