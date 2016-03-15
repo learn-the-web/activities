@@ -39,8 +39,10 @@ Try out the activities to test yourself:
 
 - Layout Labeller
 - SVG Synthesizer
-- [Javascript Journeyer](http://activities.learn-the-web.algonquindesign.ca/javascript-journeyer/)
 - [Logic Luminary](http://activities.learn-the-web.algonquindesign.ca/logic-luminary/)
+- [Loop Lancer](http://activities.learn-the-web.algonquindesign.ca/loop-lancer/)
+- [Bug Basher](http://activities.learn-the-web.algonquindesign.ca/bug-basher/)
+- [Javascript Journeyer](http://activities.learn-the-web.algonquindesign.ca/javascript-journeyer/)
 
 ### For Web Dev 4
 
