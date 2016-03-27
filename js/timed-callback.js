@@ -3,6 +3,8 @@ var TimedCallback = function (runner, questions) {
 
   var
     current = 0,
+    onStart,
+    tickTime = 15,
     ticker,
     elems = {
       title: document.getElementById('question-title'),
@@ -11,6 +13,14 @@ var TimedCallback = function (runner, questions) {
     contentGroups = {}
   ;
 
+  var setTickTime = function (time) {
+    tickTime = time;
+  };
+
+  var setStartHandler = function (cb) {
+    onStart = cb;
+  };
+
   var stopTicker = function () {
     clearInterval(ticker);
   };
@@ -18,7 +28,7 @@ var TimedCallback = function (runner, questions) {
   var startTicker = function () {
     ticker = setTimeout(function () {
       advanceOrFail();
-    }, 15);
+    }, tickTime);
   };
 
   var findContentGroups = function () {
@@ -88,14 +98,18 @@ var TimedCallback = function (runner, questions) {
     return;
   };
 
-  findContentGroups();
-
   runner.listen('start', function () {
+    if (onStart) onStart();
+    findContentGroups();
     populateQuestion(current);
     startTicker();
   });
 
   return {
+    setTickTime: setTickTime,
+    startTicker: startTicker,
+    stopTicker: stopTicker,
+    setStartHandler: setStartHandler,
     runner: runner
   };
 };
