@@ -90,6 +90,9 @@ var FormValidator = function (runner, questions) {
         case 'boolean':
           if (!elem.checked) valid = 'no';
           break;
+        case 'function':
+          if (!answer(elem.value)) valid = 'no';
+          break;
         case 'object': // Regex
           if (!elem.value.trim().match(answer)) valid = 'no';
           break;

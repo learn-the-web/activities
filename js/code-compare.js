@@ -76,11 +76,20 @@ var CodeCompare = function (runner, questions) {
   };
 
   var isAnswerCorrect = function () {
-    if (editor.getValue() === questions[current].correct) {
-      return 'yes';
-    } else {
-      return 'no';
+    var valid = 'yes';
+
+    switch (typeof questions[current].correct) {
+      case 'string':
+        if (editor.getValue() !== questions[current].correct) valid = 'no';
+        break;
+      case 'function':
+        if (!questions[current].correct(editor.getValue())) valid = 'no';
+        break;
+      default:
+        valid = 'no';
     }
+
+    return valid;
   };
 
   init();
