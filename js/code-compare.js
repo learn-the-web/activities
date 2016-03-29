@@ -15,7 +15,7 @@ var CodeCompare = function (runner, questions) {
     editor.setTheme("ace/theme/idle_fingers");
     editor.getSession().setMode("ace/mode/html");
 
-    editor.getSession().setUseSoftTabs(false);
+    editor.getSession().setUseSoftTabs(true);
     editor.getSession().setTabSize(2);
     editor.getSession().setUseWrapMode(false);
     editor.setHighlightActiveLine(true);
