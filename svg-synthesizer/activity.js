@@ -12,7 +12,7 @@ var svgSetup = function (val) {
 
 var questions = [
   {
-    question: 'Make circle: center (50,50); radius: 100',
+    question: 'Make circle: center `(50,50)`; radius: `100`',
     incorrect: document.querySelector('[data-question="1"]').value,
     correct: function (val) {
       var elem = svgSetup(val);
@@ -81,7 +81,7 @@ var questions = [
     }
   },
   {
-    question: 'Draw a line from (0,0) to (100,100)',
+    question: 'Draw a line from `(0,0)` to `(100,100)`',
     incorrect: document.querySelector('[data-question="6"]').value,
     correct: function (val) {
       var elem = svgSetup(val);
@@ -125,7 +125,7 @@ var questions = [
     }
   },
   {
-    question: 'Put the word “Awesome!” into SVG text',
+    question: 'Put the word `Awesome!` into SVG text',
     incorrect: document.querySelector('[data-question="9"]').value,
     correct: function (val) {
       var elem = svgSetup(val);

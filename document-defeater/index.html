@@ -1,0 +1,160 @@
+---
+title: Document Defeater
+intro: Start stamping defeats.
+congrats: Another defeated document to add to the stack.
+styles:
+  - /common/prism.min.css
+scripts:
+  - /common/prism.min.js
+  - activity.js
+layout: form-validator
+---
+
+<div data-input-group="question-1">
+<pre><code class="language-markup">{% capture code %}
+<div>Mammoth</div>
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Line of code:</label>
+  <input class="code" id="selector">
+  <code>;</code>
+</div>
+
+<div data-input-group="question-2">
+<pre><code class="language-markup">{% capture code %}
+<div>Mastodons</div>
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Line of code:</label>
+  <input class="code" id="selector">
+  <code>;</code>
+</div>
+
+<div data-input-group="question-3">
+<pre><code class="language-markup">{% capture code %}
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>Prehistoric creatures</title>
+</head>
+<body>
+
+</body>
+</html>
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector"><code>var $h1 =</code></label>
+  <input class="code" id="selector">
+  <code>;</code>
+</div>
+
+<div data-input-group="question-4">
+<pre><code class="language-markup">{% capture code %}
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>Prehistoric creatures</title>
+</head>
+<body>
+
+</body>
+</html>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-javascript">{% capture code %}
+var $h1 = $('<h1>');
+$h1.html('Prehistoric creatures');
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Line of code:</label>
+  <input class="code" id="selector">
+  <code>;</code>
+</div>
+
+<div data-input-group="question-5">
+<pre><code class="language-markup">{% capture code %}
+<ul>
+  <li>Glyptodon</li>
+  <li>Megatherium</li>
+</ul>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-javascript">{% capture code %}
+var $li = $('<li>');
+$li.html('Woolly rhinoceros');
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Line of code:</label>
+  <input class="code" id="selector">
+  <code>;</code>
+</div>
+
+<div data-input-group="question-6">
+<pre><code class="language-markup">{% capture code %}
+<ul>
+  <li>Glyptodon</li>
+  <li>Megatherium</li>
+  <li>Woolly rhinoceros</li>
+</ul>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-javascript">{% capture code %}
+var $h1 = $('<h1>');
+$h1.html('Prehistoric creatures');
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Line of code:</label>
+  <input class="code" id="selector">
+  <code>;</code>
+</div>
+
+<div data-input-group="question-7">
+<pre><code class="language-markup">{% capture code %}
+<h1>Prehistoric creatures</h1>
+<ul>
+  <li>Glyptodon</li>
+  <li>Megatherium</li>
+  <li>Woolly rhinoceros</li>
+</ul>
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Line of code:</label>
+  <input class="code" id="selector">
+  <code>;</code>
+</div>
+
+<div data-input-group="question-8">
+<pre><code class="language-markup">{% capture code %}
+<div class="lightbox" aria-hidden="true"></div>
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Line of code:</label>
+  <input class="code" id="selector">
+  <code>;</code>
+</div>
+
+<div data-input-group="question-9">
+<pre><code class="language-css">{% capture code %}
+.ball {
+  position: absolute;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-markup">{% capture code %}
+<div class="ball"></div>
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Line of code:</label>
+  <input class="code" id="selector">
+  <code>;</code>
+</div>
+
+<div data-input-group="question-10">
+<pre><code class="language-css">{% capture code %}
+rect {
+  fill: darkorange;
+  transition: all 1s ease;
+}
+
+.active rect {
+  fill: orange;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-markup">{% capture code %}
+<svg width="100" height="100" viewBox="0 0 100 100">
+  <rect x="0" y="0" width="50" height="50" />
+</svg>
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Line of code:</label>
+  <input class="code" id="selector">
+  <code>;</code>
+</div>

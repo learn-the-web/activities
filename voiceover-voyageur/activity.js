@@ -32,7 +32,7 @@ var questions = [
     }
   },
   {
-    question: 'Press the H5 tag.',
+    question: 'Press the `<h5>` tag.',
     inputGroup: 'question-6',
     inputs: {}
   },

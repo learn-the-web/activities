@@ -30,7 +30,7 @@ var questions = [
     ]
   },
   {
-    question: 'Some elements, like <p>, <h1> & <div>, take up their own line because:',
+    question: 'Some elements, like `<p>`, `<h1>` & `<div>`, take up their own line because:',
     correct: 2,
     choices: [
       'We placing them on their own line in the HTML',
@@ -39,7 +39,7 @@ var questions = [
     ]
   },
   {
-    question: 'To force a <strong> to stretch across the width of its parent you’d add:',
+    question: 'To force a `<strong>` to stretch across the width of its parent you’d add:',
     correct: 2,
     choices: [
       'display: inline',
@@ -48,7 +48,7 @@ var questions = [
     ]
   },
   {
-    question: 'Padding won’t work on an <a> tag unless you add:',
+    question: 'Padding won’t work on an `<a>` tag unless you add:',
     correct: 4,
     choices: [
       'display: inline',
@@ -59,7 +59,7 @@ var questions = [
     ]
   },
   {
-    question: 'Adding a width to an <img> tag works by default because:',
+    question: 'Adding a width to an `<img>` tag works by default because:',
     correct: 0,
     choices: [
       'The browser adds `display: inline-block` to images by default',
@@ -68,7 +68,7 @@ var questions = [
     ]
   },
   {
-    question: 'The only difference between a <span> and a <div> is that a <div> has `display: block` added by the browser.',
+    question: 'The only difference between a `<span>` and a `<div>` is that a `<div>` has `display: block` added by the browser.',
     correct: 0,
     choices: [
       'True',

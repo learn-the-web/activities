@@ -30,12 +30,12 @@ var questions = [
     ]
   },
   {
-    question: 'Looking at this domain, “learn-the-web.algonquindesign.ca”, what part is the TLD:',
+    question: 'Looking at this domain, `learn-the-web.algonquindesign.ca`, what part is the TLD:',
     correct: 2,
     choices: [
-      '“learn-the-web”',
-      '“algonquindesign”',
-      '“ca”'
+      '`learn-the-web`',
+      '`algonquindesign`',
+      '`ca`'
     ]
   },
   {
@@ -49,7 +49,7 @@ var questions = [
     ]
   },
   {
-    question: 'What’s the purpose of an “A” record?',
+    question: 'What’s the purpose of an `A` record?',
     correct: 1,
     choices: [
       'To point to the domain of the host.',
@@ -59,7 +59,7 @@ var questions = [
     ]
   },
   {
-    question: 'What’s the purpose of a “MX” record?',
+    question: 'What’s the purpose of a `MX` record?',
     correct: 1,
     choices: [
       'To point to the master exchanger servers.',

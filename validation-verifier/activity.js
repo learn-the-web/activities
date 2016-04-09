@@ -4,9 +4,9 @@ var questions = [
     extras: 'question-1',
     correct: 2,
     choices: [
-      'There needs to be a <p1> tag before a <p2> tag',
+      'There needs to be a `<p1>` tag before a `<p2>` tag',
       'The paragraph tag needs more content',
-      'The <p2> tag doesn’t exist'
+      'The `<p2>` tag doesn’t exist'
     ]
   },
   {
@@ -14,8 +14,8 @@ var questions = [
     extras: 'question-2',
     correct: 1,
     choices: [
-      'There can’t be a <strong> tag inside a <p> tag',
-      'The <p> tag needs to close after the <strong> tag',
+      'There can’t be a `<strong>` tag inside a `<p>` tag',
+      'The `<p>` tag needs to close after the `<strong>` tag',
       'There’s a slash missing before the second strong tag'
     ]
   },
@@ -24,9 +24,9 @@ var questions = [
     extras: 'question-3',
     correct: 0,
     choices: [
-      'The <dl> cannot have <li> tags directly inside it',
-      'The <li> tags aren’t closed properly',
-      'The <dl> tag needs to be inside a <ul> tag'
+      'The `<dl>` cannot have `<li>` tags directly inside it',
+      'The `<li>` tags aren’t closed properly',
+      'The `<dl>` tag needs to be inside a `<ul>` tag'
     ]
   },
   {
@@ -34,9 +34,9 @@ var questions = [
     extras: 'question-4',
     correct: 2,
     choices: [
-      'The <h1> tag should be inside the <head>',
-      'The DOCTYPE shouldn’t have an exclamation at the start',
-      'A <header> tag cannot go inside a <footer> tag'
+      'The `<h1>` tag should be inside the `<head>`',
+      'The `DOCTYPE` shouldn’t have an exclamation at the start',
+      'A `<header>` tag cannot go inside a `<footer>` tag'
     ]
   },
   {
@@ -44,9 +44,9 @@ var questions = [
     extras: 'question-5',
     correct: 0,
     choices: [
-      'The <h1> tag must be inside the <body>',
-      'The <head> tag should be inside the <body>',
-      'The <title> tag should be inside the <body>'
+      'The `<h1>` tag must be inside the `<body>`',
+      'The `<head>` tag should be inside the `<body>`',
+      'The `<title>` tag should be inside the `<body>`'
     ]
   },
   {
@@ -55,7 +55,7 @@ var questions = [
     correct: 2,
     choices: [
       'The semicolon is missing',
-      '“red” isn’t a proper colour name',
+      '`red` isn’t a proper colour name',
       'Colour is spelled the Canadian way'
     ]
   },

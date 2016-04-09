@@ -16,6 +16,15 @@ var ActivityRunner = function () {
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   };
 
+  var convertToCode = function (text) {
+    while (text.match(/`/)) {
+      text = text.replace(/`/, '<code>');
+      text = text.replace(/`/, '</code>');
+    }
+
+    return text;
+  };
+
   var findScreens = function () {
     var
       tmpScreens = document.querySelectorAll('[data-screen]'),
@@ -145,9 +154,10 @@ var ActivityRunner = function () {
 
   return {
     escape: escape,
+    convertToCode: convertToCode,
     toggleScreen: toggleScreen,
     send: send,
     listen: listen,
     start: start
-  }
+  };
 };

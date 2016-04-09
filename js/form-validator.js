@@ -35,7 +35,7 @@ var FormValidator = function (runner, questions) {
   };
 
   var populateQuestion = function (id) {
-    elems.title.innerHTML = runner.escape(questions[id].question);
+    elems.title.innerHTML = runner.convertToCode(runner.escape(questions[id].question));
     elems.inputs.innerHTML = '';
     elems.inputs.appendChild(inputGroups[questions[id].inputGroup]);
 

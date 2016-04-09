@@ -28,7 +28,7 @@ var questions = [
     ]
   },
   {
-    question: 'The purpose of the <br> tag is:',
+    question: 'The purpose of the `<br>` tag is:',
     correct: 1,
     choices: [
       'To create space between two pieces of text',
@@ -38,7 +38,7 @@ var questions = [
     ]
   },
   {
-    question: 'An <ol> tag does the following:',
+    question: 'An `<ol>` tag does the following:',
     correct: 0,
     choices: [
       'Defines a list where the elements have a specific order',
@@ -47,7 +47,7 @@ var questions = [
     ]
   },
   {
-    question: 'When should the <figure> tag be used?',
+    question: 'When should the `<figure>` tag be used?',
     correct: 1,
     choices: [
       'Every time an image is inserted into the page',
@@ -56,7 +56,7 @@ var questions = [
     ]
   },
   {
-    question: 'What’s the difference between a <section> and an <article>?',
+    question: 'What’s the difference between a `<section>` and an `<article>`?',
     correct: 0,
     choices: [
       'An article is self-contained, where a section requires context',
@@ -66,7 +66,7 @@ var questions = [
     ]
   },
   {
-    question: 'What’s the semantic purpose of a <div>?',
+    question: 'What’s the semantic purpose of a `<div>`?',
     correct: 3,
     choices: [
       'The <div>’s meaning is inherited from its children',
@@ -76,7 +76,7 @@ var questions = [
     ]
   },
   {
-    question: 'When should the <button> tag be used?',
+    question: 'When should the `<button>` tag be used?',
     correct: 2,
     choices: [
       'When you want to link to another page',
@@ -85,7 +85,7 @@ var questions = [
     ]
   },
   {
-    question: 'The <body> tag defines:',
+    question: 'The `<body>` tag defines:',
     correct: 2,
     choices: [
       'The main content of the website',

@@ -48,7 +48,7 @@ var TimedCallback = function (runner, questions) {
   };
 
   var populateQuestion = function (id) {
-    elems.title.innerHTML = runner.escape(questions[id].question);
+    elems.title.innerHTML = runner.convertToCode(runner.escape(questions[id].question));
     elems.contents.innerHTML = '';
     elems.contents.appendChild(contentGroups[questions[id].contentGroup]);
 

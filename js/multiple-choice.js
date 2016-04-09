@@ -35,7 +35,7 @@ var MultipleChoice = function (runner, questions) {
 
     tmpLabel = document.createElement('label');
     tmpLabel.setAttribute('for', 'choice-' + i);
-    tmpLabel.innerHTML = runner.escape(label);
+    tmpLabel.innerHTML = runner.convertToCode(runner.escape(label));
     tmpLi.appendChild(tmpLabel);
 
     return tmpLi;
@@ -45,7 +45,7 @@ var MultipleChoice = function (runner, questions) {
     var i = 0, t = questions[id].choices.length;
 
     elems.choices.innerHTML = '';
-    elems.title.innerHTML = runner.escape(questions[id].question);
+    elems.title.innerHTML = runner.convertToCode(runner.escape(questions[id].question));
 
     if (questions[id].extras) {
       elems.extras.innerHTML = document.getElementById(questions[id].extras).innerHTML;
