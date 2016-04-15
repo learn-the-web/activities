@@ -1,0 +1,188 @@
+---
+title: Spacing Superstar
+intro: A span of spacing out spaces.
+congrats: You’ve earned your solar-powered laser-beam guitar!
+scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js
+  - activity.js
+layout: code-compare
+---
+
+<pre data-question="1">
+var$h1=$('h1');
+</pre>
+
+<pre data-answer="1">
+var $h1 = $('h1');
+</pre>
+
+<pre data-question="2">
+var dino = { name: 'Brontosaurus', ate: 'Plants' };
+</pre>
+
+<pre data-answer="2">
+var dino = {
+  name: 'Brontosaurus',
+  ate: 'Plants'
+};
+</pre>
+
+<pre data-question="3">
+varisDino=true;if(isDino){console.log('It’s a dinosaur!');}
+</pre>
+
+<pre data-answer="3">
+var isDino = true;
+
+if (isDino) {
+  console.log('It’s a dinosaur!');
+}
+</pre>
+
+<pre data-question="4">
+var isDino = true;
+if (isDino) { console.log('It’s a dinosaur!'); } else { console.log('It isn’t a dinosaur!'); }
+</pre>
+
+<pre data-answer="4">
+var isDino = true;
+
+if (isDino) {
+  console.log('It’s a dinosaur!');
+} else {
+  console.log('It isn’t a dinosaur!');
+}
+</pre>
+
+<pre data-question="5">
+var pterosaurs = [
+{
+name: 'Velociraptor',
+move: function () {
+return 'Run';
+}
+},
+{
+name: 'Quetzalcoatlus',
+move: function () {
+return 'Fly';
+}
+}
+];
+</pre>
+
+<pre data-answer="5">
+var pterosaurs = [
+  {
+    name: 'Velociraptor',
+    move: function () {
+      return 'Run';
+    }
+  },
+  {
+    name: 'Quetzalcoatlus',
+    move: function () {
+      return 'Fly';
+    }
+  }
+];
+</pre>
+
+<pre data-question="6">
+var isPrehistoric = true;
+var animal = 'Plesiosuar';
+
+if (isDino) {
+switch (animal) {
+case 'Dinosaur':
+console.log('It’s a dinosaur!');
+break;
+case 'Pterosaur':
+console.log('It’s a pterosaur!');
+break;
+case 'Plesiosaur':
+console.log('It’s a plesiosaur!');
+break;
+}
+} else {
+console.log('It isn’t prehistoric!');
+}
+</pre>
+
+<pre data-answer="6">
+var isPrehistoric = true;
+var animal = 'Plesiosuar';
+
+if (isDino) {
+  switch (animal) {
+    case 'Dinosaur':
+      console.log('It’s a dinosaur!');
+      break;
+    case 'Pterosaur':
+      console.log('It’s a pterosaur!');
+      break;
+    case 'Plesiosaur':
+      console.log('It’s a plesiosaur!');
+      break;
+  }
+} else {
+  console.log('It isn’t prehistoric!');
+}
+</pre>
+
+<pre data-question="7">
+$('.btn').on('click',function(){console.log('Yay!');});
+</pre>
+
+<pre data-answer="7">
+$('.btn').on('click', function () {
+  console.log('Yay!');
+});
+</pre>
+
+<pre data-question="8">
+$('.btn').on('click', function () {
+if ($(this).hasClass('dino')) { console.log('It’s a dinosaur!'); } else { console.log('It isn’t a dinosaur!'); }
+});
+</pre>
+
+<pre data-answer="8">
+$('.btn').on('click', function () {
+  if ($(this).hasClass('dino')) {
+    console.log('It’s a dinosaur!');
+  } else {
+    console.log('It isn’t a dinosaur!');
+  }
+});
+</pre>
+
+<pre data-question="9">
+$('.btn').on('click', function () { $('.veloci').css({ top: window.scrollY * .5, left: window.scrollX * .5 }); });
+</pre>
+
+<pre data-answer="9">
+$('.btn').on('click', function () {
+  $('.veloci').css({
+    top: window.scrollY * .5,
+    left: window.scrollX * .5
+  });
+});
+</pre>
+
+<pre data-question="10">
+$(window).on('scroll',function(){$('.veloci').css({top:function(){if(window.scrollY<100){return 200;}else{return 500;}}});});
+</pre>
+
+<pre data-answer="10">
+$(window).on('scroll', function () {
+  $('.veloci').css({
+    top: function () {
+      if (window.scrollY < 100) {
+        return 200;
+      } else {
+        return 500;
+      }
+    }
+  });
+});
+</pre>
