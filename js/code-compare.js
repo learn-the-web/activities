@@ -39,6 +39,9 @@ var CodeCompare = function (runner, questions) {
 
   var populateQuestion = function (id) {
     elems.title.innerHTML = runner.convertToCode(runner.escape(questions[id].question));
+
+    if (questions[id].lang) editor.getSession().setMode('ace/mode/' + questions[id].lang);
+
     editor.setValue(questions[id].incorrect);
     editor.navigateFileStart();
     editor.focus();
