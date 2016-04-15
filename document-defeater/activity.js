@@ -59,7 +59,7 @@ var questions = [
     question: 'Give the ball a random top coordinate.',
     inputGroup: 'question-9',
     inputs: {
-      selector: /^\$\('\.ball'\)\.css\('top'\, Math\.random\(\)( * \d+)?\)$/
+      selector: /^\$\('(div|\.ball)'\)\.css\('top'\, Math\.random\(\)( \* \d+)?\)$/
     }
   },
   {
