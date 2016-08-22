@@ -3,3 +3,6 @@ _site
 tmp
 .jekyll*
 npm-debug.log
+
+activities.min.js
+*.min.css
