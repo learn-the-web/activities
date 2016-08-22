@@ -1,0 +1,41 @@
+.os-mac .win,
+.os-win .mac {
+  display: none;
+  visibility: hidden;
+}
+
+input {
+  margin-right: .75em;
+  width: 3em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0;
+  width: auto;
+}
+
+input + label {
+  margin-right: 1em;
+}
+
+select {
+  margin-right: .75em;
+  width: 6em;
+}
+
+.url-frag {
+  left: 1.5rem;
+  position: absolute;
+  width: calc(100vw - 3rem);
+
+  text-align: center;
+}
+
+.url-frag code {
+  text-align: center;
+}
+
+mark {
+  background-color: #ffd30d;
+}

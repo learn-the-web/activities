@@ -1,0 +1,224 @@
+---
+title: Keyboard Commander
+intro: No mice allowed.
+congrats: You’ve earned your stripes. Wear ’em proud!
+scripts:
+  - activity.js
+styles:
+  - /common/prism.min.css
+  - activity.css
+layout: form-validator
+hideSubmit: true
+---
+
+<div data-input-group="question-1">
+  <div class="push mega">
+    <label for="shortcut-save"><span class="func label-aligned">Save:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+    <input class="small" id="shortcut-save" maxlength="1" autofocus>
+  </div>
+  {% include check-answer-button.html %}
+</div>
+
+<div data-input-group="question-2">
+  <div class="push mega">
+    <label for="shortcut-new"><span class="func label-aligned">New:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+    <input id="shortcut-new" maxlength="1" autofocus>
+  </div>
+  <div class="push mega">
+    <label for="shortcut-open"><span class="func label-aligned">Open:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+    <input id="shortcut-open" maxlength="1">
+  </div>
+  <div hidden>
+    {% include check-answer-button.html %}
+  </div>
+</div>
+
+<div data-input-group="question-3">
+  <div class="push mega">
+    <label for="shortcut-copy"><span class="func label-aligned">Copy:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+    <input id="shortcut-copy" maxlength="1" autofocus>
+  </div>
+  <div class="push mega" id="shortcut-cut-box" hidden>
+    <label for="shortcut-cut"><span class="func label-aligned">Cut:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+    <input id="shortcut-cut" maxlength="1">
+  </div>
+  <div class="push mega">
+    <label for="shortcut-paste"><span class="func label-aligned">Paste:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+    <input id="shortcut-paste" maxlength="1">
+  </div>
+  <div class="push mega" id="shortcut-undo-box" hidden>
+    <label for="shortcut-undo"><span class="func label-aligned">Undo:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+    <input id="shortcut-undo" maxlength="1">
+  </div>
+  <div hidden>
+    {% include check-answer-button.html %}
+  </div>
+</div>
+
+<div data-input-group="question-4">
+  <div class="push mega">
+    <label for="shortcut-win"><span class="func label-aligned">Close Window:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+    <input id="shortcut-win" maxlength="1">
+  </div>
+  <div class="push mega">
+    <label for="shortcut-tab"><span class="func label-aligned">New Tab:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+    <input id="shortcut-tab" maxlength="1">
+  </div>
+  <div class="push mega">
+    <label for="shortcut-find"><span class="func label-aligned">Find:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+    <input id="shortcut-find" maxlength="1">
+  </div>
+  <div hidden>
+    {% include check-answer-button.html %}
+  </div>
+</div>
+
+<div data-input-group="question-5">
+  <fieldset class="mega">
+    <legend class="visually-hidden">⌥R is the shortcut for refresh.</legend>
+    <input type="radio" id="shortcut-refresh-t" name="shortcut-refresh" value="true">
+    <label for="shortcut-refresh-t">True</label>
+    <input type="radio" id="shortcut-refresh-f" name="shortcut-refresh" value="false">
+    <label for="shortcut-refresh-f">False</label>
+  </fieldset>
+  {% include check-answer-button.html %}
+</div>
+
+<div data-input-group="question-6">
+  <div class="push mega">
+    <label class="label-aligned" for="shortcut-highlight" data-state="invisible">Select a key</label>
+    <select id="shortcut-highlight">
+      <option value="-"></option>
+      <option value="ctrl" class="win">Ctrl</option>
+      <option value="ctrl" class="mac">⌘</option>
+      <option value="shift">Shift</option>
+      <option value="alt" class="win">Alt</option>
+      <option value="alt" class="mac">Option</option>
+    </select>
+  </div>
+  {% include check-answer-button.html %}
+</div>
+
+<div data-input-group="question-7">
+  <fieldset class="mega">
+    <legend class="visually-hidden">Select all:</legend>
+    <span class="label-aligned">Select all:</span>
+    <label class="visually-hidden" for="shortcut-select-meta" data-state="invisible">Meta key</label>
+    <select id="shortcut-select-meta">
+      <option value="-"></option>
+      <option value="ctrl" class="win">Ctrl</option>
+      <option value="ctrl" class="mac">⌘</option>
+      <option value="shift">Shift</option>
+      <option value="alt">Alt</option>
+    </select>
+    <label class="visually-hidden" for="shortcut-select-letter" data-state="invisible">Letter</label>
+    <input id="shortcut-select-letter" maxlength="1">
+  </fieldset>
+
+  <fieldset class="mega">
+    <legend class="visually-hidden">Start of line:</legend>
+    <span class="label-aligned">Start of line:</span>
+    <label class="visually-hidden" for="shortcut-start" data-state="invisible">Key</label>
+    <select id="shortcut-start">
+      <option value="-"></option>
+      <option value="left">←</option>
+      <option value="pgup">PgUp</option>
+      <option value="home" class="win">Home</option>
+      <option value="home" class="mac">⌘←</option>
+      <option value="up">↑</option>
+    </select>
+  </fieldset>
+
+  <fieldset class="mega">
+    <legend class="visually-hidden">End of line:</legend>
+    <span class="label-aligned">End of line:</span>
+    <label class="visually-hidden" for="shortcut-end" data-state="invisible">Key</label>
+    <select id="shortcut-end">
+      <option value="-"></option>
+      <option value="down">↓</option>
+      <option value="end" class="win">End</option>
+      <option value="end" class="mac">⌘→</option>
+      <option value="pgdn">PgDn</option>
+      <option value="right">→</option>
+    </select>
+  </fieldset>
+
+  <fieldset class="mega">
+    <legend class="visually-hidden">Next word:</legend>
+    <span class="label-aligned">Next word:</span>
+    <label class="visually-hidden" for="shortcut-next-meta" data-state="invisible">Meta key</label>
+    <select id="shortcut-next-meta">
+      <option value="-"></option>
+      <option value="ctrl" class="win">Ctrl</option>
+      <option value="command" class="mac">⌘</option>
+      <option value="shift">Shift</option>
+      <option value="alt" class="win">Alt</option>
+      <option value="alt" class="mac">Option</option>
+    </select>
+    <label class="visually-hidden" for="shortcut-next-letter" data-state="invisible">Key</label>
+    <select id="shortcut-next-letter">
+      <option value="-"></option>
+      <option value="home">Home</option>
+      <option value="up">↑</option>
+      <option value="right">→</option>
+      <option value="pgup">PgUp</option>
+    </select>
+  </fieldset>
+
+  <fieldset class="mega">
+    <legend class="visually-hidden">Previous word:</legend>
+    <span class="label-aligned">Previous word:</span>
+    <label class="visually-hidden" for="shortcut-prev-meta" data-state="invisible">Meta key</label>
+    <select id="shortcut-prev-meta">
+      <option value="-"></option>
+      <option value="ctrl" class="win">Ctrl</option>
+      <option value="command" class="mac">⌘</option>
+      <option value="shift">Shift</option>
+      <option value="alt" class="win">Alt</option>
+      <option value="alt" class="mac">Option</option>
+    </select>
+    <label class="visually-hidden" for="shortcut-prev-letter" data-state="invisible">Key</label>
+    <select id="shortcut-prev-letter">
+      <option value="-"></option>
+      <option value="left">←</option>
+      <option value="pgdn">PgDn</option>
+      <option value="down">↓</option>
+      <option value="end">End</option>
+    </select>
+  </fieldset>
+
+  {% include check-answer-button.html %}
+</div>
+
+<div data-input-group="question-8">
+  <input type="hidden" value="" id="changed-app">
+  <div hidden>
+    {% include check-answer-button.html %}
+  </div>
+</div>
+
+<div data-input-group="question-9">
+  <p class="giga">Add this fragment to the end of the URL: <mark>#keyboard</mark></p>
+  <pre class="language-url mega url-frag"><code class="language-url mega pad-t pad-b"><span id="hash-example-domain">http://domain.com/</span><mark>#keyboard</mark></code></pre>
+  <input type="hidden" value="" id="hash-change">
+  <div hidden>
+    {% include check-answer-button.html %}
+  </div>
+</div>
+
+<div data-input-group="question-10">
+  <input type="hidden" value="" id="hash-change">
+  <div hidden>
+    {% include check-answer-button.html %}
+  </div>
+</div>
+
+<div data-input-group="question-11">
+  <input type="checkbox" id="rule">
+  <label for="rule">Keyboards rule!</label>
+
+  <hr class="hr-dark">
+  <div class="text-center">
+    <a id="finish-link" href="#">Finish.</a>
+  </div>
+</div>

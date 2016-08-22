@@ -1,9 +1,11 @@
-input {
+input,
+select {
   font-size: 1rem;
   vertical-align: middle;
 }
 
-input:focus {
+input:focus,
+select:focus {
   outline: 3px solid #000;
 }
 
@@ -14,7 +16,12 @@ input.small {
 input.code {
   width: 16em;
 
-  font-family: "Source Code Pro",Menlo,monospace;
+  font-family: "Source Code Pro", Menlo, monospace;
+}
+
+.label-aligned {
+  display: inline-block;
+  width: 8em;
 }
 
 label {
@@ -22,6 +29,11 @@ label {
   margin-right: .4em;
 
   vertical-align: middle;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
 }
 
 samp {
