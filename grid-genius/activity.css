@@ -1,0 +1,67 @@
+.w-1 {
+  width: 100%;
+}
+
+.grid-wrap {
+  padding: 18px;
+
+  background-color: #fff;
+}
+
+.grid {
+  overflow: hidden;
+  padding: 0 18px;
+}
+
+.unit {
+  padding: 4px;
+  float: left;
+}
+
+.u-q1-u1,
+.u-q1-u2,
+.u-q5-u2,
+.u-q7-u1,
+.u-q7-u2,
+.u-q9-u1,
+.u-q10-u2 {
+  width: 50%;
+}
+
+.u-q2-u1,
+.u-q2-u2,
+.u-q2-u3,
+.u-q4-u1,
+.u-q9-u3 {
+  width: 33.3333%;
+}
+
+.u-q4-u2,
+.u-q8-u2 {
+  width: 66.6666%;
+}
+
+.u-q5-u1,
+.u-q5-u3,
+.u-q10-u3 {
+  width: 25%;
+}
+
+.u-q6-u1 {
+  width: 20%;
+}
+
+.u-q6-u2 {
+  width: 80%;
+}
+
+.u-q8-u1,
+.u-q8-u3,
+.u-q9-u2 {
+  width: 16.6667%;
+}
+
+.u-q10-u1,
+.u-q10-u4 {
+  width: 12.5%;
+}
