@@ -83,10 +83,10 @@ var CodeCompare = function (runner, questions) {
 
     switch (typeof questions[current].correct) {
       case 'string':
-        if (editor.getValue() !== questions[current].correct) valid = 'no';
+        if (editor.getValue().trim() !== questions[current].correct.trim()) valid = 'no';
         break;
       case 'function':
-        if (!questions[current].correct(editor.getValue())) valid = 'no';
+        if (!questions[current].correct(editor.getValue().trim())) valid = 'no';
         break;
       default:
         valid = 'no';
