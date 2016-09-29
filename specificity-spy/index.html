@@ -1,0 +1,177 @@
+---
+title: Specificity Spy
+intro: 'Be specific.'
+congrats: 'Specificity is the spice of sentience.'
+styles:
+  - /common/prism.min.css
+scripts:
+  - /common/prism.min.js
+  - activity.js
+layout: multiple-choice
+---
+
+<div id="question-1" hidden>
+<pre><code class="language-markup">{% capture code %}
+<h1 class="brand">Stegosaurus</h1>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-css">{% capture code %}
+h1 {
+  color: red;
+}
+
+.brand {
+  color: green;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-2" hidden>
+<pre><code class="language-markup">{% capture code %}
+<h1 class="brand">Stegosaurus</h1>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-css">{% capture code %}
+.brand {
+  color: orange;
+}
+
+.brand {
+  color: yellow;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-3" hidden>
+<pre><code class="language-markup">{% capture code %}
+<h1 id="brand">Stegosaurus</h1>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-css">{% capture code %}
+h1 {
+  color: pink;
+}
+
+#brand {
+  color: magenta;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-4" hidden>
+<pre><code class="language-markup">{% capture code %}
+<h1 class="brand brand-alt">Stegosaurus</h1>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-css">{% capture code %}
+.brand {
+  color: green;
+}
+
+.brand-alt {
+  color: limegreen;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-5" hidden>
+<pre><code class="language-markup">{% capture code %}
+<h1 class="brand-alt brand">Stegosaurus</h1>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-css">{% capture code %}
+.brand {
+  color: lavender;
+}
+
+.brand-alt {
+  color: indigo;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-6" hidden>
+<pre><code class="language-markup">{% capture code %}
+<h1 class="main-heading" id="brand">Stegosaurus</h1>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-css">{% capture code %}
+h1 {
+  color: burlywood;
+}
+
+.main-heading {
+  color: goldenrod;
+}
+
+#brand {
+  color: chocolate;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-7" hidden>
+<pre><code class="language-markup">{% capture code %}
+<h1 class="main-heading" id="brand">Stegosaurus</h1>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-css">{% capture code %}
+h1 {
+  color: gainsboro;
+}
+
+#brand {
+  color: grey;
+}
+
+.main-heading {
+  color: darkgrey;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-8" hidden>
+<pre><code class="language-markup">{% capture code %}
+<h1 class="brand">Stegosaurus</h1>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-css">{% capture code %}
+h1 {
+  color: darkgreen;
+}
+
+.brand {
+  color: darkolivegreen;
+}
+
+h1.brand {
+  color: forestgreen;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-9" hidden>
+<pre><code class="language-markup">{% capture code %}
+<h1 class="brand brand-highlight">Stegosaurus</h1>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-css">{% capture code %}
+.brand {
+  color: darkred;
+}
+
+.brand-highlight {
+  color: lightcoral;
+}
+
+.brand.brand-highlight {
+  color: firebrick;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-10" hidden>
+<pre><code class="language-markup">{% capture code %}
+<h1 class="brand">Stegosaurus</h1>
+{% endcapture %}{{ code | escape }}</code></pre>
+<pre><code class="language-css">{% capture code %}
+h1 {
+  color: deepskyblue;
+}
+
+.barnd {
+  color: lightskyblue;
+}
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
