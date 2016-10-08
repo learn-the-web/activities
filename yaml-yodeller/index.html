@@ -1,0 +1,259 @@
+---
+title: "YAML Yodeller"
+intro: "Yodel-ay-hee-hoo"
+congrats: "Taught me how to YAML<br>Yaml-oh-ee-dee<br>Diddly-odel-oh-ee-dee"
+scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js
+  - activity.js
+layout: code-compare
+---
+
+<div id="question-1-extras">
+  <div class="highlight-box gutter pad-t-1-2 pad-b-1-2 push">
+    <dl class="push-0">
+      <dt class="bold">Name</dt>
+      <dd class="gutter push-0">Megatherium</dd>
+    </dl>
+  </div>
+</div>
+
+<pre data-question="1">
+</pre>
+
+<pre data-answer="1">
+name: "Megatherium"
+</pre>
+
+<div id="question-2-extras">
+  <div class="highlight-box gutter pad-t-1-2 pad-b-1-2 push">
+    <dl class="push-0">
+      <dt class="bold">Name</dt>
+      <dd class="gutter push-0">Glyptodon</dd>
+      <dt class="bold">Period</dt>
+      <dd class="gutter push-0">Pleistocene Epoch</dd>
+      <dt class="bold">Length</dt>
+      <dd class="gutter push-0">3.3 m</dd>
+      <dt class="bold">Height</dt>
+      <dd class="gutter push-0">1.5 m</dd>
+    </dl>
+  </div>
+</div>
+
+<pre data-question="2">
+</pre>
+
+<pre data-answer="2">
+name: "Glyptodon"
+period: "Pleistocene Epoch"
+length: "3.3 m"
+height: "1.5 m"
+</pre>
+
+<pre data-question="3">
+prehistoric_creatures:
+Arsinoitherium
+Elasmotherium
+Glyptodon
+Megatherium
+</pre>
+
+<pre data-answer="3">
+prehistoric_creatures:
+  - "Arsinoitherium"
+  - "Elasmotherium"
+  - "Glyptodon"
+  - "Megatherium"
+</pre>
+
+<div id="question-4-extras">
+  <div class="highlight-box gutter pad-t-1-2 pad-b-1-2 push">
+    <ul class="push-0">
+      <li>
+        <dl class="push-0">
+          <dt class="bold">Name</dt>
+          <dd class="gutter push-0">Megatherium</dd>
+          <dt class="bold">Period</dt>
+          <dd class="gutter push-0">Early Pliocene</dd>
+        </dl>
+      </li>
+      <li>
+        <dl class="push-0">
+          <dt class="bold">Name</dt>
+          <dd class="gutter push-0">Glyptodon</dd>
+          <dt class="bold">Period</dt>
+          <dd class="gutter push-0">Pleistocene Epoch</dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<pre data-question="4">
+</pre>
+
+<pre data-answer="4">
+- name: "Megatherium"
+  period: "Early Pliocene"
+- name: "Glyptodon"
+  period: "Pleistocene Epoch"
+</pre>
+
+<div id="question-5-extras">
+  <div class="highlight-box gutter pad-t-1-2 pad-b-1-2 push">
+    <dl class="push-0">
+      <dt class="bold">Name</dt>
+      <dd class="gutter push-0">Dimetrodon</dd>
+      <dt class="bold">Period</dt>
+      <dd class="gutter push-0">Early Permian</dd>
+      <dt class="bold">Size</dt>
+      <dd class="gutter push-0">
+        <dl class="push-0">
+          <dt class="bold">Length</dt>
+          <dd class="gutter push-0">4.6 m</dd>
+          <dt class="bold">Height</dt>
+          <dd class="gutter push-0">2.2 m</dd>
+          <dt class="bold">Weight</dt>
+          <dd class="gutter push-0">250 kg</dd>
+        </dl>
+      </dd>
+      <dt class="bold">Features</dt>
+      <dd class="gutter push-0">
+        <ul>
+          <li>large back sail</li>
+          <li>long tail</li>
+          <li>large teeth</li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<pre data-question="5">
+</pre>
+
+<pre data-answer="5">
+name: "Dimetrodon"
+period: "Early Permian"
+size:
+  length: "4.6 m"
+  height: "2.2 m"
+  weight: "250 kg"
+features:
+  - "large back sail"
+  - "long tail"
+  - "large teeth"
+</pre>
+
+<pre data-question="6">
+prehistoric_creatures:
+- "Arsinoitherium"
+- "Elasmotherium"
+- "Glyptodon"
+- "Megatherium"
+</pre>
+
+<pre data-answer="6">
+prehistoric_creatures:
+  - "Arsinoitherium"
+  - "Elasmotherium"
+  - "Glyptodon"
+  - "Megatherium"
+</pre>
+
+<pre data-question="7">
+name: "Glyptodon"
+    period: "Pleistocene Epoch"
+      length: "3.3 m"
+  height: "1.5 m"
+</pre>
+
+<pre data-answer="7">
+name: "Glyptodon"
+period: "Pleistocene Epoch"
+length: "3.3 m"
+height: "1.5 m"
+</pre>
+
+<pre data-question="8">
+prehistoric_creatures:
+  - "Arsinoitherium"
+	- "Elasmotherium"
+	- "Glyptodon"
+  - "Megatherium"
+</pre>
+
+<pre data-answer="8">
+prehistoric_creatures:
+  - "Arsinoitherium"
+  - "Elasmotherium"
+  - "Glyptodon"
+  - "Megatherium"
+</pre>
+
+<pre data-question="9">
+name: "Dimetrodon" period: "Early Permian"
+size:
+length: "4.6 m" height: "2.2 m"
+weight: "250 kg"
+features: - "large back sail" - "long tail"
+      - "large teeth"
+</pre>
+
+<pre data-answer="9">
+name: "Dimetrodon"
+period: "Early Permian"
+size:
+  length: "4.6 m"
+  height: "2.2 m"
+  weight: "250 kg"
+features:
+  - "large back sail"
+  - "long tail"
+  - "large teeth"
+</pre>
+
+<pre data-question="10">
+prehistoric_creatures:
+- name: "Dimetrodon"
+period: "Early Permian"
+size:
+length: "4.6 m"
+height: "2.2 m"
+weight: "250 kg"
+features:
+- "large back sail"
+- "long tail"
+- "large teeth"
+- name: "Elasmotherium"
+period: "Late Pliocene"
+size:
+length: "4.5 m"
+height: "2 m"
+weight: "4.5 tonnes"
+features:
+- "single forehead horn"
+- "ever-growing molars"
+</pre>
+
+<pre data-answer="10">
+prehistoric_creatures:
+  - name: "Dimetrodon"
+    period: "Early Permian"
+    size:
+      length: "4.6 m"
+      height: "2.2 m"
+      weight: "250 kg"
+    features:
+      - "large back sail"
+      - "long tail"
+      - "large teeth"
+  - name: "Elasmotherium"
+    period: "Late Pliocene"
+    size:
+      length: "4.5 m"
+      height: "2 m"
+      weight: "4.5 tonnes"
+    features:
+      - "single forehead horn"
+      - "ever-growing molars"
+</pre>
