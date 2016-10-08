@@ -61,6 +61,11 @@ hr {
   width: 200px;
 }
 
+.highlight-box {
+  background-color: var(--color-code-darkest);
+  border-radius: 4px;
+}
+
 .choice-list li {
   padding-left: 1.1em;
   position: relative;

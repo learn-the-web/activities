@@ -6,6 +6,7 @@ var CodeCompare = function (runner, questions) {
     current = 0,
     elems = {
       title: document.getElementById('question-title'),
+      extras: document.getElementById('question-extras'),
       form: document.getElementById('question-form')
     }
   ;
@@ -41,6 +42,12 @@ var CodeCompare = function (runner, questions) {
     elems.title.innerHTML = runner.convertToCode(runner.escape(questions[id].question));
 
     if (questions[id].lang) editor.getSession().setMode('ace/mode/' + questions[id].lang);
+
+    if (questions[id].extras) {
+      elems.extras.innerHTML = document.getElementById(questions[id].extras).innerHTML;
+    } else {
+      elems.extras.innerHTML = '';
+    }
 
     editor.setValue(questions[id].incorrect);
     editor.navigateFileStart();
