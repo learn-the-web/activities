@@ -139,3 +139,17 @@ hr {
 
   border: 3px solid #000;
 }
+
+.from-to-panel {
+  overflow: hidden;
+}
+
+.from {
+  float: left;
+  width: 49%;
+}
+
+.to {
+  float: right;
+  width: 49%;
+}
