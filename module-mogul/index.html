@@ -1,0 +1,215 @@
+---
+title: "Module Mogul"
+intro: "M’organzie some modules"
+congrats: "You have been granted entrance into the Magnificent Module Mogul Club of the Magellan"
+scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js
+  - activity.js
+layout: code-compare
+---
+
+<pre data-question="1">
+<ul>
+  <li>Voyageur 1</li>
+  <li>New Horizons</li>
+  <li>Kepler</li>
+</ul>
+</pre>
+
+<pre data-answer="1">
+<ul class="list-group">
+  <li>Voyageur 1</li>
+  <li>New Horizons</li>
+  <li>Kepler</li>
+</ul>
+</pre>
+
+<pre data-question="2">
+<ul>
+  <li>Saturn</li>
+  <li>Neptune</li>
+  <li>Uranus</li>
+</ul>
+</pre>
+
+<pre data-answer="2">
+<ul class="list-group-inline">
+  <li>Saturn</li>
+  <li>Neptune</li>
+  <li>Uranus</li>
+</ul>
+</pre>
+
+<pre data-question="3">
+<div>
+  <img src="images/pluto-16by9.jpg" alt="">
+</div>
+</pre>
+
+<pre data-answer="3">
+<div class="embed embed-16by9">
+  <img class="embed-item" src="images/pluto-16by9.jpg" alt="">
+</div>
+</pre>
+
+<pre data-question="4">
+<img src="images/hayabusa-32.jpg" alt="">
+Hayabusa 2
+</pre>
+
+<pre data-answer="4">
+<i class="icon i-32">
+  <img src="images/hayabusa-32.jpg" alt="">
+</i>
+<span class="icon-label">Hayabusa 2</span>
+</pre>
+
+<pre data-question="5">
+<div>
+  <h2>Kepler</h2>
+</div>
+</pre>
+
+<pre data-answer="5">
+<div class="hidden">
+  <h2>Kepler</h2>
+</div>
+</pre>
+
+<pre data-question="6">
+<p>IKAROS (Interplanetary Kite-craft Accelerated by Radiation of the Sun) is the first space probe to successfully use a solar sail in deep space.</p>
+</pre>
+
+<pre data-answer="6">
+<p class="truncate">IKAROS (Interplanetary Kite-craft Accelerated by Radiation of the Sun) is the first space probe to successfully use a solar sail in deep space.</p>
+</pre>
+
+<div id="question-7-extras">
+  <p><em>Don’t worry about <samp>embed-containers</samp> only worry about positioning—but the image does need to resize. Use the shortened class names.</em></p>
+  <img class="img-flex push" src="question-7.svg" alt="">
+</div>
+
+<pre data-question="7">
+<figure>
+  <img src="images/gaia.jpg" alt="">
+  <figcaption>The Gaia space probe aims to create a detailed three-dimensional map of the Milky Way galaxy.</figcaption>
+</figure>
+</pre>
+
+<pre data-answer="7">
+<figure class="relative">
+  <img class="img-flex" src="images/gaia.jpg" alt="">
+  <figcaption class="absolute pin-br">The Gaia space probe aims to create a detailed three-dimensional map of the Milky Way galaxy.</figcaption>
+</figure>
+</pre>
+
+<div id="question-8-extras">
+  <p><em>Don’t worry about <samp>embed-containers</samp> only worry about positioning—but the images do need to resize. Use the shortened class names.</em></p>
+  <img class="img-flex push" src="question-8.svg" alt="">
+</div>
+
+<pre data-question="8">
+<div>
+  <div>
+    <img src="images/voyageur-1.jpg" alt="">
+  </div>
+  <div>
+    <img src="images/voyageur-2.jpg" alt="">
+  </div>
+</div>
+</pre>
+
+<pre data-answer="8">
+<div class="clearfix">
+  <div class="left w-1-2">
+    <img class="img-flex" src="images/voyageur-1.jpg" alt="">
+  </div>
+  <div class="right w-1-2">
+    <img class="img-flex" src="images/voyageur-2.jpg" alt="">
+  </div>
+</div>
+</pre>
+
+<pre data-question="9">
+<div class="card text-center">
+<i class="icon i-32">
+<img src="images/cassini.svg" alt="">
+</i>
+<h2 class="tera">Cassini</h2>
+<p class="italic">Cassini is a space probe orbiting Saturn.</p>
+<a class="btn btn-ghost">Learn more</a>
+</div>
+</pre>
+
+<pre data-answer="9">
+<div class="card text-center">
+  <i class="icon i-32">
+    <img src="images/cassini.svg" alt="">
+  </i>
+  <h2 class="tera">Cassini</h2>
+  <p class="italic">Cassini is a space probe orbiting Saturn.</p>
+  <a class="btn btn-ghost">Learn more</a>
+</div>
+</pre>
+
+<pre data-question="10">
+    <ul class="list-group grid">
+    	<li class="unit xs-1 s-1 m-1-2 l-1-2"><a class="card block text-center">
+    	<i class="icon i-32"><img src="images/cassini.svg" alt=""></i>
+<h2 class="tera">Cassini</h2>
+<dl>
+<dt>Launched</dt>
+<dd>October 15th, 1997</dd>
+        <dt>Distance</dt>
+        <dd>1.58 billion km</dd>
+                  </dl>
+                	<span class="btn btn-ghost">Learn about Cassini</span>
+                </a>
+	</li>
+<li class="unit xs-1 s-1 m-1-2 l-1-2">
+<a class="card block text-center">
+<i class="icon i-32">
+<img src="images/juno.svg" alt="">
+</i>
+<h2 class="tera">Juno</h2>
+			<dl> <dt>Launched</dt> <dd>August 5th, 2011</dd> <dt>Distance</dt> <dd>962.93 million km</dd> </dl>
+    	<span class="btn btn-ghost">Learn about Juno</span>
+</a>
+</li>
+</ul>
+</pre>
+
+<pre data-answer="10">
+<ul class="list-group grid">
+  <li class="unit xs-1 s-1 m-1-2 l-1-2">
+    <a class="card block text-center">
+      <i class="icon i-32">
+        <img src="images/cassini.svg" alt="">
+      </i>
+      <h2 class="tera">Cassini</h2>
+      <dl>
+        <dt>Launched</dt>
+        <dd>October 15th, 1997</dd>
+        <dt>Distance</dt>
+        <dd>1.58 billion km</dd>
+      </dl>
+      <span class="btn btn-ghost">Learn about Cassini</span>
+    </a>
+  </li>
+  <li class="unit xs-1 s-1 m-1-2 l-1-2">
+    <a class="card block text-center">
+      <i class="icon i-32">
+        <img src="images/juno.svg" alt="">
+      </i>
+      <h2 class="tera">Juno</h2>
+      <dl>
+        <dt>Launched</dt>
+        <dd>August 5th, 2011</dd>
+        <dt>Distance</dt>
+        <dd>962.93 million km</dd>
+      </dl>
+      <span class="btn btn-ghost">Learn about Juno</span>
+    </a>
+  </li>
+</ul>
+</pre>
