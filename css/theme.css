@@ -44,6 +44,10 @@ hr {
   border-width: 3px;
 }
 
+s {
+  opacity: .4;
+}
+
 .hr-dark {
   border-color: var(--color-code-darkest);
 }
