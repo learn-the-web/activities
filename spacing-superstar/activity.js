@@ -9,8 +9,8 @@ for (i; i<t; i++) {
 
   questions.push({
     question: 'Correct the spacing & indentation issues.',
-    incorrect: incorrectSamples[i].innerText,
-    correct: document.querySelector('[data-answer="' + id + '"]').innerText,
+    incorrect: incorrectSamples[i].innerHTML,
+    correct: document.querySelector('[data-answer="' + id + '"]').innerHTML,
     lang: 'javascript'
   });
 }

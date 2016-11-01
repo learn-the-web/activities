@@ -49,7 +49,7 @@ var CodeCompare = function (runner, questions) {
       elems.extras.innerHTML = '';
     }
 
-    editor.setValue(questions[id].incorrect);
+    editor.setValue(questions[id].incorrect.trim());
     editor.navigateFileStart();
     editor.focus();
   };

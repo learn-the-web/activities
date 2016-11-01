@@ -8,43 +8,43 @@ scripts:
 layout: code-compare
 ---
 
-<pre data-question="1">
+<script type="text/x-template" data-question="1">
 var$h1=$('h1');
-</pre>
+</script>
 
-<pre data-answer="1">
+<script type="text/x-template" data-answer="1">
 var $h1 = $('h1');
-</pre>
+</script>
 
-<pre data-question="2">
+<script type="text/x-template" data-question="2">
 var dino = { name: 'Brontosaurus', ate: 'Plants' };
-</pre>
+</script>
 
-<pre data-answer="2">
+<script type="text/x-template" data-answer="2">
 var dino = {
   name: 'Brontosaurus',
   ate: 'Plants'
 };
-</pre>
+</script>
 
-<pre data-question="3">
+<script type="text/x-template" data-question="3">
 varisDino=true;if(isDino){console.log('It’s a dinosaur!');}
-</pre>
+</script>
 
-<pre data-answer="3">
+<script type="text/x-template" data-answer="3">
 var isDino = true;
 
 if (isDino) {
   console.log('It’s a dinosaur!');
 }
-</pre>
+</script>
 
-<pre data-question="4">
+<script type="text/x-template" data-question="4">
 var isDino = true;
 if (isDino) { console.log('It’s a dinosaur!'); } else { console.log('It isn’t a dinosaur!'); }
-</pre>
+</script>
 
-<pre data-answer="4">
+<script type="text/x-template" data-answer="4">
 var isDino = true;
 
 if (isDino) {
@@ -52,9 +52,9 @@ if (isDino) {
 } else {
   console.log('It isn’t a dinosaur!');
 }
-</pre>
+</script>
 
-<pre data-question="5">
+<script type="text/x-template" data-question="5">
 var pterosaurs = [
 {
 name: 'Velociraptor',
@@ -69,9 +69,9 @@ return 'Fly';
 }
 }
 ];
-</pre>
+</script>
 
-<pre data-answer="5">
+<script type="text/x-template" data-answer="5">
 var pterosaurs = [
   {
     name: 'Velociraptor',
@@ -86,9 +86,9 @@ var pterosaurs = [
     }
   }
 ];
-</pre>
+</script>
 
-<pre data-question="6">
+<script type="text/x-template" data-question="6">
 var isPrehistoric = true;
 var animal = 'Plesiosuar';
 
@@ -107,9 +107,9 @@ break;
 } else {
 console.log('It isn’t prehistoric!');
 }
-</pre>
+</script>
 
-<pre data-answer="6">
+<script type="text/x-template" data-answer="6">
 var isPrehistoric = true;
 var animal = 'Plesiosuar';
 
@@ -128,25 +128,25 @@ if (isDino) {
 } else {
   console.log('It isn’t prehistoric!');
 }
-</pre>
+</script>
 
-<pre data-question="7">
+<script type="text/x-template" data-question="7">
 $('.btn').on('click',function(){console.log('Yay!');});
-</pre>
+</script>
 
-<pre data-answer="7">
+<script type="text/x-template" data-answer="7">
 $('.btn').on('click', function () {
   console.log('Yay!');
 });
-</pre>
+</script>
 
-<pre data-question="8">
+<script type="text/x-template" data-question="8">
 $('.btn').on('click', function () {
 if ($(this).hasClass('dino')) { console.log('It’s a dinosaur!'); } else { console.log('It isn’t a dinosaur!'); }
 });
-</pre>
+</script>
 
-<pre data-answer="8">
+<script type="text/x-template" data-answer="8">
 $('.btn').on('click', function () {
   if ($(this).hasClass('dino')) {
     console.log('It’s a dinosaur!');
@@ -154,26 +154,26 @@ $('.btn').on('click', function () {
     console.log('It isn’t a dinosaur!');
   }
 });
-</pre>
+</script>
 
-<pre data-question="9">
+<script type="text/x-template" data-question="9">
 $('.btn').on('click', function () { $('.veloci').css({ top: window.scrollY * .5, left: window.scrollX * .5 }); });
-</pre>
+</script>
 
-<pre data-answer="9">
+<script type="text/x-template" data-answer="9">
 $('.btn').on('click', function () {
   $('.veloci').css({
     top: window.scrollY * .5,
     left: window.scrollX * .5
   });
 });
-</pre>
+</script>
 
-<pre data-question="10">
+<script type="text/x-template" data-question="10">
 $(window).on('scroll',function(){$('.veloci').css({top:function(){if(window.scrollY<100){return 200;}else{return 500;}}});});
-</pre>
+</script>
 
-<pre data-answer="10">
+<script type="text/x-template" data-answer="10">
 $(window).on('scroll', function () {
   $('.veloci').css({
     top: function () {
@@ -185,4 +185,4 @@ $(window).on('scroll', function () {
     }
   });
 });
-</pre>
+</script>
