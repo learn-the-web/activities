@@ -1,0 +1,451 @@
+---
+title: 'Table Tabulator'
+intro: 'Tabulate tables of tabulations'
+congrats: 'Terrific! You’ve passed the Trials and T<s>ribble</s>able-ations.'
+scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js
+  - activity.js
+layout: code-compare
+---
+
+<script type="text/x-template" data-question="1">
+Stegosaurus
+Late Jurassic
+1877
+9 m
+4.5 t
+</script>
+
+<script type="text/x-template" data-answer="1">
+<tr>
+  <td>Stegosaurus</td>
+  <td>Late Jurassic</td>
+  <td>1877</td>
+  <td>9 m</td>
+  <td>4.5 t</td>
+</tr>
+</script>
+
+<script type="text/x-template" data-question="2">
+Name
+Period
+Discovery
+Length
+Mass
+</script>
+
+<script type="text/x-template" data-answer="2">
+<tr>
+  <th scope="col">Name</th>
+  <th scope="col">Period</th>
+  <th scope="col">Discovery</th>
+  <th scope="col">Length</th>
+  <th scope="col">Mass</th>
+</tr>
+</script>
+
+<script type="text/x-template" data-question="3">
+<table>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Period</th>
+    <th scope="col">Discovery</th>
+    <th scope="col">Length</th>
+    <th scope="col">Mass</th>
+  </tr>
+  <tr>
+    <th scope="row">Apatosaurus</th>
+    <td>Jurassic Period</td>
+    <td>1877</td>
+    <td>23 m</td>
+    <td>35 t</td>
+  </tr>
+  <tr>
+    <th scope="row">Total</th>
+    <td colspan="4">
+      <p>3 dinosaurs</p>
+    </td>
+  </tr>
+</table>
+</script>
+
+<script type="text/x-template" data-answer="3">
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Period</th>
+      <th scope="col">Discovery</th>
+      <th scope="col">Length</th>
+      <th scope="col">Mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Apatosaurus</th>
+      <td>Jurassic Period</td>
+      <td>1877</td>
+      <td>23 m</td>
+      <td>35 t</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Total</th>
+      <td colspan="4">
+        <p>3 dinosaurs</p>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+</script>
+
+<div id="question-4-extras">
+  <div class="highlight-box gutter pad-t-1-2 pad-b-1-2 push">
+    <code>Information on awesome dinosaurs.</code>
+  </div>
+</div>
+
+<script type="text/x-template" data-question="4">
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Period</th>
+      <th scope="col">Discovery</th>
+      <th scope="col">Length</th>
+      <th scope="col">Mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Apatosaurus</th>
+      <td>Jurassic Period</td>
+      <td>1877</td>
+      <td>23 m</td>
+      <td>35 t</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Total</th>
+      <td colspan="4">
+        <p>3 dinosaurs</p>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+</script>
+
+<script type="text/x-template" data-answer="4">
+<table>
+  <caption>Information on awesome dinosaurs.</caption>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Period</th>
+      <th scope="col">Discovery</th>
+      <th scope="col">Length</th>
+      <th scope="col">Mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Apatosaurus</th>
+      <td>Jurassic Period</td>
+      <td>1877</td>
+      <td>23 m</td>
+      <td>35 t</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Total</th>
+      <td colspan="4">
+        <p>3 dinosaurs</p>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+</script>
+
+<script type="text/x-template" data-question="5">
+<td>3 dinosaurs</td>
+</script>
+
+<script type="text/x-template" data-answer="5">
+<td colspan="4">3 dinosaurs</td>
+</script>
+
+<script type="text/x-template" data-question="6">
+<td>Extinct animals</td>
+</script>
+
+<script type="text/x-template" data-answer="6">
+<td rowspan="3">Extinct animals</td>
+</script>
+
+<div id="question-7-extras">
+  <img class="img-flex push" src="table.png" alt="">
+</div>
+
+<script type="text/x-template" data-question="7">
+<table>
+  <thead>
+    <tr>
+      <td></td>
+      <td></td>
+      <th>Size</th>
+    </tr>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Length</th>
+      <th scope="col">Mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Herbivores</th>
+      <th scope="row">Apatosaurus</th>
+      <td>23 m</td>
+      <td>35 t</td>
+    </tr>
+    <tr>
+      <th scope="row">Stegosaurus</th>
+      <td>9 m</td>
+      <td>4.5 t</td>
+    </tr>
+    <tr>
+      <th>Carnivores</th>
+      <th scope="row">Tyrannosaurus</th>
+      <td>12.3 m</td>
+      <td>6.8 t</td>
+    </tr>
+    <tr>
+      <th scope="row">Velociraptor</th>
+      <td>2 m</td>
+      <td>15 kg</td>
+    </tr>
+  </tbody>
+</table>
+</script>
+
+<script type="text/x-template" data-answer="7">
+<table>
+  <thead>
+    <tr>
+      <td rowspan="2"></td>
+      <td></td>
+      <th colspan="2">Size</th>
+    </tr>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Length</th>
+      <th scope="col">Mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2">Herbivores</th>
+      <th scope="row">Apatosaurus</th>
+      <td>23 m</td>
+      <td>35 t</td>
+    </tr>
+    <tr>
+      <th scope="row">Stegosaurus</th>
+      <td>9 m</td>
+      <td>4.5 t</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Carnivores</th>
+      <th scope="row">Tyrannosaurus</th>
+      <td>12.3 m</td>
+      <td>6.8 t</td>
+    </tr>
+    <tr>
+      <th scope="row">Velociraptor</th>
+      <td>2 m</td>
+      <td>15 kg</td>
+    </tr>
+  </tbody>
+</table>
+</script>
+
+<script type="text/x-template" data-question="8">
+<table>
+<thead>
+<tr>
+<td rowspan="2"></td>
+<td></td>
+<th colspan="2">Size</th>
+</tr>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Length</th>
+<th scope="col">Mass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th rowspan="2">Herbivores</th>
+<th scope="row">Apatosaurus</th>
+<td>23 m</td>
+<td>35 t</td>
+</tr>
+<tr>
+<th scope="row">Stegosaurus</th>
+<td>9 m</td>
+<td>4.5 t</td>
+</tr>
+<tr>
+<th rowspan="2">Carnivores</th>
+<th scope="row">Tyrannosaurus</th>
+<td>12.3 m</td>
+<td>6.8 t</td>
+</tr>
+<tr>
+<th scope="row">Velociraptor</th>
+<td>2 m</td>
+<td>15 kg</td>
+</tr>
+</tbody>
+</table>
+</script>
+
+<script type="text/x-template" data-answer="8">
+<table>
+  <thead>
+    <tr>
+      <td rowspan="2"></td>
+      <td></td>
+      <th colspan="2">Size</th>
+    </tr>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Length</th>
+      <th scope="col">Mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2">Herbivores</th>
+      <th scope="row">Apatosaurus</th>
+      <td>23 m</td>
+      <td>35 t</td>
+    </tr>
+    <tr>
+      <th scope="row">Stegosaurus</th>
+      <td>9 m</td>
+      <td>4.5 t</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Carnivores</th>
+      <th scope="row">Tyrannosaurus</th>
+      <td>12.3 m</td>
+      <td>6.8 t</td>
+    </tr>
+    <tr>
+      <th scope="row">Velociraptor</th>
+      <td>2 m</td>
+      <td>15 kg</td>
+    </tr>
+  </tbody>
+</table>
+</script>
+
+<script type="text/x-template" data-question="9">
+      <table>
+<caption>Information on awesome dinosaurs.</caption>
+<thead>
+    <tr>
+                  <th scope="col">Name</th>
+        <th scope="col">Period</th>
+                  <th scope="col">Discovery</th>
+  <th scope="col">Length</th>
+        <th scope="col">Mass</th>
+    </tr>
+            </thead> <tbody> <tr> <th scope="row">Apatosaurus</th>
+<td>Jurassic Period</td>
+    <td>1877</td>
+          <td>23 m</td>
+              <td>35 t</td>
+      </tr>
+  </tbody>
+<tfoot>
+  <tr> <th scope="row">Total</th> <td colspan="4">
+                <p>3 dinosaurs</p>
+      </td>
+    </tr>
+</tfoot> </table>
+</script>
+
+<script type="text/x-template" data-answer="9">
+<table>
+  <caption>Information on awesome dinosaurs.</caption>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Period</th>
+      <th scope="col">Discovery</th>
+      <th scope="col">Length</th>
+      <th scope="col">Mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Apatosaurus</th>
+      <td>Jurassic Period</td>
+      <td>1877</td>
+      <td>23 m</td>
+      <td>35 t</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Total</th>
+      <td colspan="4">
+        <p>3 dinosaurs</p>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+</script>
+
+<script type="text/x-template" data-question="10">
+<table><tr><td><table><tr><td>…</td></tr></table></td><td>…</td><td>…</td><td><table><tr><td>…</td><td><table><tbody><tr><td>…</td><td>…</td><td>…</td></tr></tbody></table></td><td>…</td></tr></table></td></tr></table>
+</script>
+
+<script type="text/x-template" data-answer="10">
+<table>
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <td>…</td>
+        </tr>
+      </table>
+    </td>
+    <td>…</td>
+    <td>…</td>
+    <td>
+      <table>
+        <tr>
+          <td>…</td>
+          <td>
+            <table>
+              <tbody>
+                <tr>
+                  <td>…</td>
+                  <td>…</td>
+                  <td>…</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>…</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</script>
