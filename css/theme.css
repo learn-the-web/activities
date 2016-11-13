@@ -138,6 +138,13 @@ s {
   height: 30em;
 }
 
+code,
+pre,
+code[class*="language-"],
+pre[class*="language-"] {
+  background-color: #e6e3e2 !important;
+}
+
 .outline {
   padding: 2em 1em;
 
