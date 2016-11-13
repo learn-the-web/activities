@@ -1,0 +1,288 @@
+---
+title: 'Alignment Actuator'
+intro: 'ACTUATE! ACTUATE!'
+congrats: 'All actuations are activated and aligned at actual amplifications.'
+scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js
+  - activity.js
+layout: code-compare
+---
+
+<script type="text/x-template" data-question="1">
+{% raw %}
+{% if name == "Stegosaurus" %}
+<h1>Dinosaur!</h1>
+{% endif %}
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-answer="1">
+{% raw %}
+{% if name == "Stegosaurus" %}
+  <h1>Dinosaur!</h1>
+{% endif %}
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-question="2">
+{% raw %}
+{% if name == "Archeopteryx" %}
+<h1>Pterosaur!</h1>
+{% else %}
+<h1>Dinosaur!</h1>
+{% endif %}
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-answer="2">
+{% raw %}
+{% if name == "Archeopteryx" %}
+  <h1>Pterosaur!</h1>
+{% else %}
+  <h1>Dinosaur!</h1>
+{% endif %}
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-question="3">
+{% raw %}
+    <ul>
+  {% for dino in site.data.dinos %}
+<li>{{dino}}</li>
+  {% endfor %}
+    </ul>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-answer="3">
+{% raw %}
+<ul>
+  {% for dino in site.data.dinos %}
+    <li>{{dino}}</li>
+  {% endfor %}
+</ul>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-question="4">
+{% raw %}
+    {% for dino in site.data.dinos %}
+  <figure>
+<img src="{{site.baseurl}}/images/{{dino.img}}" alt="">
+              <figcaption>{{dino.desc}}</figcaption>
+      </figure>
+          {% endfor %}
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-answer="4">
+{% raw %}
+{% for dino in site.data.dinos %}
+  <figure>
+    <img src="{{site.baseurl}}/images/{{dino.img}}" alt="">
+    <figcaption>{{dino.desc}}</figcaption>
+  </figure>
+{% endfor %}
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-question="5">
+{% raw %}
+<ul>
+{% for dino in site.data.dinos %}
+<li>
+<h2>{{dino.name}}</h2>
+</li>
+{% endfor %}
+</ul>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-answer="5">
+{% raw %}
+<ul>
+  {% for dino in site.data.dinos %}
+    <li>
+      <h2>{{dino.name}}</h2>
+    </li>
+  {% endfor %}
+</ul>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-question="6">
+{% raw %}
+<ul>{% for dino in site.data.dinos %}<li><dl><dt>Name</dt><dd>{{dino.name}}</dd><dt>Period</dt><dd>{{dino.period}}</dd></dl></li>{% endfor %}</ul>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-answer="6">
+{% raw %}
+<ul>
+  {% for dino in site.data.dinos %}
+    <li>
+      <dl>
+        <dt>Name</dt>
+        <dd>{{dino.name}}</dd>
+        <dt>Period</dt>
+        <dd>{{dino.period}}</dd>
+      </dl>
+    </li>
+  {% endfor %}
+</ul>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-question="7">
+{% raw %}
+<ul>
+  {% for dino in site.data.dinos %}
+		{% if dino.eats == "herbivore" %}
+      <li>{{dino.name}} eats plants.</li>
+		{% else %}
+			<li>{{dino.name}} eats other animals.</li>
+    {% endfor %}
+  {% endfor %}
+</ul>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-answer="7">
+{% raw %}
+<ul>
+  {% for dino in site.data.dinos %}
+    {% if dino.eats == "herbivore" %}
+      <li>{{dino.name}} eats plants.</li>
+    {% else %}
+      <li>{{dino.name}} eats other animals.</li>
+    {% endfor %}
+  {% endfor %}
+</ul>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-question="8">
+{% raw %}
+<ul>
+  {% for dino in site.data.dinos %} <li>
+{% if dino.name == "Archeopteryx" %} <strong>Pterosaur!</strong>
+        <p>{{dino.desc}}</p> {% else %}
+      <strong>Dinosaur!</strong>
+<p>{{dino.desc}}</p>
+      {% endif %} </li>
+{% endfor %} </ul>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-answer="8">
+{% raw %}
+<ul>
+  {% for dino in site.data.dinos %}
+    <li>
+      {% if dino.name == "Archeopteryx" %}
+        <strong>Pterosaur!</strong>
+        <p>{{dino.desc}}</p>
+      {% else %}
+        <strong>Dinosaur!</strong>
+        <p>{{dino.desc}}</p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-question="9">
+{% raw %}
+      <table>
+<caption>A list of awesome dinosaurs</caption>
+<thead>
+    <tr>
+              <th scope="col">Name</th>
+          <th scope="col">Period</th> <th scope="col">Size</th>
+    </tr>
+  </thead>
+  <tbody> {% for dino in site.data.dios %} <tr> <td>{{dino.name}}</td>
+        <td>{{dino.period}}</td> <td>
+          <dl>
+            <dt>Width</dt>
+    <dd>{{dino.size.width}}</dd>
+        <dt>Length</dt>
+              <dd>{{dino.size.length}}</dd>
+                <dt>Weight</dt>
+          <dd>{{dino.size.weight}}</dd> </dl>
+    </td>
+          </tr>
+      {% endfor %}
+</tbody> </table>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-answer="9">
+{% raw %}
+<table>
+  <caption>A list of awesome dinosaurs</caption>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Period</th>
+      <th scope="col">Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for dino in site.data.dios %}
+      <tr>
+        <td>{{dino.name}}</td>
+        <td>{{dino.period}}</td>
+        <td>
+          <dl>
+            <dt>Width</dt>
+            <dd>{{dino.size.width}}</dd>
+            <dt>Length</dt>
+            <dd>{{dino.size.length}}</dd>
+            <dt>Weight</dt>
+            <dd>{{dino.size.weight}}</dd>
+          </dl>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-question="10">
+{% raw %}
+<main>{% for dino_type in site.data.dinos %}<section><h2>{{dino_type.title}}</h2><ul>{% for dino in dino_type.dinos %}<li>{% if dino.img %}<figure><img src="{{site.baseurl}}/images/{{dino.img.url}}" alt=""><figcaption>{{dino.img.desc}}</figcaption></figure>{% endif %}<dl><dt>Name</dt><dd>{{dino.name}}</dd><dt>Period</dt><dd>{{dino.period}}</dd></dl></li>{% endfor %}</ul></section>{% endfor %}</main>
+{% endraw %}
+</script>
+
+<script type="text/x-template" data-answer="10">
+{% raw %}
+<main>
+  {% for dino_type in site.data.dinos %}
+    <section>
+      <h2>{{dino_type.title}}</h2>
+      <ul>
+        {% for dino in dino_type.dinos %}
+          <li>
+            {% if dino.img %}
+              <figure>
+                <img src="{{site.baseurl}}/images/{{dino.img.url}}" alt="">
+                <figcaption>{{dino.img.desc}}</figcaption>
+              </figure>
+            {% endif %}
+            <dl>
+              <dt>Name</dt>
+              <dd>{{dino.name}}</dd>
+              <dt>Period</dt>
+              <dd>{{dino.period}}</dd>
+            </dl>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</main>
+{% endraw %}
+</script>
