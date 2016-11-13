@@ -145,6 +145,10 @@ pre[class*="language-"] {
   background-color: #e6e3e2 !important;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
 .outline {
   padding: 2em 1em;
 
