@@ -57,7 +57,7 @@ var questions = [
     ]
   },
   {
-    question: ' The `permalink: pretty` configuration option remove the `.html` extension from URLs making them more SEO friendly and easier to type.',
+    question: ' The `permalink: pretty` configuration option removes the `.html` extension from URLs, making them more SEO friendly and easier to type.',
     correct: 0,
     choices: [
       'True',
