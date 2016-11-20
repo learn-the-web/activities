@@ -142,7 +142,30 @@ code,
 pre,
 code[class*="language-"],
 pre[class*="language-"] {
-  background-color: #e6e3e2 !important;
+  background-color: #dfdcda !important;
+  border-radius: 3px;
+
+  font-family: "Source Code Pro",Menlo,monospace;
+  font-size: .9rem;
+}
+
+.answer-code-block-label {
+  width: 100%;
+}
+
+li:last-child .answer-code-block-label {
+  margin: 0;
+}
+
+.answer-code-block {
+  display: block;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.answer-code-block code {
+  display: block;
+  padding: 0.3em 0.6em;
 }
 
 .bg-white {

@@ -24,11 +24,11 @@
 }
 
 .folder::before {
-  background-image: url("folder.svg");
+  background-image: url("images/folder.svg");
 }
 
 .file::before {
-  background-image: url("file.svg");
+  background-image: url("images/file.svg");
 }
 
 .file-label[data-state="from"]::after,

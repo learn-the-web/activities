@@ -1,16 +1,14 @@
 var ActivityRunner = function () {
-  "use strict";
+  'use strict';
 
-  var
-    boundListeners = {
-      start: null
-    },
-    screens = {},
-    sayings = {
-      failure: document.querySelectorAll('[data-screen="failure"] p'),
-      success: document.querySelectorAll('[data-screen="success"] p')
-    }
-  ;
+  var boundListeners = {
+    start: null,
+  };
+  var screens = {};
+  var sayings = {
+    failure: document.querySelectorAll('[data-screen="failure"] p'),
+    success: document.querySelectorAll('[data-screen="success"] p')
+  };
 
   var escape = function (str) {
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -25,11 +23,13 @@ var ActivityRunner = function () {
     return text;
   };
 
+  var wrapInCodeBlock = function (text) {
+    return '<pre class="answer-code-block"><code>' + text + '</code></pre>';
+  };
+
   var findScreens = function () {
-    var
-      tmpScreens = document.querySelectorAll('[data-screen]'),
-      i = 0, t = tmpScreens.length
-    ;
+    var tmpScreens = document.querySelectorAll('[data-screen]');
+    var i = 0, t = tmpScreens.length;
 
     for (i; i<t; i++) {
       screens[tmpScreens[i].getAttribute('data-screen')] = tmpScreens[i];
@@ -60,11 +60,8 @@ var ActivityRunner = function () {
   };
 
   var displaySaying = function (group) {
-    var
-      i = 0,
-      t = group.length,
-      rand = Math.floor(Math.random() * t)
-    ;
+    var i = 0, t = group.length;
+    var rand = Math.floor(Math.random() * t);
 
     for (i; i<t; i++) {
       group[i].hidden = true;
@@ -155,6 +152,7 @@ var ActivityRunner = function () {
   return {
     escape: escape,
     convertToCode: convertToCode,
+    wrapInCodeBlock: wrapInCodeBlock,
     toggleScreen: toggleScreen,
     send: send,
     listen: listen,

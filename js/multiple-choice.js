@@ -1,15 +1,13 @@
 var MultipleChoice = function (runner, questions) {
-  "use strict";
+  'use strict';
 
-  var
-    current = 0,
-    elems = {
-      title: document.getElementById('question-title'),
-      choices: document.getElementById('question-choices'),
-      form: document.getElementById('question-form'),
-      extras: document.getElementById('extras')
-    }
-  ;
+  var current = 0;
+  var elems = {
+    title: document.getElementById('question-title'),
+    choices: document.getElementById('question-choices'),
+    form: document.getElementById('question-form'),
+    extras: document.getElementById('extras'),
+  };
 
   var bindEvents = function () {
     elems.form.addEventListener('submit', function (e) {
@@ -35,7 +33,15 @@ var MultipleChoice = function (runner, questions) {
 
     tmpLabel = document.createElement('label');
     tmpLabel.setAttribute('for', 'choice-' + i);
-    tmpLabel.innerHTML = runner.convertToCode(runner.escape(label));
+
+    if (typeof label === 'function') {
+      tmpLabel.classList.add('answer-code-block-label');
+      tmpLabel.classList.add('push-1-2');
+      tmpLabel.innerHTML = runner.wrapInCodeBlock(label(runner));
+    } else {
+      tmpLabel.innerHTML = runner.convertToCode(runner.escape(label));
+    }
+
     tmpLi.appendChild(tmpLabel);
 
     return tmpLi;
