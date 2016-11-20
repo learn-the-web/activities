@@ -1,0 +1,57 @@
+---
+title: "Liquid Locomotor"
+intro: "Rails are bumpy—don’t spill."
+congrats: "You’re faster than a speeding locomotive & deeper than the ocean’s liquid."
+scripts:
+  - activity.js
+layout: multiple-choice
+---
+
+<div id="question-5-extras" hidden>
+  <div class="highlight-box gutter pad-t-1-2 pad-b-1-2 push">
+    <pre class="push-0"><code>---
+title: "Dinos"
+---</code></pre>
+  </div>
+</div>
+
+<div id="question-7-extras" hidden>
+  <div class="highlight-box gutter pad-t-1-2 pad-b-1-2 push">
+    <pre class="push-0"><code>---
+title: "Dinos"
+---</code></pre>
+    <pre class="push-0"><code>{% raw %}
+{% if page.title == "dinos" %}
+  &lt;!-- True path --&gt;
+{% else %}
+  &lt;!-- False path --&gt;
+{% endif %}
+{% endraw %}</code></pre>
+  </div>
+</div>
+
+<div id="question-9-extras" hidden>
+  <div class="highlight-box gutter pad-t-1-2 pad-b-1-2 push">
+    <h2 class="folder normal micro push-0">
+      <span class="file-label">jekyll-root</span>
+    </h2>
+    <ol class="folder-group micro push-0">
+      <li class="folder">
+        {% include file-label.html label="_data" %}
+        <ol>
+          <li class="file">
+            {% include file-label.html label="dinos.yml" %}
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div id="question-10-extras" hidden>
+  <div class="highlight-box gutter pad-t-1-2 pad-b-1-2 push">
+    <pre class="push-0"><code>---
+total_dinos: 4
+---</code></pre>
+  </div>
+</div>
