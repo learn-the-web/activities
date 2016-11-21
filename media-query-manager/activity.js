@@ -25,7 +25,7 @@ for (var i = 1; i <= 20; i++) {
 var
   timedCallback = TimedCallback(ActivityRunner(), questions),
   qna = document.getElementById('questions-answers'),
-  minLeft = 10000 - 75,
+  minLeft = 10000 - 240,
   maxLeft = 10000 - 1200,
   totalQuestions = questions.length;
   ;
