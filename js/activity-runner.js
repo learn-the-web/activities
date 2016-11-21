@@ -151,8 +151,11 @@ var ActivityRunner = function () {
 
   return {
     escape: escape,
+    e: escape,
     convertToCode: convertToCode,
+    code: convertToCode,
     wrapInCodeBlock: wrapInCodeBlock,
+    wrap: wrapInCodeBlock,
     toggleScreen: toggleScreen,
     send: send,
     listen: listen,
