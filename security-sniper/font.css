@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Klingon piqaD";
+  src: url("klingon-piqad-hasta.woff2") format("woff2"),
+       url("klingon-piqad-hasta.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[lang="tlh"] {
+  font-family: "Klingon piqaD";
+}
