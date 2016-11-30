@@ -34,12 +34,17 @@ var MultipleChoice = function (runner, questions) {
     tmpLabel = document.createElement('label');
     tmpLabel.setAttribute('for', 'choice-' + i);
 
-    if (typeof label === 'function') {
-      tmpLabel.classList.add('answer-code-block-label');
-      tmpLabel.classList.add('push-1-2');
-      tmpLabel.innerHTML = runner.wrapInCodeBlock(label(runner));
-    } else {
-      tmpLabel.innerHTML = runner.convertToCode(runner.escape(label));
+    switch (typeof label) {
+      case 'function':
+        tmpLabel.classList.add('answer-code-block-label');
+        tmpLabel.classList.add('push-1-2');
+        tmpLabel.innerHTML = runner.wrapInCodeBlock(label(runner));
+        break;
+      case 'object': // array
+        tmpLabel.innerHTML = label[0];
+        break;
+      default:
+        tmpLabel.innerHTML = runner.convertToCode(runner.escape(label));
     }
 
     tmpLi.appendChild(tmpLabel);
