@@ -35,7 +35,12 @@ var FormValidator = function (runner, questions) {
   };
 
   var populateQuestion = function (id) {
-    elems.title.innerHTML = runner.convertToCode(runner.escape(questions[id].question));
+    if (typeof questions[id].question === 'function') {
+      elems.title.innerHTML = questions[id].question(runner);
+    } else {
+      elems.title.innerHTML = runner.convertToCode(runner.escape(questions[id].question));
+    }
+
     elems.inputs.innerHTML = '';
     elems.inputs.appendChild(inputGroups[questions[id].inputGroup]);
 

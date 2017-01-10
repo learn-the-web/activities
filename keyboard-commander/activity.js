@@ -47,7 +47,7 @@ var questions = [
     }
   },
   {
-    question: '⌥R is the shortcut for refresh.',
+    question: function (r) { return '<code><span class="win">Alt-</span><span class="mac">⌥</span>R</code> is the shortcut for refresh.' },
     inputGroup: 'question-5',
     inputs: {
       'shortcut-refresh-f': function (val) {
