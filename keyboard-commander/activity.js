@@ -1,3 +1,6 @@
+var os = (navigator.platform.search(/mac/i) > -1) ? 'mac' : 'win';
+var notOs = (os == 'win') ? 'mac' : 'win';
+
 var questions = [
   {
     question: 'Shortcut for ‘Save’:',
@@ -41,7 +44,13 @@ var questions = [
     question: 'Shortcuts for…',
     inputGroup: 'question-4',
     inputs: {
-      'shortcut-win': /[wW]/,
+      'shortcut-win': function (val) {
+        if (os === 'win') {
+          return document.getElementById('shortcut-tab-close').value.match(/[wW]/);
+        } else {
+          return val.match(/[wW]/);
+        }
+      },
       'shortcut-tab': /[tT]/,
       'shortcut-find': /[fF]/
     }
@@ -164,13 +173,9 @@ var questions = [
   }
 ];
 
-var
-  form = document.getElementById('question-form'),
-  runner = ActivityRunner(),
-  activity,
-  os = (navigator.platform.search(/mac/i) > -1) ? 'mac' : 'win',
-  notOs = (os == 'win') ? 'mac' : 'win'
-;
+var form = document.getElementById('question-form');
+var runner = ActivityRunner();
+var activity;
 
 var fatalMouseMove = function (e) {
   runner.send('fatal-error', null, {
