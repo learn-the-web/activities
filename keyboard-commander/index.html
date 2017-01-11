@@ -56,13 +56,17 @@ hideSubmit: true
 </div>
 
 <div data-input-group="question-4">
-  <div class="push mega">
-    <label for="shortcut-win"><span class="func label-aligned">Close Window:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
+  <div class="push mega mac">
+    <label for="shortcut-win"><span class="func label-aligned">Close Window:</span> ⌘ </label>
     <input id="shortcut-win" maxlength="1">
   </div>
   <div class="push mega">
     <label for="shortcut-tab"><span class="func label-aligned">New Tab:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
     <input id="shortcut-tab" maxlength="1">
+  </div>
+  <div class="push mega win">
+    <label for="shortcut-win"><span class="func label-aligned">Close Tab:</span> Ctrl + </label>
+    <input id="shortcut-win" maxlength="1">
   </div>
   <div class="push mega">
     <label for="shortcut-find"><span class="func label-aligned">Find:</span> <span class="mac">⌘</span><span class="win">Ctrl +</span> </label>
@@ -149,10 +153,10 @@ hideSubmit: true
     <label class="visually-hidden" for="shortcut-next-meta" data-state="invisible">Meta key</label>
     <select id="shortcut-next-meta">
       <option value="-"></option>
-      <option value="ctrl" class="win">Ctrl</option>
+      <option value="alt" class="win">Ctrl</option>
       <option value="command" class="mac">⌘</option>
       <option value="shift">Shift</option>
-      <option value="alt" class="win">Alt</option>
+      <option value="alt-win" class="win">Alt</option>
       <option value="alt" class="mac">Option</option>
     </select>
     <label class="visually-hidden" for="shortcut-next-letter" data-state="invisible">Key</label>
@@ -171,10 +175,10 @@ hideSubmit: true
     <label class="visually-hidden" for="shortcut-prev-meta" data-state="invisible">Meta key</label>
     <select id="shortcut-prev-meta">
       <option value="-"></option>
-      <option value="ctrl" class="win">Ctrl</option>
+      <option value="alt" class="win">Ctrl</option>
       <option value="command" class="mac">⌘</option>
       <option value="shift">Shift</option>
-      <option value="alt" class="win">Alt</option>
+      <option value="alt-win" class="win">Alt</option>
       <option value="alt" class="mac">Option</option>
     </select>
     <label class="visually-hidden" for="shortcut-prev-letter" data-state="invisible">Key</label>
