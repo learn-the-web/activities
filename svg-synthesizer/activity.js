@@ -1,8 +1,6 @@
 var svgSetup = function (val) {
-  var
-    svg = document.createElement('svg'),
-    elem = document.createDocumentFragment()
-    ;
+  var svg = document.createElement('svg');
+  var elem = document.createDocumentFragment();
 
   svg.innerHTML = val;
   elem.appendChild(svg);
@@ -102,9 +100,12 @@ var questions = [
     correct: function (val) {
       var elem = svgSetup(val);
       var g = elem.querySelector('g');
-      var paths = g.querySelectorAll('path');
+      var paths;
 
       if (!g) return false;
+
+      paths = g.querySelectorAll('path');
+
       if (!paths) return false;
       if (paths.length != 3) return false;
 
