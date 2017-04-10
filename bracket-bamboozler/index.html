@@ -1,0 +1,146 @@
+---
+title: "Bracket Bamboozler"
+intro: "Square or Round or Curly?"
+congrats: "You’re like the logical square bracket: sharp as a 90-degree angle."
+styles:
+  - /common/prism.min.css
+scripts:
+  - /common/prism.min.js
+  - activity.js
+layout: form-validator
+---
+
+<div data-input-group="question-1">
+<pre data-line="5"><code class="language-javascript">{% capture code %}
+var species = [
+  'S. stenops',
+  'S. ungulatus',
+  'S. sulcatus',
+
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Missing closing brackets:</label>
+  <input class="code" id="brackets">
+</div>
+
+<div data-input-group="question-2">
+<pre data-line="4"><code class="language-javascript">{% capture code %}
+var dino = {
+  name: 'Brontosaurus',
+  ate: 'Plants',
+
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Missing closing brackets:</label>
+  <input class="code" id="brackets">
+</div>
+
+<div data-input-group="question-3">
+<pre data-line="3"><code class="language-javascript">{% capture code %}
+if (isDino) {
+  console.log('It’s a dinosaur!');
+
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Missing closing brackets:</label>
+  <input class="code" id="brackets">
+</div>
+
+<div data-input-group="question-4">
+<pre data-line="12"><code class="language-javascript">{% capture code %}
+if (isDino) {
+  switch (animal) {
+    case 'Dinosaur':
+      console.log('It’s a dinosaur!');
+      break;
+    case 'Pterosaur':
+      console.log('It’s a pterosaur!');
+      break;
+    case 'Plesiosaur':
+      console.log('It’s a plesiosaur!');
+      break;
+
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Missing closing brackets:</label>
+  <input class="code" id="brackets">
+</div>
+
+<div data-input-group="question-5">
+<pre data-line="12"><code class="language-javascript">{% capture code %}
+var pterosaurs = [
+  {
+    name: 'Velociraptor',
+    move: function () {
+      return 'Run';
+    }
+  },
+  {
+    name: 'Quetzalcoatlus',
+    move: function () {
+      return 'Fly';
+
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Missing closing brackets:</label>
+  <input class="code" id="brackets">
+</div>
+
+<div data-input-group="question-6">
+<pre data-line="3"><code class="language-javascript">{% capture code %}
+$('.btn').on('click', function () {
+  console.log('Stegosaurus!');
+
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Missing closing brackets:</label>
+  <input class="code" id="brackets">
+</div>
+
+<div data-input-group="question-7">
+<pre data-line="7"><code class="language-javascript">{% capture code %}
+$('.btn').on('click', function () {
+  stego.swipeTail([
+    'leftwards',
+    'rightwards',
+    'leftwards',
+    'upwards',
+
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Missing closing brackets:</label>
+  <input class="code" id="brackets">
+</div>
+
+<div data-input-group="question-8">
+<pre data-line="6"><code class="language-javascript">{% capture code %}
+$('.btn').on('click', function () {
+  if ($(this).hasClass('dino')) {
+    console.log('It’s a dinosaur!');
+  } else {
+    console.log('It isn’t a dinosaur!');
+
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Missing closing brackets:</label>
+  <input class="code" id="brackets">
+</div>
+
+<div data-input-group="question-9">
+<pre data-line="5"><code class="language-css">{% capture code %}
+$('.btn').on('click', function () {
+  $('.veloci').css({
+    top: window.scrollY * .5,
+    left: window.scrollX * .5
+
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Missing closing brackets:</label>
+  <input class="code" id="brackets">
+</div>
+
+<div data-input-group="question-10">
+<pre data-line="58"><code class="language-css">{% capture code %}
+$(window).on('scroll', function () {
+  $('.veloci').css({
+    top: function () {
+      if (window.scrollY < 100) {
+        return 200;
+      } else {
+        return 500;
+
+{% endcapture %}{{ code | escape }}</code></pre>
+  <label for="selector">Missing closing brackets:</label>
+  <input class="code" id="brackets">
+</div>
