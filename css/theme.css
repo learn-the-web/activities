@@ -48,7 +48,8 @@ s {
   opacity: .4;
 }
 
-mark {
+mark,
+.mark {
   padding: .05em .1em;
   background-color: #ffd30d;
 }
