@@ -21,7 +21,7 @@
     "postcss": "postcss -u postcss-import -u postcss-cssnext --postcss-cssnext.browsers 'last 2 versions' -u postcss-assets -u cssnano",
     "build-css-main": "npm run postcss -- -o main.min.css css/main.css",
     "build-css-prism": "npm run postcss -- -o common/prism.min.css common/prism.css",
-    "build-css": "parallelshell 'npm run build-css-main' 'npm run build-css-prism'",
+    "build-css": "npm-run-all --parallel build-css-*",
     "watch-css": "onchange 'css/*.css' -- npm run build-css",
     "build-js": "uglifyjs $npm_package_config_js_main -c -m --lint -o activities.min.js",
     "watch-js": "onchange 'js/*.js' -- npm run build-js",
