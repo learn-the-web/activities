@@ -4,12 +4,12 @@
   "devDependencies": {
     "cssnano": "^3.7.4",
     "npm-run-all": "^4.0.2",
-    "onchange": "^2.5.0",
+    "onchange": "^3.2.1",
     "postcss-assets": "^4.1.0",
-    "postcss-cli": "^2.5.2",
-    "postcss-cssnext": "^2.7.0",
-    "postcss-import": "^8.1.2",
-    "uglify-js": "^2.7.3"
+    "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0",
+    "uglify-js": "^3.0.28"
   },
   "config": {
     "js_main": "js/activity-runner.js js/code-compare.js js/form-validator.js js/multiple-choice.js js/timed-callback.js"
