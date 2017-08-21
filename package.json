@@ -3,8 +3,8 @@
   "private": true,
   "devDependencies": {
     "cssnano": "^3.7.4",
+    "npm-run-all": "^4.0.2",
     "onchange": "^2.5.0",
-    "parallelshell": "^2.0.0",
     "postcss-assets": "^4.1.0",
     "postcss-cli": "^2.5.2",
     "postcss-cssnext": "^2.7.0",
@@ -15,7 +15,7 @@
     "js_main": "js/activity-runner.js js/code-compare.js js/form-validator.js js/multiple-choice.js js/timed-callback.js"
   },
   "scripts": {
-    "start": "parallelshell 'npm run start-server' 'npm run watch-css' 'npm run watch-js'",
+    "start": "npm-run-all --parallel start-server watch-*",
     "start-server": "jekyll serve --incremental",
     "build-site": "jekyll build",
     "postcss": "postcss -u postcss-import -u postcss-cssnext --postcss-cssnext.browsers 'last 2 versions' -u postcss-assets -u cssnano",

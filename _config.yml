@@ -1,6 +1,8 @@
 version: 19
 permalink: pretty
 
+port: 4001
+
 exclude:
   - README.md
   - gulpfile.js
