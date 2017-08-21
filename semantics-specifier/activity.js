@@ -3,17 +3,17 @@ var questions = [
     question: 'What tag is used to create a hyperlink?',
     correct: 0,
     choices: [
-      '<a>',
-      '<link>',
-      '<button>'
+      '`<a>`',
+      '`<link>`',
+      '`<button>`'
     ]
   },
   {
     question: 'What tag is used to make text look italic?',
     correct: 3,
     choices: [
-      '<i>',
-      '<em>',
+      '`<i>`',
+      '`<em>`',
       'All of the above',
       'None of the above'
     ]
@@ -22,9 +22,9 @@ var questions = [
     question: 'Which tag defines the most important piece of text?',
     correct: 1,
     choices: [
-      'The <title> tag',
-      'The <h1> tag',
-      'The <strong> tag'
+      'The `<title>` tag',
+      'The `<h1>` tag',
+      'The `<strong>` tag'
     ]
   },
   {
