@@ -28,5 +28,113 @@
   {% for script in page.scripts %}
     <script src="{{script}}?v={{site.version}}"></script>
   {% endfor %}
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Thomas J Bradley",
+      "jobTitle": "Professor",
+      "memberOf": {
+        "@id": "#algonquin"
+      },
+      "description": "Thomas J Bradley, Professor of The Open Web, is in charge of developing & maintaining the Web Development courses in the Graphic Design program at Algonquin College",
+      "email": "thomas.bradley@algonquincollege.com",
+      "url": "https://thomasjbradley.ca"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "#thomasjbradley",
+      "name": "Thomas J Bradley",
+      "jobTitle": "Professor",
+      "memberOf": {
+        "@id": "#algonquin"
+      },
+      "description": "Thomas J Bradley, Professor of The Open Web, is in charge of developing & maintaining the Web Development courses in the Graphic Design program at Algonquin College",
+      "email": "thomas.bradley@algonquincollege.com",
+      "url": "https://thomasjbradley.ca"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "PostalAddress",
+      "@id": "#algonquin-address",
+      "name": "Algonquin College",
+      "url": "https://algonquincollege.com",
+      "streetAddress": "1385 Woodroffe Ave.",
+      "addressLocality": "Ottawa",
+      "addressRegion": "ON",
+      "postalCode": "K2G 1V8",
+      "addressCountry": "CA"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "CollegeOrUniversity",
+      "name": "Algonquin College Graphic Design",
+      "image": "https://algonquindesign.ca/favicon-152.png",
+      "url": "https://algonquindesign.ca",
+      "description": "Ontario college graphic design diploma program teaching students up-to-date courses in print, mobile, web & motion.",
+      "address": {
+        "@id": "#algonquin-address"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "CollegeOrUniversity",
+      "@id": "#algonquin",
+      "name": "Algonquin College Graphic Design",
+      "image": "https://algonquindesign.ca/favicon-152.png",
+      "url": "https://algonquindesign.ca",
+      "description": "Ontario college graphic design diploma program teaching students up-to-date courses in print, mobile, web & motion.",
+      "address": {
+        "@id": "#algonquin-address"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "AlignmentObject",
+      "@id": "#higher-education",
+      "alignmentType": "teaches",
+      "educationalFramework": "Higher Education",
+      "targetName": "Higher Education",
+      "targetUrl": "http://purl.org/ASN/scheme/ASNEducationLevel/HigherEducation"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "accessMode": "textual, visual",
+      "accessModeSufficient": "textual",
+      "accessibilityAPI": "ARIA",
+      "accessibilityControl": "fullKeyboardControl, fullMouseControl, fullTouchControl",
+      "accessibilityFeature": "alternativeText, highContrastDisplay, largePrint, readingOrder, structuralNavigation",
+      "accessibilityHazard": "noFlashingHazard, noSoundHazard",
+      "author": {
+        "@id": "#thomasjbradley"
+      },
+      "copyrightHolder": {
+        "@id": "#thomasjbradley"
+      },
+      "copyrightYear": "{{site.time | date:'%Y'}}",
+      "dateModified": "{{site.time}}",
+      "educationalAlignment": {
+        "@id": "#higher-education"
+      },
+      "educationalUse": "Quiz",
+      "isAccessibleForFree": true,
+      "learningResourceType": "Quiz",
+      "interactivityType": "active",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "timeRequired": "PT30M",
+      "name": "{{page.title}}",
+      "url": "https://activities.learn-the-web.algonquindesign.ca{{page.url | replace: 'index.html', ''}}",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "public"
+      }
+    }
+  ]
+  </script>
+
 </body>
 </html>
