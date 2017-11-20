@@ -65,13 +65,11 @@ var questions = [
   }
 ];
 
-var
-  form = document.getElementById('question-form'),
-  runner = ActivityRunner(),
-  activity,
-  resetBtns = document.querySelectorAll('[type="reset"]'),
-  i = 0, t = resetBtns.length
-;
+var form = document.getElementById('question-form');
+var runner = ActivityRunner();
+var activity;
+var resetBtns = document.querySelectorAll('[type="reset"]');
+var i = 0, t = resetBtns.length;
 
 for (i; i<t; i++) {
   resetBtns[i].addEventListener('click', function (e) {

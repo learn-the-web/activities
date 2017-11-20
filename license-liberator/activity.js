@@ -89,7 +89,7 @@ var questions = [
     ]
   },
   {
-    question: 'You search on GitHub and find Javascript slideshow code that has the MIT license. Can you use this?',
+    question: 'You search on GitHub and find JavaScript slideshow code that has the MIT license. Can you use this?',
     correct: 2,
     choices: [
       'No',

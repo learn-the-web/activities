@@ -56,11 +56,9 @@ layout: wrapper
 </aside>
 
 <script>
-  var
-    expectedUrl = getState().url,
-    rawRating = window.location.search.match(/rating=(\d+)/),
-    rating
-  ;
+  var expectedUrl = getState().url;
+  var rawRating = window.location.search.match(/rating=(\d+)/);
+  var rating;
 
   // window.location.hash = '';
 

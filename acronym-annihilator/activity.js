@@ -23,7 +23,7 @@ var questions = [
     choices: [
       'Johnson Space',
       'Java Semantics',
-      'Javascript'
+      'JavaScript'
     ]
   },
   {

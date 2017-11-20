@@ -1,15 +1,13 @@
 var CodeCompare = function (runner, questions) {
   "use strict";
 
-  var
-    editor = null,
-    current = 0,
-    elems = {
-      title: document.getElementById('question-title'),
-      extras: document.getElementById('question-extras'),
-      form: document.getElementById('question-form')
-    }
-  ;
+  var editor = null;
+  var current = 0;
+  var elems = {
+    title: document.getElementById('question-title'),
+    extras: document.getElementById('question-extras'),
+    form: document.getElementById('question-form'),
+  };
 
   var init = function () {
     editor = ace.edit("editor");
@@ -68,19 +66,19 @@ var CodeCompare = function (runner, questions) {
       case 'yes':
         runner.send('success', function () {
           advanceQuestion();
-        });
+        }, { questionId: current });
         break;
 
       case 'no':
         runner.send('failure', function () {
           editor.focus();
-        });
+        }, { questionId: current });
         break;
 
       default:
         runner.send('failure', function () {
           editor.focus();
-        });
+        }, { questionId: current });
         break;
     }
   };

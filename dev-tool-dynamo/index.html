@@ -1,0 +1,83 @@
+---
+title: "Dev Tool Dynamo"
+desc: "A fun activity testing knowledge of developer tools by posing problems that can only be solved with the tools."
+intro: "Develop Your Dynamic Tools"
+congrats: "Oh, you are quite the dynamo!"
+styles:
+  - activity.css
+scripts:
+  - activity.js
+layout: timed-callback
+---
+
+<div data-content-group="question-1">
+  <div id="question-1-wrapper">
+    <div id="question-1-hidden-div"></div>
+  </div>
+</div>
+
+<div data-content-group="question-2">
+  <ol id="question-2-nums">
+    <li>3</li>
+    <li>5</li>
+    <li>1</li>
+    <li>4</li>
+    <li>2</li>
+  </ol>
+</div>
+
+<div data-content-group="question-3">
+  <div id="question-3-box"></div>
+</div>
+
+<div data-content-group="question-4">
+  <div id="question-4-left" class="shape circle"></div>
+  <div id="question-4-right" class="shape circle"></div>
+</div>
+
+<div data-content-group="question-5">
+  <div id="question-5-back" class="shape circle"></div>
+  <div id="question-5-front" class="shape circle"></div>
+</div>
+
+<div data-content-group="question-6">
+  <div id="question-6-left" class="shape"></div>
+  <div id="question-6-right" class="shape"></div>
+</div>
+
+<div data-content-group="question-7">
+  <div id="question-7-vert" class="guide vert"></div>
+  <div id="question-7-horz" class="guide horz"></div>
+  <img src="arrow.svg" id="question-7-arrow" class="movable-shape" alt="Arrow">
+</div>
+
+<div data-content-group="question-8">
+  <div id="question-8-vert" class="guide vert"></div>
+  <div id="question-8-horz" class="guide horz"></div>
+  <img src="crosshair.png" id="question-8-circle" class="movable-shape" alt="Crosshair">
+</div>
+
+<div data-content-group="question-9">
+  <form id="question-9-form" autocomplete="off">
+    <div class="push">
+      <label for="word" data-state="invisible">Word</label>
+      <input id="word" autofocus>
+    </div>
+    <div class="text-center">
+      <button class="btn btn--ghost kilo" type="submit">Check answer</button>
+    </div>
+  </form>
+</div>
+
+<div data-content-group="question-10">
+  <form id="question-10-form" autocomplete="off">
+    <div class="push">
+      <label for="size" data-state="invisible">Word</label>
+      <input type="number" id="size" step="0.01" autofocus>
+      <span>KB</span>
+    </div>
+    <div class="text-center">
+      <button class="btn btn--ghost kilo" type="submit">Check answer</button>
+    </div>
+  </form>
+</div>

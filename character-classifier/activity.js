@@ -47,7 +47,7 @@ var questions = [
     ]
   },
   {
-    question: 'Ends a line in CSS & Javascript:',
+    question: 'Ends a line in CSS & JavaScript:',
     correct: 1,
     choices: [
       'Colon',

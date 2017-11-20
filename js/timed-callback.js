@@ -1,17 +1,15 @@
 var TimedCallback = function (runner, questions) {
   "use strict";
 
-  var
-    current = 0,
-    onStart,
-    tickTime = 15,
-    ticker,
-    elems = {
-      title: document.getElementById('question-title'),
-      contents: document.getElementById('question-contents')
-    },
-    contentGroups = {}
-  ;
+  var current = 0;
+  var onStart;
+  var tickTime = 15;
+  var ticker;
+  var elems = {
+    title: document.getElementById('question-title'),
+    contents: document.getElementById('question-contents'),
+  };
+  var contentGroups = {};
 
   var setTickTime = function (time) {
     tickTime = time;
@@ -74,13 +72,13 @@ var TimedCallback = function (runner, questions) {
       case 'yes':
         runner.send('success', function () {
           advanceQuestion();
-        });
+        }, { questionId: current });
         break;
 
       case 'no':
         runner.send('failure', function () {
           startTicker();
-        });
+        }, { questionId: current });
         break;
 
       default:

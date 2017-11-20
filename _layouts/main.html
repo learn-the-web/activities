@@ -7,6 +7,7 @@ layout: wrapper
   <p class="giga" id="game-intro">{{page.intro}}</p>
   <img class="game-icon push-2" src="icon.svg" alt="">
   <button class="btn giga" id="start-button">Start activity</button>
+  {% if page.notes %}<small class="block pad-t-2 italic" id="game-notes">{{page.notes | markdownify}}</small>{% endif %}
 </header>
 
 {{content}}
@@ -66,6 +67,22 @@ layout: wrapper
   <h2 class="zetta" tabindex="-1">Congratulations!</h2>
   <strong class="block push marker-image"><img src="/images/victory.svg" alt="Victory!"></strong>
   <p class="giga italic max-length" id="game-congrats">{{page.congrats}}</p>
+  <dl id="success-stats">
+    <div>
+      <dt>Started</dt>
+      <dd id="stats-start"></dd>
+    </div>
+    <div>
+      <dt>Finished</dt>
+      <dd id="stats-end"></dd>
+    </div>
+    <div>
+      <dt>Completion time</dt>
+      <dd id="stats-time"></dd>
+    </div>
+  </dl>
+  <p>You answered <strong id="stats-correct"></strong> of the questions correctly on the first try.</p>
 </footer>
 
+<script>var quizId = '{{page.url | replace:"/", ""}}';</script>
 <script src="/activities.min.js?v={{site.version}}"></script>

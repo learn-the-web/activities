@@ -1,8 +1,6 @@
-var
-  questions = [],
-  incorrectSamples = document.querySelectorAll('[data-question]'),
-  i = 0, t = incorrectSamples.length
-;
+var questions = [];
+var incorrectSamples = document.querySelectorAll('[data-question]');
+var i = 0, t = incorrectSamples.length;
 
 for (i; i<t; i++) {
   var id = incorrectSamples[i].getAttribute('data-question');

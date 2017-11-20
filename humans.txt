@@ -10,17 +10,12 @@ Location: Ottawa, Canada
 
 ---
 
-# THANKS
-
-
----
-
 # TECHNOLOGY
 
 ## Software
 
 - Sublime Text 3 (with Vintageous)
 - Git + GitHub
-- Gulp.js
+- Jekyll
 - PostCSS
 - UglifyJS

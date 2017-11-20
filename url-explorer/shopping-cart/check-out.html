@@ -12,10 +12,44 @@ scripts:
     <h2 class="zetta" tabindex="-1">Congratulations!</h2>
     <strong class="block push marker-image"><img src="/images/victory.svg" alt="Victory!"></strong>
     <p class="giga italic">You are now an official url-naut!</p>
+    <dl id="success-stats">
+      <div>
+        <dt>Started</dt>
+        <dd id="stats-start"></dd>
+      </div>
+      <div>
+        <dt>Finished</dt>
+        <dd id="stats-end"></dd>
+      </div>
+      <div>
+        <dt>Completion time</dt>
+        <dd id="stats-time"></dd>
+      </div>
+    </dl>
+    <p>You answered <strong id="stats-correct">100%</strong> of the questions correctly on the first try.</p>
   </article>
 </main>
 
 <script>
+  var dateFormatter = new Intl.DateTimeFormat('en-CA', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  });
+
+  var dtstart = new Date(sessionStorage.getItem('url-explorer-dtstart'));
+  var dtend = new Date();
+  var timeDiff = 20;
+
+  timeDiff = ((dtend.getTime() - dtstart.getTime()) / 1000 / 60).toFixed(2);
+
+  document.getElementById('stats-start').innerHTML = dateFormatter.format(dtstart);
+  document.getElementById('stats-end').innerHTML = dateFormatter.format(dtend);
+  document.getElementById('stats-time').innerHTML = '~' + timeDiff + ' m';
+
   sessionStorage.clear();
   sessionStorage.clear();
 </script>

@@ -1,5 +1,6 @@
 ---
-title: URL Explorer
+title: "URL Explorer"
+desc: "Test knowledge of using proper Open Web URLs by following prompts to navigate a website."
 blockingscripts:
   - /url-explorer/redirector.js
 styles:
@@ -23,5 +24,6 @@ layout: wrapper
 </main>
 
 <script>
+  if (!sessionStorage.getItem('url-explorer-dtstart')) sessionStorage.setItem('url-explorer-dtstart', (new Date()).toJSON());
   saveState('/start/');
 </script>

@@ -95,20 +95,18 @@ var questions = [
   }
 ];
 
-var
-  timedCallback = TimedCallback(ActivityRunner(), questions),
-  startButton = document.getElementById('start-button'),
-  startMessage = document.createElement('span'),
-  bigWord = 'color: #00675a; font-size: 24px; font-weight: bold;',
-  boldStatement = 'color: #000; font-size: 18px; font-weight: bold;',
-  brightStatement = 'color: #00deaf; font-size: 16px; font-weight: bold;';
-  start = function () {
-    timedCallback.runner.start();
-    console.log('%cWatch the page for instructions.', boldStatement);
-    return 'Awesome-sauce!';
-  },
-  question5Clicked = false;
-;
+var timedCallback = TimedCallback(ActivityRunner(), questions);
+var startButton = document.getElementById('start-button');
+var startMessage = document.createElement('span');
+var bigWord = 'color: #00675a; font-size: 24px; font-weight: bold;';
+var boldStatement = 'color: #000; font-size: 18px; font-weight: bold;';
+var brightStatement = 'color: #00deaf; font-size: 16px; font-weight: bold;';
+var start = function () {
+  timedCallback.runner.start();
+  console.log('%cWatch the page for instructions.', boldStatement);
+  return 'Awesome-sauce!';
+};
+var question5Clicked = false;
 
 window.stars = ['Sirius', 'EZ Aquarii', 'Procyon', 'Cygni'];
 
@@ -119,5 +117,5 @@ startButton.parentNode.appendChild(startMessage);
 startButton.parentNode.removeChild(startButton);
 
 console.clear();
-console.log('%cWelcome to Javascript Journeyer!', bigWord);
+console.log('%cWelcome to JavaScript Journeyer!', bigWord);
 console.log('%cTo begin the activity use the command line below and run the `start()` function.', boldStatement);

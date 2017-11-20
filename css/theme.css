@@ -197,3 +197,36 @@ li:last-child .answer-code-block-label {
   float: right;
   width: 49%;
 }
+
+.instructions {
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 1rem;
+  position: fixed;
+  max-width: calc(100% - 20px);
+  z-index: 100;
+
+  background-color: rgba(255, 255, 204, .6);
+  border-radius: 8px;
+  border: 2px solid #ffc;
+}
+
+#success-stats {
+  padding: 0;
+}
+
+#success-stats dt,
+#success-stats dd {
+  display: inline-block;
+  width: 11em;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+#success-stats dd {
+  margin-left: .5em;
+  font-weight: bold;
+  text-align: left;
+}

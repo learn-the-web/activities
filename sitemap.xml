@@ -1,0 +1,13 @@
+---
+layout: sitemap
+---
+
+{% for page in site.pages %}
+  {% if page.url contains "sitemap.xml" or page.url contains "url-explorer" or page.url contains "404" %}{% continue %}{% endif %}
+  {% include sitemap-entry.xml entry=page %}
+{% endfor %}
+
+<url>
+  <loc>https://activities.learn-the-web.algonquindesign.ca/url-explorer/</loc>
+  <lastmod>{% capture lastmod_date %}{% last_modified url-explorer/index.html %}{% endcapture %}{{ lastmod_date | date_to_xmlschema }}</lastmod>
+</url>

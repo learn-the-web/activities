@@ -87,25 +87,23 @@ layout: wrapper
 </main>
 
 <script>
-  var
-    rawPage = window.location.search.match(/page=(\d+)/),
-    rawSearch = window.location.search.match(/q=(\w+)/),
-    page, search,
-    expectedUrl = getState().url,
-    setPage2 = function () {
-      var products = document.querySelectorAll('.product-list li')
+  var rawPage = window.location.search.match(/page=(\d+)/);
+  var rawSearch = window.location.search.match(/q=(\w+)/);
+  var page, search;
+  var expectedUrl = getState().url;
+  var setPage2 = function () {
+    var products = document.querySelectorAll('.product-list li')
 
-      products[0].setAttribute('hidden', true);
-      products[1].setAttribute('hidden', true);
-      products[2].setAttribute('hidden', true);
-      products[3].removeAttribute('hidden');
-      products[4].removeAttribute('hidden');
-      products[5].removeAttribute('hidden');
+    products[0].setAttribute('hidden', true);
+    products[1].setAttribute('hidden', true);
+    products[2].setAttribute('hidden', true);
+    products[3].removeAttribute('hidden');
+    products[4].removeAttribute('hidden');
+    products[5].removeAttribute('hidden');
 
-      document.getElementById('page-1').classList.remove('current');
-      document.getElementById('page-2').classList.add('current');
-    }
-  ;
+    document.getElementById('page-1').classList.remove('current');
+    document.getElementById('page-2').classList.add('current');
+  };
 
   if (rawPage && rawPage[1]) {
     page = parseInt(rawPage[1], 10) || 1;

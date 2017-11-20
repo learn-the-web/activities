@@ -1,9 +1,7 @@
-var
-  baseUrl = document.querySelectorAll('.base-url'),
-  i = 0, t = baseUrl.length,
-  form = document.querySelector('form'),
-  main = document.querySelector('main')
-;
+var baseUrl = document.querySelectorAll('.base-url');
+var i = 0, t = baseUrl.length;
+var form = document.querySelector('form');
+var main = document.querySelector('main');
 
 for (i; i<t; i++) {
   baseUrl[i].innerHTML = window.location.host + '/url-explorer/';

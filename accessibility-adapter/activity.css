@@ -1,0 +1,136 @@
+.floater {
+  position: absolute;
+  opacity: .3;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.floater-1 {
+  left: 60%;
+  top: -140px;
+  animation: floater-shifty 10s alternate infinite ease;
+}
+
+.floater-2 {
+  left: 40%;
+  top: 24%;
+  animation: floater-jittery .3s steps(2) alternate infinite;
+}
+
+.floater-3 {
+  left: 70%;
+  top: 60%;
+}
+
+.floater-4 {
+  left: 20%;
+  top: 0;
+  opacity: .5;
+  animation: floater-shifty 1s steps(2) alternate infinite;
+}
+
+@keyframes floater-shifty {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(25px);
+  }
+}
+
+@keyframes floater-jittery {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.macular-degeneration {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  background-image: radial-gradient(#000, transparent);
+  pointer-events: none;
+}
+
+main.wrapper {
+  animation: none .5s steps(2) alternate infinite;
+}
+
+@keyframes flutters {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+.diabetic-retinopathy {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: .1;
+}
+
+.embed {
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  width: 100%;
+}
+
+.embed-16by9 {
+  padding-top: 56.25%;
+}
+
+.embed-item {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  z-index: 50;
+  filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, .5));
+}
+
+.blindness {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  background-color: #000;
+  pointer-events: none;
+}
+
+#pointer-lock-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  background-color: rgba(245, 242, 240, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

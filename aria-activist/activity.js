@@ -24,7 +24,7 @@ var questions = [
     choices: [
       'CSS',
       'PHP',
-      'Javascript',
+      'JavaScript',
     ]
   },
   {
@@ -51,7 +51,7 @@ var questions = [
     choices: [
       'Best compatibility with accessibility tools',
       'Don’t—just use `hidden`',
-      'Because it can be controlled by Javascript',
+      'Because it can be controlled by JavaScript',
     ]
   },
   {

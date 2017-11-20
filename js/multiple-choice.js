@@ -67,6 +67,8 @@ var MultipleChoice = function (runner, questions) {
     for (i; i<t; i++) {
       elems.choices.appendChild(createChoiceElement(i, questions[id].choices[i]));
     }
+
+    if (questions[id].onStart) questions[id].onStart();
   };
 
   var advanceQuestion = function () {
@@ -83,15 +85,15 @@ var MultipleChoice = function (runner, questions) {
       case 'yes':
         runner.send('success', function () {
           advanceQuestion();
-        });
+        }, { questionId: current });
         break;
 
       case 'no':
-        runner.send('failure');
+        runner.send('failure', false, { questionId: current });
         break;
 
       default:
-        runner.send('failure');
+        runner.send('failure', false, { questionId: current });
         break;
     }
   };

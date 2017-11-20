@@ -1,15 +1,13 @@
 var FormValidator = function (runner, questions) {
   "use strict";
 
-  var
-    current = 0,
-    elems = {
-      title: document.getElementById('question-title'),
-      inputs: document.getElementById('question-inputs'),
-      form: document.getElementById('question-form')
-    },
-    inputGroups = {}
-  ;
+  var current = 0;
+  var elems = {
+    title: document.getElementById('question-title'),
+    inputs: document.getElementById('question-inputs'),
+    form: document.getElementById('question-form'),
+  };
+  var inputGroups = {};
 
   var bindEvents = function () {
     elems.form.addEventListener('submit', function (e) {
@@ -19,10 +17,8 @@ var FormValidator = function (runner, questions) {
   };
 
   var findInputGroups = function () {
-    var
-      groups = document.querySelectorAll('[data-input-group]'),
-      i = 0, t = groups.length
-    ;
+    var groups = document.querySelectorAll('[data-input-group]');
+    var i = 0, t = groups.length;
 
     for (i; i<t; i++) {
       inputGroups[groups[i].getAttribute('data-input-group')] = groups[i];
@@ -65,15 +61,15 @@ var FormValidator = function (runner, questions) {
       case 'yes':
         runner.send('success', function () {
           advanceQuestion();
-        });
+        }, { questionId: current });
         break;
 
       case 'no':
-        runner.send('failure');
+        runner.send('failure', false, { questionId: current });
         break;
 
       default:
-        runner.send('failure');
+        runner.send('failure', false, { questionId: current });
         break;
     }
   };
