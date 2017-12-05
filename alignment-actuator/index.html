@@ -203,7 +203,7 @@ layout: code-compare
           <th scope="col">Period</th> <th scope="col">Size</th>
     </tr>
   </thead>
-  <tbody> {% for dino in site.data.dios %} <tr> <td>{{dino.name}}</td>
+  <tbody> {% for dino in site.data.dinos %} <tr> <td>{{dino.name}}</td>
         <td>{{dino.period}}</td> <td>
           <dl>
             <dt>Width</dt>
@@ -231,7 +231,7 @@ layout: code-compare
     </tr>
   </thead>
   <tbody>
-    {% for dino in site.data.dios %}
+    {% for dino in site.data.dinos %}
       <tr>
         <td>{{dino.name}}</td>
         <td>{{dino.period}}</td>
