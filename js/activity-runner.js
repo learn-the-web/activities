@@ -11,14 +11,24 @@ var ActivityRunner = function () {
   };
   var successAndFailures = {};
 
-  var dateFormatter = new Intl.DateTimeFormat('en-CA', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  });
+  var formatDate = function (theDate) {
+    var dateFormatter;
+
+    if (window.hasOwnProperty('Intl')) {
+      dateFormatter = new Intl.DateTimeFormat('en-CA', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+      });
+
+      return dateFormatter.format(theDate);
+    } else {
+      return theDate.getFullYear() + '-' + theDate.getMonth() + '-' + theDate.getDate() + 'T' + theDate.getHours() + ':' + theDate.getMinutes() + ':' + theDate.getSeconds();
+    }
+  };
 
   var recordStartTime = function () {
     if (!sessionStorage.getItem(quizId + '-dtstart')) sessionStorage.setItem(quizId + '-dtstart', (new Date()).toJSON());
@@ -127,8 +137,8 @@ var ActivityRunner = function () {
     timeDiff = ((dtend.getTime() - dtstart.getTime()) / 1000 / 60).toFixed(2);
     outOfExtras = (totalQuestions > 0) ? '(' + totalCorrect + ' of ' + totalQuestions + ')' : '';
 
-    document.getElementById('stats-start').innerHTML = dateFormatter.format(dtstart);
-    document.getElementById('stats-end').innerHTML = dateFormatter.format(dtend);
+    document.getElementById('stats-start').innerHTML = formatDate(dtstart);
+    document.getElementById('stats-end').innerHTML = formatDate(dtend);
     document.getElementById('stats-time').innerHTML = '~' + timeDiff + ' m';
     document.getElementById('stats-correct').innerHTML = percentCorrect + '%' + outOfExtras;
   };
