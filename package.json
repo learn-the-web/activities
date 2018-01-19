@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "npm-run-all --parallel start-server watch-*",
-    "start-server": "jekyll serve --incremental",
+    "start-server": "jekyll serve --incremental --port=4001 --ssl-key=_certs/https-key.pem --ssl-cert=_certs/https-cert.pem",
     "build-site": "jekyll build",
     "postcss": "postcss --no-map -u postcss-import -u postcss-cssnext --postcss-cssnext.browsers 'last 2 versions' -u postcss-assets -u cssnano --cssnano.safe",
     "build-css-main": "npm run postcss -- -o main.min.css css/main.css",
