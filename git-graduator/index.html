@@ -1,0 +1,30 @@
+---
+title: "Git Graduator"
+desc: "A quiz on some intermediate Git & GitHub features necessary for working on teams."
+intro: "Don’t be a git: know Git"
+congrats: |
+  What you gonna do? You wanna git down?
+  <br>Tell me
+  <br>Git down on it!
+  <br>Git down on it! C’mon and
+  <br>Git down on it!"
+styles:
+  - /common/prism.min.css
+scripts:
+  - /common/prism.min.js
+  - activity.js
+layout: multiple-choice
+---
+
+<div id="question-10" hidden>
+<pre><code class="language-markup">{% capture code %}<ul>
+  <li>Brachiosaurus</li>
+  <li>Stegosaurus</li>
+<<<<<<< add-new-herbivore
+  <li>Triceratops</li>
+=======
+  <li>Ankylosaurus</li>
+>>>>>>> master
+</ul>
+{% endcapture %}{{ code | escape }}</code></pre>
+</div>
