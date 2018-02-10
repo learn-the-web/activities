@@ -2,4 +2,4 @@
 
 These HTTPS certificates are nothing special—just self-signed localhost only certificates used for development.
 
-*They’re in the repository to allow for each development startup time.*
+*They’re in the repository to allow for easier development startup time.*
