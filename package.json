@@ -27,7 +27,7 @@
     "concat-js": "uglifyjs $npm_package_config_js_main -b -o activities.min.js",
     "watch-js": "onchange 'js/*.js' -- npm run concat-js",
     "build": "npm run build-css && npm run minifiy-js && npm run build-site",
-    "deploy": "rsync --recursive --checksum --delete --delete-excluded --verbose --compress --exclude-from=rsync-exclude.txt ./_site/ keycdn:zones/activities/",
+    "deploy": "rsync --recursive --checksum --delete --delete-excluded --verbose --compress --exclude-from=rsync-exclude.txt ./_site/ keycdn:activities/",
     "build-n-deploy": "npm run build && npm run deploy"
   }
 }
