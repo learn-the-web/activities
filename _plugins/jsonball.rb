@@ -29,7 +29,7 @@ require 'net/http'
 # to print out all the name entries (or build a fancy TOC sidebar)
 
 # or even better yet, to read from a URL
-# 
+#
 # {% jsonball feed from url http://www.foo.com/bar.json %}
 #
 # then e.g. {% for record in feed %} {{ record.key }} {% endfor %}
@@ -49,48 +49,56 @@ module JekyllJsonball
     end
 
     def render(context)
-	if /(.+) from var (.+)/.match(@text)
-		context[$1] = JSON context[$2]
-		return ''
-	end
-	if /(.+) from data (.+)/.match(@text)
-		context[$1] = JSON $2
-		return ''
-	end
-	if /(.+) from file (.+)/.match(@text)
-		context[$1] = JSON page_relative_file_contents(context, $2.strip)
-		return ''
-	end
-	if /(.+) from page (.+)/.match(@text)
-		context[$1] = JSON jekylled_page_relative_file_contents(context, $2.strip)
-		return ''
-	end
-	if /(.+) from url (.+)/.match(@text)
-    		base_url = $2
-    		resp = Net::HTTP.get_response(URI.parse(base_url))
-    		data = resp.body
-    		context[$1] = JSON data
-    		return ''
-  	end
-	# syntax error
-	return 'ERROR:bad_jsonball_syntax'
+      if /(.+) from var (.+)/.match(@text)
+        context[$1] = JSON context[$2]
+        return ''
+      end
+
+      if /(.+) from data (.+)/.match(@text)
+        context[$1] = JSON $2
+        return ''
+      end
+
+      if /(.+) from file (.+)/.match(@text)
+        context[$1] = JSON page_relative_file_contents(context, $2.strip)
+        return ''
+      end
+
+      if /(.+) from page (.+)/.match(@text)
+        context[$1] = JSON jekylled_page_relative_file_contents(context, $2.strip)
+        return ''
+      end
+
+      if /(.+) from url (.+)/.match(@text)
+        base_url = $2
+        resp = Net::HTTP.get_response(URI.parse(base_url))
+        data = resp.body
+        context[$1] = JSON data
+        return ''
+      end
+
+      # syntax error
+      return 'ERROR:bad_jsonball_syntax'
     end
 
     def page_relative_file_contents(context, filename)
-	jekyllSite = context.registers[:site]
-	dir = jekyllSite.source+'/'+File.dirname(context['page']['url'])
-	if !filename.match(/\/.*/)
-		filename = dir + '/' + filename
-	end
-	file = File.open(filename, "rb")
-	return file.read
+      jekyllSite = context.registers[:site]
+      dir = jekyllSite.source#+'/'+File.dirname(context['page']['url'])
+
+      if !filename.match(/\/.*/)
+        filename = dir + '/' + filename
+      end
+
+      file = File.open(filename, "rb")
+
+      return file.read
     end
 
     def jekylled_page_relative_file_contents(context, filename)
-	jekyllSite = context.registers[:site]
-	targetPage = Jekyll::Page.new(jekyllSite, jekyllSite.source, File.dirname(context['page']['url']), filename)
-	targetPage.render(jekyllSite.layouts, jekyllSite.site_payload)
-	targetPage.output
+      jekyllSite = context.registers[:site]
+      targetPage = Jekyll::Page.new(jekyllSite, jekyllSite.source, File.dirname(context['page']['url']), filename)
+      targetPage.render(jekyllSite.layouts, jekyllSite.site_payload)
+      targetPage.output
     end
 
   end
