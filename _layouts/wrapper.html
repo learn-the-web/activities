@@ -1,3 +1,5 @@
+{% jsonball package from file package.json %}
+
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
@@ -6,13 +8,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="{{page.desc | strip | strip_newlines}}">
 
-  <link href="/main.min.css?v={{site.version}}" rel="stylesheet">
+  <link href="/main.min.css?v={{package.version}}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400italic,700|Source+Code+Pro:400,700" rel="stylesheet">
   {% for script in page.blockingscripts %}
-    <script src="{{script}}?v={{site.version}}"></script>
+    <script src="{{script}}?v={{package.version}}"></script>
   {% endfor %}
   {% for style in page.styles %}
-    <link href="{{style}}?v={{site.version}}" rel="stylesheet">
+    <link href="{{style}}?v={{package.version}}" rel="stylesheet">
   {% endfor %}
 
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -53,7 +55,7 @@
   {{content}}
 
   {% for script in page.scripts %}
-    <script src="{{script}}?v={{site.version}}"></script>
+    <script src="{{script}}?v={{package.version}}"></script>
   {% endfor %}
 
   <script type="application/ld+json">
