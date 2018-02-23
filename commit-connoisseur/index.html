@@ -1,0 +1,281 @@
+---
+title: 'Commit Connoisseur'
+desc: 'A small quiz testing knowledge of proper commit message conventions through a series of questions.'
+intro: 'Commit early, commit often.'
+congrats: 'Your commitment to proper commits is commendable.'
+styles:
+  - /common/prism.min.css
+scripts:
+  - /common/prism.min.js
+  - activity.js
+layout: form-validator
+---
+
+<div data-input-group="question-1">
+  <ul id="question-choices" class="list-group push-2 mega choice-list">
+    <li>
+      <input id="choice-0" name="question-choices" data-id="0" type="radio">
+      <label for="choice-0">This commit adds a new class to the div tag</label>
+    </li>
+    <li>
+      <input id="choice-1" name="question-choices" data-id="1" type="radio">
+      <label for="choice-1">Added a new class to the div tag</label>
+    </li>
+    <li>
+      <input id="choice-2" name="question-choices" data-id="2" type="radio">
+      <label for="choice-2">Add a new class to the div tag</label>
+    </li>
+  </ul>
+</div>
+
+<div data-input-group="question-2">
+  <ul id="question-choices" class="list-group push-2 mega choice-list">
+    <li>
+      <input id="choice-0" name="question-choices" data-id="0" type="radio">
+      <label for="choice-0">Remove an extra closing div tag</label>
+    </li>
+    <li>
+      <input id="choice-1" name="question-choices" data-id="1" type="radio">
+      <label for="choice-1">Removed an extra closing div tag</label>
+    </li>
+    <li>
+      <input id="choice-2" name="question-choices" data-id="2" type="radio">
+      <label for="choice-2">This commit will remove an extra closing div tag</label>
+    </li>
+  </ul>
+</div>
+
+<div data-input-group="question-3">
+  <ul id="question-choices" class="list-group push-2 mega choice-list">
+    <li>
+      <input id="choice-0" name="question-choices" data-id="0" type="radio">
+      <label for="choice-0">change the font family for the body copy</label>
+    </li>
+    <li>
+      <input id="choice-1" name="question-choices" data-id="1" type="radio">
+      <label for="choice-1">Change the font family for the body copy</label>
+    </li>
+    <li>
+      <input id="choice-2" name="question-choices" data-id="2" type="radio">
+      <label for="choice-2">Change the font family for the body copy.</label>
+    </li>
+  </ul>
+</div>
+
+<div data-input-group="question-4">
+  <ul id="question-choices" class="list-group push-2 mega choice-list">
+    <li>
+      <input id="choice-0" name="question-choices" data-id="0" type="radio">
+      <label for="choice-0">Link the planets page into the navigation</label>
+    </li>
+    <li>
+      <input id="choice-1" name="question-choices" data-id="1" type="radio">
+      <label for="choice-1">Links the planets page into the navigation</label>
+    </li>
+    <li>
+      <input id="choice-2" name="question-choices" data-id="2" type="radio">
+      <label for="choice-2">Linked the planets page into the navigation</label>
+    </li>
+  </ul>
+</div>
+
+<div data-input-group="question-5">
+  <ul id="question-choices" class="list-group push-2 mega choice-list">
+    <li>
+      <input id="choice-0" name="question-choices" data-id="0" type="radio">
+      <label for="choice-0">Add a copywrite notice to the footer</label>
+    </li>
+    <li>
+      <input id="choice-1" name="question-choices" data-id="1" type="radio">
+      <label for="choice-1">Add a copyright notce to the footer</label>
+    </li>
+    <li>
+      <input id="choice-2" name="question-choices" data-id="2" type="radio">
+      <label for="choice-2">Add a copyright notice to the footer</label>
+    </li>
+  </ul>
+</div>
+
+<div data-input-group="question-6">
+  <div class="differ push">
+    <div class="differ-box" data-file="index.html">
+      <pre class="push-0"><code class="language-markup">{% capture code %}
+      {% endcapture %}{{ code | escape }}</code></pre>
+    </div>
+    <div class="differ-box" data-file="index.html">
+      <pre class="push-0" data-line="1-10"><code class="language-markup">{% capture code %}
+        <!DOCTYPE html>
+        <html lang="en-ca">
+        <head>
+          <meta charset="utf-8">
+          <title>Kuiper Belt Objects</title>
+        </head>
+        <body>
+
+        </body>
+        </html>
+      {% endcapture %}{{ code | escape }}</code></pre>
+    </div>
+  </div>
+
+  <label class="block" for="commit-message">This commit will…</label>
+  <input class="code code-wide" id="commit-message">
+</div>
+
+<div data-input-group="question-7">
+  <div class="differ push">
+    <div class="differ-box" data-file="index.html">
+      <pre class="push-0" data-line="9-11"><code class="language-markup">{% capture code %}
+        <!DOCTYPE html>
+        <html lang="en-ca">
+        <head>
+          <meta charset="utf-8">
+          <title>Kuiper Belt Objects</title>
+        </head>
+        <body>
+
+
+
+
+
+        </body>
+        </html>
+      {% endcapture %}{{ code | escape }}</code></pre>
+    </div>
+    <div class="differ-box" data-file="index.html">
+      <pre class="push-0" data-line="9-11"><code class="language-markup">{% capture code %}
+        <!DOCTYPE html>
+        <html lang="en-ca">
+        <head>
+          <meta charset="utf-8">
+          <title>Kuiper Belt Objects</title>
+        </head>
+        <body>
+
+          <header>
+            <h1>Kuiper Belt Objects</h1>
+          </header>
+
+        </body>
+        </html>
+      {% endcapture %}{{ code | escape }}</code></pre>
+    </div>
+  </div>
+
+  <label class="block" for="commit-message">This commit will…</label>
+  <input class="code code-wide" id="commit-message">
+</div>
+
+<div data-input-group="question-8">
+  <div class="differ push">
+    <div class="differ-box" data-file="index.html">
+      <pre class="push-0" data-line="9"><code class="language-markup">{% capture code %}
+        <!DOCTYPE html>
+        <html lang="en-ca">
+        <head>
+          <meta charset="utf-8">
+          <title>Kuiper Belt Objects</title>
+        </head>
+        <body>
+
+          <header class="mashead">
+            <h1>Kuiper Belt Objects</h1>
+          </header>
+
+        </body>
+        </html>
+      {% endcapture %}{{ code | escape }}</code></pre>
+    </div>
+    <div class="differ-box" data-file="index.html">
+      <pre class="push-0" data-line="9"><code class="language-markup">{% capture code %}
+        <!DOCTYPE html>
+        <html lang="en-ca">
+        <head>
+          <meta charset="utf-8">
+          <title>Kuiper Belt Objects</title>
+        </head>
+        <body>
+
+          <header class="masthead">
+            <h1>Kuiper Belt Objects</h1>
+          </header>
+
+        </body>
+        </html>
+      {% endcapture %}{{ code | escape }}</code></pre>
+    </div>
+  </div>
+
+  <label class="block" for="commit-message">This commit will…</label>
+  <input class="code code-wide" id="commit-message">
+</div>
+
+<div data-input-group="question-9">
+  <div class="differ push">
+    <div class="differ-box" data-file="index.html">
+      <pre class="push-0" data-line="2"><code class="language-css">{% capture code %}
+        .masthead {
+          background-color: red;
+        }
+      {% endcapture %}{{ code | escape }}</code></pre>
+    </div>
+    <div class="differ-box" data-file="index.html">
+      <pre class="push-0" data-line="2"><code class="language-css">{% capture code %}
+        .masthead {
+          background-color: indigo;
+        }
+      {% endcapture %}{{ code | escape }}</code></pre>
+    </div>
+  </div>
+
+  <label class="block" for="commit-message">This commit will…</label>
+  <input class="code code-wide" id="commit-message">
+</div>
+
+<div data-input-group="question-10">
+  <div class="differ push">
+    <div class="differ-box" data-file="index.html">
+      <pre class="push-0" data-line="13"><code class="language-markup">{% capture code %}
+        <!DOCTYPE html>
+        <html lang="en-ca">
+        <head>
+          <meta charset="utf-8">
+          <title>Kuiper Belt Objects</title>
+        </head>
+        <body>
+
+          <header class="mashead">
+            <h1>Kuiper Belt Objects</h1>
+          </header>
+
+          <h1>Pluto</h1>
+
+        </body>
+        </html>
+      {% endcapture %}{{ code | escape }}</code></pre>
+    </div>
+    <div class="differ-box" data-file="index.html">
+      <pre class="push-0" data-line="13"><code class="language-markup">{% capture code %}
+        <!DOCTYPE html>
+        <html lang="en-ca">
+        <head>
+          <meta charset="utf-8">
+          <title>Kuiper Belt Objects</title>
+        </head>
+        <body>
+
+          <header class="masthead">
+            <h1>Kuiper Belt Objects</h1>
+          </header>
+
+
+
+        </body>
+        </html>
+      {% endcapture %}{{ code | escape }}</code></pre>
+    </div>
+  </div>
+
+  <label class="block" for="commit-message">This commit will…</label>
+  <input class="code code-wide" id="commit-message">
+</div>

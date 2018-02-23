@@ -1,0 +1,45 @@
+.differ {
+  display: flex;
+  overflow: visible;
+}
+
+.differ-box,
+.differ-box[class*="language-"] {
+  width: 50%;
+  position: relative;
+  overflow: visible;
+}
+
+.differ-box code {
+  overflow-x: auto;
+}
+
+.differ-box::before {
+  content: attr(data-file);
+  left: .6rem;
+  padding: 0 .8em;
+  position: absolute;
+  top: -1.2rem;
+
+  background-color: var(--color-code-darkest);
+  border-radius: 4px 4px 0 0;
+
+  font-size: 70%;
+  line-height: 2.1;
+}
+
+.differ-box pre {
+  height: 100%;
+}
+
+.differ-box:last-child {
+  border-left: 3px solid var(--color-grey-dark);
+}
+
+.differ-box:first-child pre {
+  border-radius: 3px 0 0 3px;
+}
+
+.differ-box:last-child pre {
+  border-radius: 0 3px 3px 0;
+}
