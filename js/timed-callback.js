@@ -30,10 +30,8 @@ var TimedCallback = function (runner, questions) {
   };
 
   var findContentGroups = function () {
-    var
-      groups = document.querySelectorAll('[data-content-group]'),
-      i = 0, t = groups.length
-    ;
+    var groups = document.querySelectorAll('[data-content-group]');
+    var i = 0, t = groups.length;
 
     for (i; i<t; i++) {
       contentGroups[groups[i].getAttribute('data-content-group')] = groups[i];
@@ -74,13 +72,11 @@ var TimedCallback = function (runner, questions) {
           advanceQuestion();
         }, { questionId: current });
         break;
-
       case 'no':
         runner.send('failure', function () {
           startTicker();
         }, { questionId: current });
         break;
-
       default:
         startTicker();
         break;
@@ -98,6 +94,7 @@ var TimedCallback = function (runner, questions) {
 
   runner.listen('start', function () {
     if (onStart) onStart();
+
     findContentGroups();
     populateQuestion(current);
     startTicker();

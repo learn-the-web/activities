@@ -87,11 +87,9 @@ var MultipleChoice = function (runner, questions) {
           advanceQuestion();
         }, { questionId: current });
         break;
-
       case 'no':
         runner.send('failure', false, { questionId: current });
         break;
-
       default:
         runner.send('failure', false, { questionId: current });
         break;
@@ -101,9 +99,7 @@ var MultipleChoice = function (runner, questions) {
   var isAnswerCorrect = function () {
     var choice = elems.choices.querySelector(':checked');
 
-    if (!choice) {
-      return;
-    }
+    if (!choice) return;
 
     if (parseInt(choice.getAttribute('data-id'), 10) == questions[current].correct) {
       return 'yes';

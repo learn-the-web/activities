@@ -68,13 +68,11 @@ var CodeCompare = function (runner, questions) {
           advanceQuestion();
         }, { questionId: current });
         break;
-
       case 'no':
         runner.send('failure', function () {
           editor.focus();
         }, { questionId: current });
         break;
-
       default:
         runner.send('failure', function () {
           editor.focus();

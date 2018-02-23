@@ -40,9 +40,7 @@ var FormValidator = function (runner, questions) {
     elems.inputs.innerHTML = '';
     elems.inputs.appendChild(inputGroups[questions[id].inputGroup]);
 
-    if (questions[id].onStart) {
-      questions[id].onStart();
-    }
+    if (questions[id].onStart) questions[id].onStart();
   };
 
   var advanceQuestion = function () {
@@ -63,11 +61,9 @@ var FormValidator = function (runner, questions) {
           advanceQuestion();
         }, { questionId: current });
         break;
-
       case 'no':
         runner.send('failure', false, { questionId: current });
         break;
-
       default:
         runner.send('failure', false, { questionId: current });
         break;
@@ -78,10 +74,8 @@ var FormValidator = function (runner, questions) {
     var valid = 'yes';
 
     Object.keys(questions[current].inputs).forEach(function(key) {
-      var
-        elem = document.getElementById(key),
-        answer = questions[current].inputs[key]
-      ;
+      var elem = document.getElementById(key);
+      var answer = questions[current].inputs[key];
 
       switch (typeof answer) {
         case 'string':
