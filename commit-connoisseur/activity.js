@@ -8,6 +8,7 @@ var commitMatcher = function (val, matches) {
   });
 
   if (val.split(/\s{1,}/).length < 3) isValid = false;
+  if (/\s*\.$/.test(val)) isValid = false;
 
   return isValid;
 };
