@@ -1,0 +1,204 @@
+---
+title: 'Variable Validator'
+desc: 'A quiz to help test knowledge of CSS variables and specificity related to variables, code order & classes.'
+intro: 'A variform of variables.'
+congrats: 'You really varoomed through the many variable variations!'
+styles:
+  - /common/prism.min.css
+scripts:
+  - /common/prism.min.js
+  - activity.js
+layout: multiple-choice
+---
+
+<div id="question-1" hidden>
+  <pre><code class="language-css">{% capture code %}
+    :root {
+      --color-background: red;
+    }
+
+    h1 {
+      background-color: var(--color-background);
+    }
+  {% endcapture %}{{ code | escape }}</code></pre>
+  <pre><code class="language-markup">{% capture code %}
+    <h1>Stegosaurus</h1>
+  {% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+
+<div id="question-2" hidden>
+  <pre><code class="language-css">{% capture code %}
+    :root {
+      --color-background: red;
+    }
+
+    h1 {
+      background-color: var(--color-backgroud);
+    }
+  {% endcapture %}{{ code | escape }}</code></pre>
+  <pre><code class="language-markup">{% capture code %}
+    <h1>Triceratops</h1>
+  {% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+
+<div id="question-3" hidden>
+  <pre><code class="language-css">{% capture code %}
+    :root {
+      --color-highlight: yellow;
+    }
+
+    h1 {
+      background-color: --color-highlight;
+    }
+  {% endcapture %}{{ code | escape }}</code></pre>
+  <pre><code class="language-markup">{% capture code %}
+    <h1>Ankylosaurus</h1>
+  {% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+
+<div id="question-4" hidden>
+  <pre><code class="language-css">{% capture code %}
+    :root {
+      --color-highlight: yellow;
+    }
+
+    h1 {
+      background-color: var(--color-highlight);
+    }
+
+    .title {
+      background-color: orange;
+    }
+  {% endcapture %}{{ code | escape }}</code></pre>
+  <pre><code class="language-markup">{% capture code %}
+    <h1 class="title">Brontosaurus</h1>
+  {% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+
+<div id="question-5" hidden>
+  <pre><code class="language-css">{% capture code %}
+    :root {
+      --color-highlight: yellow;
+    }
+
+    h1 {
+      background-color: orange;
+    }
+
+    .title {
+      background-color: var(--color-highlight);
+    }
+  {% endcapture %}{{ code | escape }}</code></pre>
+  <pre><code class="language-markup">{% capture code %}
+    <h1 class="title">Micropachycephalosaurus</h1>
+  {% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+<div id="question-6" hidden>
+  <pre><code class="language-css">{% capture code %}
+    :root {
+      --color-fancy-pants: yellow;
+    }
+
+    h1 {
+      --color-fancy-pants: magenta;
+      background-color: var(--color-fancy-pants);
+    }
+  {% endcapture %}{{ code | escape }}</code></pre>
+  <pre><code class="language-markup">{% capture code %}
+    <h1>Brachiosaurus</h1>
+  {% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+
+<div id="question-7" hidden>
+  <pre><code class="language-css">{% capture code %}
+    :root {
+      --color-fancy-pants: yellow;
+    }
+
+    h1 {
+      --color-fancy-pants: magenta;
+    }
+
+    .title {
+      background-color: var(--color-fancy-pants);
+    }
+  {% endcapture %}{{ code | escape }}</code></pre>
+  <pre><code class="language-markup">{% capture code %}
+    <h1 class="title">Parasaurolophus</h1>
+  {% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+
+<div id="question-8" hidden>
+  <pre><code class="language-css">{% capture code %}
+    :root {
+      --color-highlight: yellow;
+      --color-fancy-pants: magenta;
+    }
+
+    h1 {
+      background-color: var(--color-highlight);
+    }
+
+    .title {
+      background-color: var(--color-fancy-pants);
+    }
+  {% endcapture %}{{ code | escape }}</code></pre>
+  <pre><code class="language-markup">{% capture code %}
+    <h1 class="title">Spinosaurus</h1>
+  {% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+
+<div id="question-9" hidden>
+  <pre><code class="language-css">{% capture code %}
+    :root {
+      --color-highlight: yellow;
+      --color-fancy-pants: magenta;
+    }
+
+    h1 {
+      --color-highlight: orange;
+      background-color: var(--color-highlight);
+    }
+
+    .title {
+      background-color: var(--color-fancy-pants);
+    }
+  {% endcapture %}{{ code | escape }}</code></pre>
+  <pre><code class="language-markup">{% capture code %}
+    <h1 class="title">Troodon</h1>
+  {% endcapture %}{{ code | escape }}</code></pre>
+</div>
+
+
+<div id="question-10" hidden>
+  <pre><code class="language-css">{% capture code %}
+    :root {
+      --color-highlight: yellow;
+      --color-neutral: grey;
+      --color-fancy-pants: magenta;
+    }
+
+    h1 {
+      background-color: var(--color-highlight);
+    }
+
+    .title-fancy {
+      background-color: var(--color-fancy-pants);
+    }
+
+    .title {
+      background-color: var(--color-neutral);
+    }
+  {% endcapture %}{{ code | escape }}</code></pre>
+  <pre><code class="language-markup">{% capture code %}
+    <h1 class="title title-fancy">Carnotaurus</h1>
+  {% endcapture %}{{ code | escape }}</code></pre>
+</div>
