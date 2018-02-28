@@ -21,6 +21,11 @@
 
   <meta name="application-name" content="Activities · Learn the Web">
   <link rel="author" href="/humans.txt">
+  {% if page.url contains 'url-explorer' %}
+    <link rel="canonical" href="https://activities.learn-the-web.algonquindesign.ca/url-explorer/">
+  {% else %}
+    <link rel="canonical" href="https://activities.learn-the-web.algonquindesign.ca{{page.url | replace: 'index.html', ''}}">
+  {% endif %}
 
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
