@@ -1,6 +1,6 @@
 {
   "name": "activities-learn-the-web",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "devDependencies": {
     "cssnano": "^3.7.3",
