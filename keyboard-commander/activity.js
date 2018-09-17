@@ -167,7 +167,13 @@ var questions = [
     },
     onStart: function () {
       document.getElementById('finish-link').addEventListener('click', function (e) {
-        activity.advanceOrFail('yes');
+        var check = document.getElementById('rule');
+
+        if (check.checked) {
+          activity.advanceOrFail('yes');
+        } else {
+          activity.advanceOrFail('no');
+        }
       });
     }
   }
