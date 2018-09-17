@@ -12,4 +12,7 @@ for (i; i<t; i++) {
   });
 }
 
-CodeCompare(ActivityRunner(), questions);
+var ac = ActivityRunner();
+
+ac.allowReset();
+CodeCompare(ac, questions);

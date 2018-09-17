@@ -53,4 +53,7 @@ var questions = [
   },
 ];
 
-CodeCompare(ActivityRunner(), questions);
+var ac = ActivityRunner();
+
+ac.allowReset();
+CodeCompare(ac, questions);

@@ -62,3 +62,20 @@
 .btn--alg:hover {
   background-color: #94C947;
 }
+
+.btn-invisible {
+  padding: 0 .2em;
+
+  background-color: transparent;
+  border-bottom: .1em solid var(--color-brand);
+  border-radius: 0;
+
+  color: var(--color-brand-dark);
+}
+
+.btn-reset {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

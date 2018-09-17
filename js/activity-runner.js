@@ -202,6 +202,19 @@ var ActivityRunner = function () {
     }
   };
 
+  var allowReset = function () {
+    var resetBtn = document.getElementById('btn-reset');
+
+    if (!resetBtn) return;
+
+    resetBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      dispatchEvent('reset');
+    });
+
+    resetBtn.hidden = false;
+  };
+
   var start = function () {
     toggleScreen('start');
     toggleScreen('main');
@@ -224,5 +237,6 @@ var ActivityRunner = function () {
     send: send,
     listen: listen,
     start: start,
+    allowReset: allowReset,
   };
 };

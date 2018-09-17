@@ -104,4 +104,8 @@ var CodeCompare = function (runner, questions) {
   runner.listen('start', function () {
     populateQuestion(current);
   });
+
+  runner.listen('reset', function () {
+    populateQuestion(current);
+  });
 };
