@@ -156,4 +156,19 @@ var questions = [
 
 var question9FormSubmitted = false;
 var question10FormSubmitted = false;
-var timedCallback = TimedCallback(ActivityRunner(), questions);
+var ac = ActivityRunner();
+var timedCallback = TimedCallback(ac, questions);
+var btn = document.createElement('button');
+
+btn.innerText = 'Reset';
+btn.classList.add('btn', 'btn-invisible', 'micro', 'btn-reset');
+btn.addEventListener('click', function (e) {
+  e.preventDefault();
+  timedCallback.reset();
+});
+
+timedCallback.setStartHandler(function () {
+  document.body.appendChild(btn);
+});
+
+if (ac.getState() > 0) ac.start();

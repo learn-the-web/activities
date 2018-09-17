@@ -92,19 +92,26 @@ var TimedCallback = function (runner, questions) {
     return;
   };
 
+  var reset = function () {
+    runner.setState(current);
+    window.location.reload();
+  };
+
   runner.listen('start', function () {
     if (onStart) onStart();
 
     findContentGroups();
+    current = runner.getState();
     populateQuestion(current);
     startTicker();
   });
 
   return {
+    reset: reset,
     setTickTime: setTickTime,
     startTicker: startTicker,
     stopTicker: stopTicker,
     setStartHandler: setStartHandler,
-    runner: runner
+    runner: runner,
   };
 };

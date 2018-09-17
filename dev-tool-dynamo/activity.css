@@ -1,5 +1,9 @@
 /* platypus */
 
+body {
+  min-height: 100vh;
+}
+
 .shape {
   height: 100px;
   left: 50%;
@@ -110,4 +114,10 @@
 #question-8-circle {
   left: 800px;
   top: 500px;
+}
+
+.btn-reset {
+  bottom: 0;
+  left: .7em;
+  top: auto;
 }

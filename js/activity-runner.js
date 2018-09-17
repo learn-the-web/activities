@@ -1,6 +1,9 @@
 var ActivityRunner = function () {
   'use strict';
 
+  var stateFiller = 'unusual-unicorns-unlikely-to-utter-assistance->';
+  var stateKey = 'learn-the-web-activity-state';
+
   var boundListeners = {
     start: null,
   };
@@ -162,6 +165,8 @@ var ActivityRunner = function () {
   };
 
   var send = function (ev, cb, opts) {
+    clearState();
+
     switch (ev) {
       case 'success':
         displaySuccessScreen(cb, opts);
@@ -215,6 +220,30 @@ var ActivityRunner = function () {
     resetBtn.hidden = false;
   };
 
+  var getState = function () {
+    var state = sessionStorage.getItem(stateKey);
+
+    if (!state) return 0;
+
+    try {
+      state = window.atob(state);
+    } catch (e) {
+      return 0;
+    }
+
+    if (!state) return 0;
+
+    return parseInt(state.replace(stateFiller, ''), 10);
+  };
+
+  var setState = function (state) {
+    sessionStorage.setItem(stateKey, window.btoa(stateFiller + state));
+  };
+
+  var clearState = function () {
+    sessionStorage.removeItem(stateKey);
+  };
+
   var start = function () {
     toggleScreen('start');
     toggleScreen('main');
@@ -238,5 +267,8 @@ var ActivityRunner = function () {
     listen: listen,
     start: start,
     allowReset: allowReset,
+    setState: setState,
+    getState: getState,
+    clearState: clearState,
   };
 };
