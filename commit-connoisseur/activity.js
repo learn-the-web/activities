@@ -71,7 +71,7 @@ var questions = [
         var matches = [
           /^(Add|Create|Make|Code|Write|Append)/,
           /(header|masthead|heading)/,
-          /(tag|code)/,
+          /(tag|code|index\.html)/,
         ]
         return commitMatcher(val, matches);
       },
@@ -99,7 +99,7 @@ var questions = [
         var matches = [
           /^(Change|Fix|Replace|Correct|Repair|Redesign)/,
           /masthead/,
-          /background-color/,
+          /background[-\s]colou?r/,
         ]
         return commitMatcher(val, matches);
       },
