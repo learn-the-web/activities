@@ -54,7 +54,7 @@ var questions = [
     choices: ["`⇧` + click", "`⌥` + click", "`⌘` + click"],
   },
   {
-    question: "What does the keyboard shortcut `⌘⇧P` doe?",
+    question: "What does the keyboard shortcut `⌘⇧P` do?",
     correct: 2,
     choices: [
       "Prints our code to paper",
