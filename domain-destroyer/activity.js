@@ -30,12 +30,12 @@ var questions = [
     ]
   },
   {
-    question: 'Looking at this domain, `learn-the-web.algonquindesign.ca`, what part is the TLD:',
+    question: 'Looking at this domain, `activites.learntheweb.courses`, what part is the TLD:',
     correct: 2,
     choices: [
-      '`learn-the-web`',
-      '`algonquindesign`',
-      '`ca`'
+      '`activites`',
+      '`learntheweb`',
+      '`courses`'
     ]
   },
   {
@@ -87,7 +87,7 @@ var questions = [
       '192.168.1.1',
       'vera.ns.cloudflare.com',
       'in1-smtp.messagingengine.com',
-      'algonquindesign.ca'
+      'learntheweb.courses'
     ]
   },
   {

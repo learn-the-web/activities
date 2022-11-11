@@ -22,9 +22,9 @@
   <meta name="application-name" content="Activities · Learn the Web">
   <link rel="author" href="/humans.txt">
   {% if page.url contains 'url-explorer' %}
-    <link rel="canonical" href="https://activities.learn-the-web.algonquindesign.ca/url-explorer/">
+    <link rel="canonical" href="https://activities.learntheweb.courses/url-explorer/">
   {% else %}
-    <link rel="canonical" href="https://activities.learn-the-web.algonquindesign.ca{{page.url | replace: 'index.html', ''}}">
+    <link rel="canonical" href="https://activities.learntheweb.courses{{page.url | replace: 'index.html', ''}}">
   {% endif %}
 
   <link rel="shortcut icon" href="/favicon.ico">
@@ -42,18 +42,11 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_CA">
   <meta property="og:title" content="{{page.title}} · Activities · Learn the Web">
-  <meta property="og:url" content="https://activities.learn-the-web.algonquindesign.ca{{page.url | replace: 'index.html', ''}}">
-  <meta property="og:image" content="https://activities.learn-the-web.algonquindesign.ca/favicon-152.png">
+  <meta property="og:url" content="https://activities.learntheweb.courses{{page.url | replace: 'index.html', ''}}">
+  <meta property="og:image" content="https://activities.learntheweb.courses/favicon-152.png">
   <meta property="og:site_name" content="Activities · Learn the Web">
   <meta property="og:description" content="{{page.desc | strip | strip_newlines}}">
   <meta property="og:updated_time" content="{% capture lastmod_date %}{% last_modified {{ page.path }} %}{% endcapture %}{{ lastmod_date | date_to_xmlschema }}">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@algonquindesign">
-  <meta name="twitter:title" content="{{page.title}} · Activities · Learn the Web">
-  <meta name="twitter:url" content="https://activities.learn-the-web.algonquindesign.ca{{page.url | replace: 'index.html', ''}}">
-  <meta name="twitter:description" content="{{page.desc | strip | strip_newlines}}">
-  <meta name="twitter:image" content="https://activities.learn-the-web.algonquindesign.ca/favicon-152.png">
 </head>
 <body>
 
@@ -68,71 +61,12 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Thomas J Bradley",
-      "jobTitle": "Professor",
-      "memberOf": {
-        "@id": "#algonquin"
-      },
-      "description": "Thomas J Bradley, Professor of The Open Web, is in charge of developing & maintaining the Web Development courses in the Graphic Design program at Algonquin College",
-      "email": "thomas.bradley@algonquincollege.com",
-      "url": "https://thomasjbradley.ca"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
       "@id": "#thomasjbradley",
       "name": "Thomas J Bradley",
       "jobTitle": "Professor",
-      "memberOf": {
-        "@id": "#algonquin"
-      },
-      "description": "Thomas J Bradley, Professor of The Open Web, is in charge of developing & maintaining the Web Development courses in the Graphic Design program at Algonquin College",
-      "email": "thomas.bradley@algonquincollege.com",
+      "description": "Thomas J Bradley, Professor of The Open Web, is in charge of developing & maintaining the Web Development courses from Learn the Web",
+      "email": "thomas@learntheweb.courses",
       "url": "https://thomasjbradley.ca"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "PostalAddress",
-      "@id": "#algonquin-address",
-      "name": "Algonquin College",
-      "url": "https://algonquincollege.com",
-      "streetAddress": "1385 Woodroffe Ave.",
-      "addressLocality": "Ottawa",
-      "addressRegion": "ON",
-      "postalCode": "K2G 1V8",
-      "addressCountry": "CA"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "CollegeOrUniversity",
-      "name": "Algonquin College Graphic Design",
-      "image": "https://algonquindesign.ca/favicon-152.png",
-      "url": "https://algonquindesign.ca",
-      "description": "Ontario college graphic design diploma program teaching students up-to-date courses in print, mobile, web & motion.",
-      "address": {
-        "@id": "#algonquin-address"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "CollegeOrUniversity",
-      "@id": "#algonquin",
-      "name": "Algonquin College Graphic Design",
-      "image": "https://algonquindesign.ca/favicon-152.png",
-      "url": "https://algonquindesign.ca",
-      "description": "Ontario college graphic design diploma program teaching students up-to-date courses in print, mobile, web & motion.",
-      "address": {
-        "@id": "#algonquin-address"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "AlignmentObject",
-      "@id": "#higher-education",
-      "alignmentType": "teaches",
-      "educationalFramework": "Higher Education",
-      "targetName": "Higher Education",
-      "targetUrl": "http://purl.org/ASN/scheme/ASNEducationLevel/HigherEducation"
     },
     {
       "@context": "https://schema.org",
@@ -151,9 +85,6 @@
       },
       "copyrightYear": "{{site.time | date:'%Y'}}",
       "dateModified": "{{site.time}}",
-      "educationalAlignment": {
-        "@id": "#higher-education"
-      },
       "educationalUse": "Quiz",
       "isAccessibleForFree": true,
       "learningResourceType": "Quiz",
@@ -162,7 +93,7 @@
       "timeRequired": "PT30M",
       "name": "{{page.title}}",
       "description": "{{page.desc}}",
-      "url": "https://activities.learn-the-web.algonquindesign.ca{{page.url | replace: 'index.html', ''}}",
+      "url": "https://activities.learntheweb.courses{{page.url | replace: 'index.html', ''}}",
       "audience": {
         "@type": "Audience",
         "audienceType": "public"

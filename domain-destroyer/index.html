@@ -11,15 +11,15 @@ layout: multiple-choice
 ---
 
 <div id="question-9" hidden>
-<pre><code class="language-sh">{% capture code %}algonquindesign.ca.   A       192.168.1.1
-algonquindesign.ca.   NS      vera.ns.cloudflare.com.
-algonquindesign.ca.   MX      in1-smtp.messagingengine.com.
-www                   CNAME   algonquindesign.ca.
+<pre><code class="language-sh">{% capture code %}learntheweb.courses.   A       192.168.1.1
+learntheweb.courses.   NS      vera.ns.cloudflare.com.
+learntheweb.courses.   MX      in1-smtp.messagingengine.com.
+www                   CNAME   learntheweb.courses.
 {% endcapture %}{{ code | escape }}</code></pre>
 </div>
 
 <div id="question-10" hidden>
-<pre><code class="language-sh">{% capture code %}$ traceroute learn-the-web.algonquindesign.ca
+<pre><code class="language-sh">{% capture code %}$ traceroute learntheweb.courses
 
 1  10.0.1.1                                   (10.0.1.1)
 2  bas1-ottawa11_lo0_symp.net.bell.ca         (64.230.200.134)

@@ -8,6 +8,6 @@ layout: sitemap
 {% endfor %}
 
 <url>
-  <loc>https://activities.learn-the-web.algonquindesign.ca/url-explorer/</loc>
+  <loc>https://activities.learntheweb.courses/url-explorer/</loc>
   <lastmod>{% capture lastmod_date %}{% last_modified url-explorer/index.html %}{% endcapture %}{{ lastmod_date | date_to_xmlschema }}</lastmod>
 </url>
